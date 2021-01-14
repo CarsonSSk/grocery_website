@@ -9,15 +9,15 @@ If you're new to Github, I recommend downloading Git Bash and following this tut
 
 Everybody should work in a branch named after themselves. When working, regularly rebase and especially rebase before pushing your changes to Github. This will update your local repository to reflect the main branch of Github and helps avoid merge conflicts. In other words, new changes from the main branch will be copied into your local work. To rebase for most (all?) computers, navigate to your local repository in Git Bash and run the commands:
 
-git checkout main
-git pull
-git checkout BRANCH_NAME
+git checkout main<br/>
+git pull<br/>
+git checkout BRANCH_NAME<br/>
 git rebase main
 
 When you're ready to push your code to your Github branch (make sure to rebase first), navigate to your local directory in Git Bash and type:
 
-git add .
-git commit -m "mesage about what you changed (with quotation marks)"
+git add .<br/>
+git commit -m "mesage about what you changed (with quotation marks)"<br/>
 git push origin BRANCH_NAME
 
 Then on the Github website, submit a pull request and message me on Discord so I can merge your changes into main.
