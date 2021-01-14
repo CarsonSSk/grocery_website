@@ -20,4 +20,4 @@ git add .<br/>
 git commit -m "mesage about what you changed (with quotation marks)"<br/>
 git push origin BRANCH_NAME
 
-Then on the Github website, submit a pull request and message me on Discord so I can merge your changes into main.
+Then on the Github website, submit a pull request and message me on Discord so I can merge your changes into main. Don't be afraid to push regularly and have me merge into main, or else other people won't be able to get your changes as they're working.
