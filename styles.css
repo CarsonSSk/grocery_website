@@ -1,0 +1,19 @@
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    padding-bottom: 36px;
+}
+
+.main {
+    margin: 0 auto 70px;
+    width: 60%;
+    background-color: #f9f9f9;
+    position: relative;
+    min-height: 100vh;
+    border: solid #cccdd3;
+    border-width: 1px;
+    padding-bottom: 80px;
+}
