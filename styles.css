@@ -1,3 +1,22 @@
+/*IMPORTANT: You can use ctrl-F to quickly navigate this page.
+
+             Use the same set of colors and designs across the entire website.
+
+             Any changes you wish to implement for the mobile version
+             of your page should be done near the bottom of this file,
+             where specified.
+
+             If you need a button, I have created a custom class themed for
+             our website. Simply create an "a" tag with the class "custom-button"
+             or copy paste this: 
+             
+             <a href="" class="custom-button">Hello</a>
+
+             There are also subtitle and subtitle-secondary classes for use wherever
+             you would like to include them.
+*/
+
+/*Basic styling */
 body {
     background-color: #f5f5f5;
     font-family: 'Open Sans', sans-serif;
@@ -9,8 +28,47 @@ a {
     text-decoration: none;
 }
 
+hr {
+    width: 80%;
+    margin: auto;
+    border: 1px solid #2bae66ff;
+    opacity: 1;
+}
+
 a:hover{
     color: #2bae66ff;
+}
+
+.custom-button {
+    padding: 10px 10px 10px 10px;
+    background-color: #2bae66ff;
+    color: white;
+    font-size: 18px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.custom-button:hover {
+    background-color: white;
+    border: 2px solid #2bae66ff;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 22px;
+    color: #2bae66ff;
+    border: 2px solid #2bae66ff;
+    border-radius: 2px;
+}
+
+.subtitle-secondary {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #2bae66ff;
+    text-decoration: underline;
 }
 
 .fas {
@@ -42,23 +100,73 @@ a:hover{
     padding-top: 50px;
 }
 
+/* Food ad-box styling */
+.aisle .col-md-6{
+    margin: auto;
+}
+
+.advertisement-holder {
+    padding-top: 27px;
+    padding-bottom: 15px;
+    margin-bottom: 28px;
+    border: 2px solid #dbdbdb;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.advertisement-holder:hover {
+    border-color: #2bae66ff;
+}
+
+.aisle img {
+    width: 100%;
+}
+
+.img-holder {
+    width: 200px;
+    margin: auto;
+}
+
+.info-holder {
+    margin: 8px 15px;
+}
+
+.aisle .food-name {
+    margin: 15px 0 0 0;
+    font-size: 20px;
+    color: #272727;
+}
+
+.aisle .food-name:hover {
+    color: #2bae66ff;
+    text-decoration: underline;
+}
+
+.aisle .food-details {
+    margin-bottom: 8px;
+}
+
+.aisle .food-price {
+    font-size: 18px;
+}
+
 /* Header styling */
 .heading {
     width: 75%;
     margin: auto;
 }
 
-.userpage {
+.header-userpage {
     text-align: right;
     padding: 10px 0;
     background-color: #161616;
 }
 
-.userpage a {
+.header-userpage a {
     color: white;
 }
 
-.userpage a:hover {
+.header-userpage a:hover {
     text-decoration: underline;
 }
 
@@ -153,7 +261,7 @@ header {
     display: block;
 }
 
-/* Header Dropdown Menu Styling */
+/* Aisle menu mobile */
 .dropdown {
     display: none;
     float: right;
@@ -182,35 +290,24 @@ header .dropdown-menu a:focus {
     border-radius: 4px;
 }
 
-/* Check cart button */
+/* Check cart button desktop */
 .cart-check {
     position: relative;
     top: 31px;
     left: 12px;
 }
 
-.cart-button {
+.cart-check .custom-button {
     padding: 10px 30px 10px 3px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 15px;
-    background-color: #2bae66ff;
-    color: white;
-    font-size: 18px;
-    border-radius: 4px;
 }
 
 .fas.fa-shopping-cart {
     font-size: 20px;
     padding-right: 2px;
-}
-
-.cart-button:hover {
-    background-color: white;
-    border: 2px solid #2bae66ff;
-    transition: 0.3s ease;
-    -webkit-transition: 0.3s ease;
 }
 
 /* Sidebar Styling */
@@ -278,7 +375,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-.col-lg-3, .col-lg-6, .col-md-12 {
+footer .col-lg-3, footer .col-lg-6, footer .col-md-12 {
     padding: 0;
 }
 
@@ -320,7 +417,7 @@ footer a:hover {
 /* Homepage Banner Styling */
 .banner {
     width: 100%;
-    margin: auto;
+    margin: 0 auto 45px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
@@ -329,6 +426,7 @@ footer a:hover {
 .banner h2 {
     font-size: 38px;
     text-decoration: underline;
+    margin-top: 45px;
 }
 
 .banner h3 {
@@ -350,12 +448,12 @@ a .banner {
     background-color: #2bae66ff; 
 }
 
-.banner .col-lg-4 {
-    padding-top: 45px;
+.banner .col-lg-3, .banner .col-lg-6, .banner .col-md-12 {
+    padding: 0;
 }
 
 a .banner:hover {
-    color: green;
+    color: #2bae66ff;
     background-color: white;
     border: 5px solid #2bae66ff;
     border-radius: 4px;
@@ -367,15 +465,31 @@ a .banner:hover {
     width: 100%;
 }
 
+/*****************************/
+/* Responsiveness styling */
+/*****************************/
+
 @media (max-width: 1140px) {
+    
+    hr {
+        width: 85%;
+    }
+    
     .icon-bar {
         display: none;
     }
 }
 
+/* Most changes for the mobile version of your page should be specified here.
+ If you want an element to disappear entirely when the user is on mobile, simply
+ give that element the class "desktop-only" in your HTML file.*/
 @media (max-width: 992px) {
 
     .page-width {
+        width: 90%;
+    }
+
+    hr {
         width: 90%;
     }
 
@@ -407,14 +521,18 @@ a .banner:hover {
         margin-top: 15px;
     }
 
-    .banner .col-lg-4 {
-        padding-top: 21px;
+    .banner h2 {
+        margin-top: 21px;
     }
 }
 
 @media (max-width: 750px) {
 
     .page-width {
+        width: 95%;
+    }
+
+    hr {
         width: 95%;
     }
 
