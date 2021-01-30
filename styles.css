@@ -27,12 +27,12 @@ a:hover{
 }
 
 .page-width {
-    width: 60%;
+    width: 980px;
     margin: auto;
 }
 
 .main {
-    margin: 0 auto 70px;
+    margin: 0 auto;
     background-color: #ffffff;
     position: relative;
     min-height: 100vh;
@@ -70,9 +70,9 @@ header {
 }
 
 .header-name {
-    font-family: 'Merriweather', serif;
-    font-size: 35px;
-    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+    font-size: 33px;
+    font-weight: 800;
     margin: 5px 0;
     padding: 0px;
 }
@@ -256,10 +256,77 @@ header .dropdown-menu a:focus {
     background: #641126;
 }
 
-@media (max-width: 950px) {
+/* Footer styling */
+footer {
+    color: white;
+    background-color: #161616;
+    margin: 0;
+    padding: 20px 0 10px;
+}
+
+.footer-name {
+    margin-top: 10px;
+}
+
+.footer-name a {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 28px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.col-lg-3, .col-lg-6, .col-md-12 {
+    padding: 0;
+}
+
+.icon-bar-foot {
+    text-align: center;
+}
+
+.icon-bar-foot a {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    color: white;
+    font-size: 20px;
+}
+
+.icon-bar-foot i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+}
+
+.icon-bar-foot a:hover {
+    background-color: #2bae66ff;
+}
+
+.contact {
+    margin-top: 12px;
+    text-align: right;
+}
+
+.contact a {
+    font-size: 20px;
+    color: white;
+}
+
+@media (max-width: 1140px) {
+    .icon-bar {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
 
     .page-width {
-        width: 85%;
+        width: 90%;
     }
 
     .desktop-only {
@@ -268,6 +335,18 @@ header .dropdown-menu a:focus {
 
     .dropdown {
         display: inline-block;
+    }
+
+    footer {
+        padding: 10px 0 15px;
+    }
+
+    footer .row, .contact {
+        text-align: center;
+    }
+
+    .icon-bar-foot {
+        padding: 5px 0;
     }
 }
 
