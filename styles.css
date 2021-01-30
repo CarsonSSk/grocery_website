@@ -9,6 +9,10 @@ a {
     text-decoration: none;
 }
 
+.fas {
+    padding: 0 8px;
+}
+
 .page-container {
     position: relative;
     min-height: 100vh;
@@ -20,16 +24,18 @@ a {
 
 .page-width {
     width: 60%;
+    margin: auto;
 }
 
 .main {
     margin: 0 auto 70px;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     position: relative;
     min-height: 100vh;
     border: solid #cccdd3;
     border-width: 1px;
     padding-bottom: 80px;
+    padding-top: 50px;
 }
 
 /* Header styling */
@@ -40,7 +46,7 @@ a {
 
 .userpage {
     text-align: right;
-    padding: 10px 22%;
+    padding: 10px 0;
     background-color: #161616;
 }
 
@@ -51,3 +57,129 @@ a {
 .userpage a:hover {
     text-decoration: underline;
 }
+
+header {
+    background-color: white;
+    border: solid #cccdd3;
+    border-width: 0 0 1px;
+    padding: 1px 0;
+}
+
+.header-name {
+    font-family: 'Merriweather', serif;
+    font-size: 35px;
+    font-weight: 900;
+    margin: 5px 0;
+    padding: 0px;
+}
+
+.header-name a {
+    color: white;
+    background-color: #2bae66ff;
+    padding: 5px 12px;
+    border-radius: 4px;
+}
+
+.header-name a:hover {
+    background-color: white;
+    color: #2bae66ff;
+    border: 2px solid #2bae66ff;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+}
+
+/* Aisle menu desktop */
+.aisle-menu {
+    width: 110px;
+    margin-top: 8px;
+    position: relative;
+    float: right;
+    right: 125px;
+}
+
+.aisle-box {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    line-height: 2;
+    width: 110px;
+    color: white;
+    font-size: 18px;
+    background-color: #2bae66ff;
+    border-radius: 4px;
+    padding: 5px 0;
+}
+
+.aisle-menu ul {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    border: 1px solid #f8f8f8;
+    box-shadow: 0px 1px 7px grey;
+    border-radius: 2px;
+    display: none;
+    position: absolute;
+    top: 43px;
+    left: 0;
+    font-size: 18px;
+}
+
+.aisle-menu ul a {
+    color:#272727
+}
+
+.aisle-menu ul li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.aisle-menu ul li a {
+    width: 110px;
+    display: block;
+    padding: 10px 00px;
+}
+
+.aisle-menu ul li a:hover {
+    border: 2px solid #2bae66ff;
+    border-radius: 4px;
+    text-decoration: underline;
+    color: #2bae66ff;
+}
+
+.aisle-menu:hover ul {
+    display: block;
+}
+
+/* Check cart button */
+.cart-check {
+    position: relative;
+    top: 31px;
+    left: 12px;
+}
+
+.cart-button {
+    padding: 10px 30px 10px 3px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    background-color: #2bae66ff;
+    color: white;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.fas.fa-shopping-cart {
+    font-size: 20px;
+    padding-right: 2px;
+}
+
+.cart-button:hover {
+    background-color: white;
+    color: #2bae66ff;
+    border: 2px solid #2bae66ff;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+}
+
