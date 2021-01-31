@@ -4,7 +4,9 @@
 
              Any changes you wish to implement for the mobile version
              of your page should be done near the bottom of this file,
-             where specified.
+             where specified. If you would like an element to appear only
+             on the desktop version, simply give it the class "desktop-only" in
+             your html file.
 
              If you need a button, I have created a custom class themed for
              our website. Simply create an "a" tag with the class "custom-button"
@@ -14,9 +16,12 @@
 
              There are also subtitle and subtitle-secondary classes for use wherever
              you would like to include them.
+
+             Be careful when editing tags. In particular, do not edit anything listed
+             under "Basic styling".
 */
 
-/*Basic styling */
+/*Basic styling. Do not edit anything here. */
 body {
     background-color: #f5f5f5;
     font-family: 'Open Sans', sans-serif;
@@ -29,10 +34,14 @@ a {
 }
 
 hr {
-    width: 80%;
-    margin: auto;
+    width: 75%;
+    margin: 40px auto;
     border: 1px solid #2bae66ff;
     opacity: 1;
+}
+
+.center-text {
+    text-align: center;
 }
 
 a:hover{
@@ -41,6 +50,7 @@ a:hover{
 
 .custom-button {
     padding: 10px 10px 10px 10px;
+    margin: auto;
     background-color: #2bae66ff;
     color: white;
     font-size: 18px;
@@ -114,12 +124,14 @@ a:hover{
     text-align: center;
 }
 
-.advertisement-holder:hover {
+.advertisement-holder:hover, .advertisement-holder:hover img {
     border-color: #2bae66ff;
 }
 
 .aisle img {
     width: 100%;
+    border-radius: 3px;
+    border: 2px solid white;
 }
 
 .img-holder {
@@ -305,7 +317,7 @@ header .dropdown-menu a:focus {
     right: 15px;
 }
 
-.fas.fa-shopping-cart {
+.cart-check .fas.fa-shopping-cart {
     font-size: 20px;
     padding-right: 2px;
 }
@@ -361,8 +373,9 @@ footer {
     padding: 20px 0 10px;
 }
 
-.footer-name {
-    margin-top: 10px;
+footer .row {
+    margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 .footer-name a {
