@@ -9,10 +9,12 @@
              your html file.
 
              If you need a button, I have created a custom class themed for
-             our website. Simply create an "a" tag with the class "custom-button"
-             or copy paste this: 
-             
+             our website. Simply create any (I think) tag with the class "custom-button"
+             or copy paste this if you want a button to a link to a page: 
              <a href="" class="custom-button">Hello</a>
+
+             Or this if you want a submit button within a form:
+             <input type="submit" class="custom-button" name="cool">
 
              There are also subtitle and subtitle-secondary classes for use wherever
              you would like to include them.
@@ -56,9 +58,11 @@ a:hover{
     font-size: 18px;
     border-radius: 4px;
     display: inline-block;
+    border: 0;
 }
 
 .custom-button:hover {
+    color: #2bae66ff;
     background-color: white;
     border: 2px solid #2bae66ff;
     transition: 0.3s ease;
