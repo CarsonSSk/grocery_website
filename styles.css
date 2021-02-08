@@ -542,6 +542,11 @@ a .banner:hover {
         margin-top: 21px;
     }
 }
+/* Used for receipt in shoppingcart.html */
+.table-receipt{
+    width: 300px;
+}
+
 
 @media (max-width: 750px) {
 
