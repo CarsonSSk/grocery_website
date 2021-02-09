@@ -46,8 +46,16 @@ hr {
     text-align: center;
 }
 
+.right-text {
+    text-align: right;
+}
+
 .center-content {
     margin: auto;
+}
+
+.green-background {
+    background-color: #2bae66ff;
 }
 
 a:hover{
@@ -67,6 +75,10 @@ tr:hover {
     border-radius: 4px;
     display: inline-block;
     border: 0;
+}
+
+img {
+    background-color: #2bae66ff;
 }
 
 .custom-button:hover {
@@ -181,7 +193,6 @@ tr:hover {
 }
 
 .header-userpage {
-    text-align: right;
     padding: 10px 0;
     background-color: #161616;
 }
@@ -192,6 +203,10 @@ tr:hover {
 
 .header-userpage a:hover {
     text-decoration: underline;
+}
+
+.header-userpage .row .col-6 {
+    padding: 0;
 }
 
 header {
@@ -572,5 +587,12 @@ a .banner:hover {
 
     .dropdown {
         top: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .header-name {
+        font-size: 25px;
     }
 }
