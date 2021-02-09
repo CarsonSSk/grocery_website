@@ -1,140 +1,269 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<!doctype html>
+<html lang="en">
   <head>
+
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>List of users</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+    <!-- CSS Sheet -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+    <!--Font Awesome CDN-->
+    <script src="https://kit.fontawesome.com/1e07fc90b9.js" crossorigin="anonymous"></script>
+    
+    <!-- Scripts -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    
+    <title>Userlist | TastyGrocery.com</title>
+    <meta name="description" content="The userlist of Grocery.com, home of great online grocery shopping!">
+    <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png">
+    
   </head>
 
   <body>
-    <div class="container">
-      <div class="card">
-        <div class="card-content">
-            <h5>User Management</h5>
-        </div>
-        <div class="topbar">
-          <input type="text" class="searchBar" placeholder="Search...">
-          <button type="button" class="btn search"><i class="fa fa-search"></i></button>
-          <button type="button" class="btn add"><b>Add User</b></button>
-        </div>
-        <table id ="table">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Added</th>
-              <th>Manage</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td><h5>Nicholas Aguilar</h5></td>
-              <td>nicholas@gmail.com</td>
-              <td>2021-01-12</td>
-              <td>
-                <button type="button" class="btn delete"><i class="fa fa-trash"></i></button>
-                <button type="button" class="btn edit"><i class="fa fa-edit"></i></button>
-              </td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td><h5>Leah Watson</h5></td>
-              <td>leahwatson@outlook.com</td>
-              <td>2021-10-21</td>
-              <td>
-                <button type="button" class="btn delete"><i class="fa fa-trash"></i></button>
-                <button type="button" class="btn edit"><i class="fa fa-edit"></i></button>
-              </td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td><h5>Pat Jacobs</h5></td>
-              <td>patty@hotmail.com</td>
-              <td>2021-12-06</td>
-              <td>
-                <button type="button" class="btn delete"><i class="fa fa-trash"></i></button>
-                <button type="button" class="btn edit"><i class="fa fa-edit"></i></button>
-              </td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td><h5>Alfred Morrison</h5></td>
-              <td>alfredo@outlook.com</td>
-              <td>2021-12-09</td>
-              <td>
-                <button type="button" class="btn delete"><i class="fa fa-trash"></i></button>
-                <button type="button" class="btn edit"><i class="fa fa-edit"></i></button>
-              </td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td><h5>Eva Rose</h5></td>
-              <td>roseeva@gmail.com</td>
-              <td>2021-12-23</td>
-              <td>
-                <button type="button" class="btn delete"><i class="fa fa-trash"></i></button>
-                <button type="button" class="btn edit"><i class="fa fa-edit"></i></button>
-              </td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td><h5>Lucille Mendoza</h5></td>
-              <td>mendoza@outlook.com</td>
-              <td>2021-01-06</td>
-              <td>
-                <button type="button" class="btn delete"><i class="fa fa-trash"></i></button>
-                <button type="button" class="btn edit"><i class="fa fa-edit"></i></button>
-              </td>
-            </tr>
-            <tr>
-              <td>7</td>
-              <td><h5>Isabel Pearson</h5></td>
-              <td>isabelpearson@hotmail.com</td>
-              <td>2021-01-14</td>
-              <td>
-                <button type="button" class="btn delete"><i class="fa fa-trash"></i></button>
-                <button type="button" class="btn edit"><i class="fa fa-edit"></i></button>
-              </td>
-            </tr>
-            <tr>
-              <td>8</td>
-              <td><h5>Mary Castillo</h5></td>
-              <td>castillo@gmail.com</td>
-              <td>2021-04-20</td>
-              <td>
-                <button type="button" class="btn delete"><i class="fa fa-trash"></i></button>
-                <button type="button" class="btn edit"><i class="fa fa-edit"></i></button>
-              </td>
-            </tr>
-            <tr>
-              <td>9</td>
-              <td><h5>Viola Harrington</h5></td>
-              <td>viola1@outlook.com</td>
-              <td>2021-07-08</td>
-              <td>
-                <button type="button" class="btn delete"><i class="fa fa-trash"></i></button>
-                <button type="button" class="btn edit"><i class="fa fa-edit"></i></button>
-              </td>
-            </tr>
-            <tr>
-              <td>10</td>
-              <td><h5>Leigh Walsh</h5></td>
-              <td>leigh420@hotmail.com</td>
-              <td>2021-11-10</td>
-              <td>
-                <button type="button" class="btn delete"><i class="fa fa-trash"></i></button>
-                <button type="button" class="btn edit"><i class="fa fa-edit"></i></button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
 
+    <div class="header-userpage">
+      <div class="row page-width">
+        <div class="col-6">
+          <a href=""><i class="fas fa-door-open"></i>Backstore</a>
+        </div>
+        <div class="col-6 right-text">
+          <a href=""><i class="fas fa-user-alt"></i>My Account</a>
+        </div>
+      </div>
     </div>
+
+    <header class="sticky-top">
+      <div class="page-width">
+        <div class="row">
+          
+          <div class="col-md-6 col-9">
+            <p class="header-name"><a href="index.html"><i class="fas fa-pepper-hot"></i>TastyGrocery</a></p>
+          </div>
+
+          <div class="col-md-6 col-3">
+
+            <!-- Aisle menu on desktop view -->
+            <div class="aisle-menu desktop-only">
+                <div class="aisle-box">
+                  <span><i class="fas fa-search"></i>Aisles</span>
+                </div>
+              <ul>
+                  <li>
+                      <a href="aisles/Produce.html"><i class="fas fa-pepper-hot"></i>Produce</a>
+                  </li>
+                  <li>
+                      <a href="aisles/Meat.html"><i class="fas fa-drumstick-bite"></i>Meat</a>
+                  </li>
+                  <li>
+                      <a href="aisles/Grain.html"><i class="fas fa-bread-slice"></i>Grain</a>
+                  </li>
+              </ul>
+            </div>
+            
+            <!-- Aisle and cart menu on mobile view -->
+            <div class="dropdown show">
+              <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Menu
+              </a>
+            
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="shoppingCart.html"><i class="fas fa-shopping-cart"></i>Cart</a>
+                <a class="dropdown-item" href="aisles/Produce.html"><i class="fas fa-pepper-hot"></i>Produce</a>
+                <a class="dropdown-item" href="aisles/Meat.html"><i class="fas fa-drumstick-bite"></i>Meat</a>
+                <a class="dropdown-item" href="aisles/Grain.html"><i class="fas fa-bread-slice"></i>Grain</a>
+              </div>
+            </div>
+
+            <!-- Cart check on mobile view -->
+            <div class="cart-check desktop-only">
+                <a class="custom-button" href="shoppingCart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <div class="page-container">
+        <div class="content-wrapper">
+            
+            <div class="main page-width">
+              <!--Main content starts here!-->
+                  
+                <div class="card-content">
+                    <h5 class="center-text">User Management</h5>
+                </div>
+
+                <div class="topbar">
+                  <input type="text" class="searchBar" placeholder="Search...">
+                  <button type="button" class="btn custom-button"><i class="fa fa-search"></i></button>
+                  <button type="button" class="btn add custom-button">Add User</button>
+                </div>
+                <table id ="table">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Added</th>
+                      <th>Manage</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Nicholas Aguilar</td>
+                      <td>nicholas@gmail.com</td>
+                      <td>2021-01-12</td>
+                      <td>
+                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
+                        <button type="button" class="btn custom-button"><i class="fa fa-edit"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Leah Watson</td>
+                      <td>leahwatson@outlook.com</td>
+                      <td>2021-10-21</td>
+                      <td>
+                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
+                        <button type="button" class="btn custom-button"><i class="fa fa-edit"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Pat Jacobs</td>
+                      <td>patty@hotmail.com</td>
+                      <td>2021-12-06</td>
+                      <td>
+                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
+                        <a href="" class="custom-button"><i class="fa fa-edit"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Alfred Morrison</td>
+                      <td>alfredo@outlook.com</td>
+                      <td>2021-12-09</td>
+                      <td>
+                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
+                        <button type="button" class="btn custom-button"><i class="fa fa-edit"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Eva Rose</td>
+                      <td>roseeva@gmail.com</td>
+                      <td>2021-12-23</td>
+                      <td>
+                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
+                        <button type="button" class="btn custom-button"><i class="fa fa-edit"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>Lucille Mendoza</td>
+                      <td>mendoza@outlook.com</td>
+                      <td>2021-01-06</td>
+                      <td>
+                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
+                        <button type="button" class="btn custom-button"><i class="fa fa-edit"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>Isabel Pearson</td>
+                      <td>isabelpearson@hotmail.com</td>
+                      <td>2021-01-14</td>
+                      <td>
+                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
+                        <button type="button" class="btn custom-button"><i class="fa fa-edit"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>Mary Castillo</td>
+                      <td>castillo@gmail.com</td>
+                      <td>2021-04-20</td>
+                      <td>
+                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
+                        <button type="button" class="btn custom-button"><i class="fa fa-edit"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>Viola Harrington</td>
+                      <td>viola1@outlook.com</td>
+                      <td>2021-07-08</td>
+                      <td>
+                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
+                        <button type="button" class="btn custom-button"><i class="fa fa-edit"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td>Leigh Walsh</td>
+                      <td>leigh420@hotmail.com</td>
+                      <td>2021-11-10</td>
+                      <td>
+                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
+                        <button type="button" class="btn custom-button"><i class="fa fa-edit"></i></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+          
+              
+              <!--Main content ends here!-->
+            </div>
+
+        </div>
+
+        <footer>
+          <div class="row page-width">
+
+            <div class="col-lg-3 col-md-12">
+              <p class="footer-name"><a href="index.html">Grocery.com</a></p>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+              <div class="icon-bar-foot">
+                  <a href="https://www.facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.twitter.com" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.pinterest.com" target="_blank" class="pinterest"><i class="fab fa-pinterest"></i></a>
+                  <a href="https://www.tumblr.com" target="_blank" class="tumblr"><i class="fab fa-tumblr"></i></a>
+                  <a href="mailto:?" class="email"><i class="far fa-envelope"></i></a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-12">
+              <p class="contact"><a href="mailto:grocery@mailinator.com">Contact us</a></p>
+            </div>
+
+          </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+
+
+
+    
   </body>
 
 </html>
