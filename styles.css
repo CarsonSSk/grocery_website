@@ -46,7 +46,23 @@ hr {
     text-align: center;
 }
 
+.right-text {
+    text-align: right;
+}
+
+.center-content {
+    margin: auto;
+}
+
+.green-background {
+    background-color: #2bae66ff;
+}
+
 a:hover{
+    color: #2bae66ff;
+}
+
+tr:hover {
     color: #2bae66ff;
 }
 
@@ -59,6 +75,10 @@ a:hover{
     border-radius: 4px;
     display: inline-block;
     border: 0;
+}
+
+img {
+    background-color: #2bae66ff;
 }
 
 .custom-button:hover {
@@ -139,7 +159,7 @@ a:hover{
 }
 
 .img-holder {
-    width: 200px;
+    width: 199px;
     margin: auto;
 }
 
@@ -173,7 +193,6 @@ a:hover{
 }
 
 .header-userpage {
-    text-align: right;
     padding: 10px 0;
     background-color: #161616;
 }
@@ -184,6 +203,10 @@ a:hover{
 
 .header-userpage a:hover {
     text-decoration: underline;
+}
+
+.header-userpage .row .col-6 {
+    padding: 0;
 }
 
 header {
@@ -564,5 +587,12 @@ a .banner:hover {
 
     .dropdown {
         top: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .header-name {
+        font-size: 25px;
     }
 }

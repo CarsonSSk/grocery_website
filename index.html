@@ -25,7 +25,7 @@
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     
-    <title>Grocery.com</title>
+    <title>Homepage | TastyGrocery.com</title>
     <meta name="description" content="The homepage of Grocery.com, home of great online grocery shopping!">
     <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png">
     
@@ -34,8 +34,13 @@
   <body>
 
     <div class="header-userpage">
-      <div class="page-width">
-        <a href=""><i class="fas fa-user-alt"></i>My Account</a>
+      <div class="row page-width">
+        <div class="col-6">
+          <a href=""><i class="fas fa-door-open"></i>Backstore</a>
+        </div>
+        <div class="col-6 right-text">
+          <a href=""><i class="fas fa-user-alt"></i>My Account</a>
+        </div>
       </div>
     </div>
 
@@ -44,7 +49,7 @@
         <div class="row">
           
           <div class="col-md-6 col-9">
-            <p class="header-name"><a href="index.html"><i class="fas fa-pepper-hot"></i>Grocery.com</a></p>
+            <p class="header-name"><a href="index.html"><i class="fas fa-pepper-hot"></i>TastyGrocery</a></p>
           </div>
 
           <div class="col-md-6 col-3">
@@ -56,13 +61,13 @@
                 </div>
               <ul>
                   <li>
-                      <a href=""><i class="fas fa-pepper-hot"></i>Produce</a>
+                      <a href="aisles/Produce.html"><i class="fas fa-pepper-hot"></i>Produce</a>
                   </li>
                   <li>
-                      <a href=""><i class="fas fa-drumstick-bite"></i>Meat</a>
+                      <a href="aisles/Meat.html"><i class="fas fa-drumstick-bite"></i>Meat</a>
                   </li>
                   <li>
-                      <a href=""><i class="fas fa-bread-slice"></i>Grain</a>
+                      <a href="aisles/Grain.html"><i class="fas fa-bread-slice"></i>Grain</a>
                   </li>
               </ul>
             </div>
@@ -74,16 +79,16 @@
               </a>
             
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href=""><i class="fas fa-shopping-cart"></i>Cart</a>
-                <a class="dropdown-item" href=""><i class="fas fa-pepper-hot"></i>Produce</a>
-                <a class="dropdown-item" href=""><i class="fas fa-drumstick-bite"></i>Meat</a>
-                <a class="dropdown-item" href=""><i class="fas fa-bread-slice"></i>Grain</a>
+                <a class="dropdown-item" href="shoppingCart.html"><i class="fas fa-shopping-cart"></i>Cart</a>
+                <a class="dropdown-item" href="aisles/Produce.html"><i class="fas fa-pepper-hot"></i>Produce</a>
+                <a class="dropdown-item" href="aisles/Meat.html"><i class="fas fa-drumstick-bite"></i>Meat</a>
+                <a class="dropdown-item" href="aisles/Grain.html"><i class="fas fa-bread-slice"></i>Grain</a>
               </div>
             </div>
 
             <!-- Cart check on mobile view -->
             <div class="cart-check desktop-only">
-                <a class="custom-button" href=""><i class="fas fa-shopping-cart"></i> Cart</a>
+                <a class="custom-button" href="shoppingCart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
             </div>
           </div>
 
@@ -107,7 +112,7 @@
             
             <a href="">
               <div class="row banner">
-                <div class="col-lg-8 col-md-12"><img src="img/live_chicken.jpg" alt="chicken"></div>
+                <div class="col-lg-8 col-md-12 green-background"><img src="img/live_chicken.jpg" alt="chicken"></div>
                 <div class="col-lg-4 col-md-12">
                   <h2>Great Chicken</h2>
                   <h3>Every Day.</h3>
@@ -167,7 +172,7 @@
             </div>
 
             <div class="center-text">
-              <a href="" class="custom-button"><i class="fas fa-pepper-hot"></i>See all produce</a>
+              <a href="aisles/Produce.html" class="custom-button"><i class="fas fa-pepper-hot"></i>See all produce</a>
             </div>
 
             <hr>
@@ -220,7 +225,7 @@
             </div>
 
             <div class="center-text">
-              <a href="" class="custom-button"><i class="fas fa-drumstick-bite"></i>See all meat</a>
+              <a href="aisles/Meat.html" class="custom-button"><i class="fas fa-drumstick-bite"></i>See all meat</a>
             </div>
 
             <hr>
@@ -273,7 +278,7 @@
             </div>
 
             <div class="center-text">
-              <a href="" class="custom-button"><i class="fas fa-bread-slice"></i>See all grains</a>
+              <a href="aisles/Grain.html" class="custom-button"><i class="fas fa-bread-slice"></i>See all grains</a>
             </div>
 
             <hr>
