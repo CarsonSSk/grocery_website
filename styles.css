@@ -46,7 +46,15 @@ hr {
     text-align: center;
 }
 
+.center-content {
+    margin: auto;
+}
+
 a:hover{
+    color: #2bae66ff;
+}
+
+tr:hover {
     color: #2bae66ff;
 }
 
@@ -139,7 +147,7 @@ a:hover{
 }
 
 .img-holder {
-    width: 200px;
+    width: 199px;
     margin: auto;
 }
 
