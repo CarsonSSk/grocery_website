@@ -505,6 +505,76 @@ a .banner:hover {
     width: 100%;
 }
 
+/*User list styling*/
+
+.card-content {
+    color: white;
+    background-color: #2bae66ff;
+    font-size: 40px;
+    width: 30%;
+}
+
+.card-content h5 {
+    margin-top: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#table {
+    text-align: center;
+    border-collapse: collapse;
+    margin-top: 5px;
+    background-color: white;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#table td, th {
+    border: 1px solid #ddd;
+}
+
+#table td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#table thead tr {
+    background-color: #2bae66ff;
+    color: white;
+}
+
+#table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.topbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.add {
+    top: 20px;
+}
+
+.searchBar {
+    width: 25%;
+    height: 30px;
+    font-size: 15px;
+}
+
+thead th {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+
+tbody td h5 {
+    font-size: 15px;
+}
+
+
+
 /*****************************/
 /* Responsiveness styling */
 /*****************************/
@@ -588,11 +658,19 @@ a .banner:hover {
     .dropdown {
         top: 8px;
     }
+
+    .card-content {
+        width: 50%;
+    }
 }
 
 @media (max-width: 400px) {
 
     .header-name {
         font-size: 25px;
+    }
+
+    .card-content {
+        width: 90%;
     }
 }
