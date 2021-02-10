@@ -593,6 +593,26 @@ tbody td h5 {
 }
 
 
+.product-page-content input {
+    border: 2px solid #2bae66ff;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.border {
+    border: 2px solid #2bae66ff !important;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.product-page-content .custom-button {
+    margin-top: 25px;
+}
+
+
 
 /*****************************/
 /* Responsiveness styling */
@@ -652,6 +672,27 @@ tbody td h5 {
 
     .banner h2 {
         margin-top: 21px;
+    }
+
+    .product-page img {
+        width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .product-page-content {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .product-page {
+        text-align: center;
+    }
+
+    .product-page img {
+        width: 220px;
+        float: none;
     }
 }
 
