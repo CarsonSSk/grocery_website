@@ -573,6 +573,25 @@ tbody td h5 {
     font-size: 15px;
 }
 
+/* Used for receipt in shoppingcart.html */
+.table-receipt{
+    width: 300px;
+}
+
+
+/*Product page styling*/
+
+.product-page img {
+    width: 300px;
+    float: right;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+.product-page img:hover {
+    border-color: #2bae66ff;
+}
+
 
 
 /*****************************/
@@ -634,10 +653,6 @@ tbody td h5 {
     .banner h2 {
         margin-top: 21px;
     }
-}
-/* Used for receipt in shoppingcart.html */
-.table-receipt{
-    width: 300px;
 }
 
 
