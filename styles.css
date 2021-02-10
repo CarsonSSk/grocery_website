@@ -123,6 +123,11 @@ img {
     margin: auto;
 }
 
+.page-width-login {
+    width: 600px;
+    margin: auto;
+}
+
 .main {
     margin: 0 auto;
     background-color: #ffffff;
