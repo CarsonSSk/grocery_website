@@ -123,11 +123,6 @@ img {
     margin: auto;
 }
 
-.page-width-login {
-    width: 600px;
-    margin: auto;
-}
-
 .main {
     margin: 0 auto;
     background-color: #ffffff;
@@ -137,6 +132,41 @@ img {
     border-width: 1px;
     padding-bottom: 80px;
     padding-top: 50px;
+}
+
+/* Login and sign up styling */
+.login-signup {
+    margin: 0 auto;
+    background-color: #2bae66ff;
+    color: white;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 400px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.login-buttons {
+    background-color: white;
+    border: none;
+    color: #2bae66ff;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.login-boxes {
+    border: none;
+    color: #2bae66ff;
+    border-radius: 4px;
+}
+
+.login-signup a {
+    color: white;
+    font-style: italic;
+}
+
+.login-signup a:hover {
+    text-decoration: underline;
 }
 
 /* Food ad-box styling */
