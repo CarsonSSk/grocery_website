@@ -546,7 +546,7 @@ a .banner:hover {
     color: white;
     background-color: #2bae66ff;
     font-size: 40px;
-    width: 30%;
+    width: 280px;
 }
 
 .card-content h5 {
@@ -614,16 +614,28 @@ tbody td h5 {
     margin-top: 50px;
 }
 
-.Type, .Address, .Email, .Password, .Date, .Time, .Items { 
+.edit-field-type, .Date, .Time, .Items { 
     margin-top: 20px;
+}
+
+.edit-field-type input, .edit-field-type select {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid #2bae66ff;
+    border-radius: 4px;
+    outline: none;
+}
+
+.edit-holder {
+    width: 100%;
+    margin: auto;
 }
 
 .card-sub-content { 
     color: white;
     background-color: #2bae66ff;
     font-size: 20px;
-    width: 15%;
-    margin-left: 100px;
+    width: 200px;
 }
 
 .card-sub-content h5 { 
@@ -638,23 +650,25 @@ tbody td h5 {
     border: 1px solid rgb(66, 66, 66);
 }
 
-.nameContent, .addressContent, .emailContent, .passwordContent, .idContent, .dateContent, .timeContent { 
+.edit-field, .idContent, .dateContent, .timeContent { 
     margin-top: 17px;
-    margin-left: 100px;
 }
 
 .userType { 
     margin-top: 10px;
-    margin-left: 100px;
-    width: 80%;
-    padding-left: 5px;
+    padding: 5px;
     border-radius: 10px;
     border: 1px solid rgb(66, 66, 66);
 }
 
 .saveButton { 
     margin-top: 50px;
-    margin-left: 800px;
+    float: right;
+}
+
+.clear {
+    clear: both;
+    margin-top: 120px;
 }
 
 /*Order edit Styling*/
@@ -692,6 +706,17 @@ tbody td h5 {
     width: 89%;
     border-radius: 10px;
     border: 1px solid rgb(182, 182, 182)
+}
+
+/*Backstore Navigation */
+.backstore-navigation {
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+
+.backstore-navigation a {
+    margin-top: 15px;
 }
 
 
@@ -800,6 +825,19 @@ tbody td h5 {
     .product-page img {
         width: 250px;
     }
+
+    .edit-holder {
+        width: 80%;
+    }
+
+    .saveButton { 
+        text-align: center;
+        float: none;
+    }
+
+    .clear {
+        margin: 40px auto;
+    }
 }
 
 @media (max-width: 768px) {
@@ -816,6 +854,18 @@ tbody td h5 {
     .product-page img {
         width: 220px;
         float: none;
+    }
+
+    .card-sub-content {
+        margin: auto;
+    }
+
+    .edit-holder {
+        width: 90%;
+    }
+
+    .card-content {
+        margin: auto;
     }
 }
 
@@ -837,19 +887,11 @@ tbody td h5 {
     .dropdown {
         top: 8px;
     }
-
-    .card-content {
-        width: 50%;
-    }
 }
 
 @media (max-width: 400px) {
 
     .header-name {
         font-size: 25px;
-    }
-
-    .card-content {
-        width: 90%;
     }
 }
