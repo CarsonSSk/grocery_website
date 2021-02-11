@@ -23,7 +23,7 @@
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     
-    <title>Orderlist | TastyGrocery.com</title>
+    <title>Orderedit | TastyGrocery.com</title>
     <meta name="description" content="The userlist of Grocery.com, home of great online grocery shopping!">
     <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png">
     
@@ -108,128 +108,82 @@
             <div class="main page-width">
               <!--Main content starts here!-->
                   
-                <div class="card-content">
-                    <h5 class="center-text">Order Management</h5>
+              <div class="card-content">
+                <h5 class="center-text"><b>Order Editor</b></h5>
+            </div>
+            <div class="ID">
+              <div class="card-sub-content">
+                  <h5 class="center-text">#ID</h5>
+              </div>
+              <div class="idContent">
+                  <input value="RA958383498CA" class="barContent">
+              </div>
+            </div>
+            <div class="Address">
+              <div class="card-sub-content">
+                  <h5 class="center-text">Address</h5>
+              </div>
+              <div class="addressContent">
+                <input value="6817 43 Av Montreal QC H1T 2R9" class="barContent">
+              </div>
+            </div>
+            <div class="Date">
+              <div class="card-sub-content">
+                  <h5 class="center-text">Date</h5>
+              </div>
+              <div class="dateContent">
+                <input value="2021-03-08" class="barContent">
+              </div>
+            </div>
+            <div class="Time">
+              <div class="card-sub-content">
+                  <h5 class="center-text">Time</h5>
+              </div>
+              <div class="timeContent">
+                <input value="09:55" class="barContent">
+              </div>
+            </div>
+            <div class="Items">
+                <div class="card-sub-content">
+                    <h5 class="center-text">Items</h5>
                 </div>
+            </div>
 
-                <div class="topbar">
-                  <input type="text" class="searchBar" placeholder="Search...">
-                  <button type="button" class="btn custom-button"><i class="fa fa-search"></i></button>
-                  <button type="button" class="btn add custom-button">Add Order</button>
-                </div>
-                <table id ="table">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>Address</th>
-                      <th>Time</th>
-                      <th>Status</th>
-                      <th>Manage</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>6817 43 Av Montreal QC H1T 2R9</td>
-                      <td>2021-03-08 09:55</td>
-                      <td>Pending</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="editorder1.html" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>7503 Rue St Denis Montreal QC H2R 2E7</td>
-                      <td>2021-03-30 10:55</td>
-                      <td>Pending</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>251 Av Percival Montreal Ouest QC H4X 1T8</td>
-                      <td>2021-06-10 13:15</td>
-                      <td>Pending</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td>7766 George Street Lasalle QC H8P 1E1</td>
-                      <td>2021-07-30 13:20</td>
-                      <td>Pending</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>5</td>
-                      <td>5745 17 Av Montreal QC H1X 2R7</td>
-                      <td>2021-09-28 13:55</td>
-                      <td>Pending</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>6</td>
-                      <td>3708 Rue St Hubert Montreal QC H2L 4A2</td>
-                      <td>2021-10-13 15:30</td>
-                      <td>Pending</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>7</td>
-                      <td>800 Rue Gagne Lasalle QC H8P 3W3</td>
-                      <td>2021-10-19 15:50</td>
-                      <td>Pending</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>8</td>
-                      <td>4430 Ste Catherine Street O Westmount QC H3Z 3E4</td>
-                      <td>2021-10-22 16:00</td>
-                      <td>Pending</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>9</td>
-                      <td>5930 Rue Hurteau Montreal QC H4E 2Y2</td>
-                      <td>2021-10-29 16:40</td>
-                      <td>Pending</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>10</td>
-                      <td>717 Charron Street Lasalle QC H8P 3T8</td>
-                      <td>2021-11-10 16:50</td>
-                      <td>Pending</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+            <table class = "orderItems">
+                <thead>
+                  <tr>
+                    <th>#ID</th>
+                    <th>Quantity</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input value="1" class="barContentItems"></td>
+                    <td><input value="2" class="barContentItems"></td>
+                  </tr>
+                  <tr>
+                    <td><input value="1" class="barContentItems"></td>
+                    <td><input value="2" class="barContentItems"></td>
+                  </tr>
+                  <tr>
+                    <td><input value="1" class="barContentItems"></td>
+                    <td><input value="2" class="barContentItems"></td>
+                  </tr>
+                  <tr>
+                    <td><input value="1" class="barContentItems"></td>
+                    <td><input value="2" class="barContentItems"></td>
+                  </tr>
+                  <tr>
+                    <td><input value="1" class="barContentItems"></td>
+                    <td><input value="2" class="barContentItems"></td>
+                  </tr>
+                </tbody>
+              </table>
+            
+            <div class="saveButton"> 
+              <button type="button" class="btn custom-button">Save <i class="fa fa-save"></i></button>
+            </div>
+            <div></div>
           
               
               <!--Main content ends here!-->
