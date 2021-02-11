@@ -540,7 +540,7 @@ a .banner:hover {
     width: 100%;
 }
 
-/*User list styling*/
+/*User and order list styling*/
 
 .card-content {
     color: white;
@@ -607,6 +607,94 @@ thead th {
 tbody td h5 {
     font-size: 15px;
 }
+
+/*User edit styling */
+/*Some CSS are also used for the order edit*/
+.Name, .ID { 
+    margin-top: 50px;
+}
+
+.Type, .Address, .Email, .Password, .Date, .Time, .Items { 
+    margin-top: 20px;
+}
+
+.card-sub-content { 
+    color: white;
+    background-color: #2bae66ff;
+    font-size: 20px;
+    width: 15%;
+    margin-left: 100px;
+}
+
+.card-sub-content h5 { 
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.barContent { 
+    padding-left: 10px;
+    width: 89%;
+    border-radius: 10px;
+    border: 1px solid rgb(66, 66, 66);
+}
+
+.nameContent, .addressContent, .emailContent, .passwordContent, .idContent, .dateContent, .timeContent { 
+    margin-top: 17px;
+    margin-left: 100px;
+}
+
+.userType { 
+    margin-top: 10px;
+    margin-left: 100px;
+    width: 80%;
+    padding-left: 5px;
+    border-radius: 10px;
+    border: 1px solid rgb(66, 66, 66);
+}
+
+.saveButton { 
+    margin-top: 50px;
+    margin-left: 800px;
+}
+
+/*Order edit Styling*/
+
+.orderItems {
+    text-align: center;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.orderItems td, th {
+    border: 1px solid #ddd;
+}
+
+.orderItems td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.orderItems thead tr {
+    background-color: #2bae66ff;
+    color: white;
+}
+
+.orderItems tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.barContentItems { 
+    padding-left: 10px;
+    width: 89%;
+    border-radius: 10px;
+    border: 1px solid rgb(182, 182, 182)
+}
+
+
 
 /* Used for receipt in shoppingcart.html */
 .table-receipt{
