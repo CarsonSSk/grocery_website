@@ -23,7 +23,7 @@
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     
-    <title>Order Edit | TastyGrocery.com</title>
+    <title>User Edit | TastyGrocery.com</title>
     <meta name="description" content="The userlist of Grocery.com, home of great online grocery shopping!">
     <link rel="shortcut icon" type="image/png" href="../img/favicon-32x32.png">
     
@@ -111,79 +111,50 @@
               <div class="edit-holder">
 
                 <div class="card-content">
-                  <h5 class="center-text"><b>Order Editor</b></h5>
+                  <h5 class="center-text"><b>User Editor</b></h5>
                 </div>
 
                 <div class="edit-field-type">
                   <div class="card-sub-content">
-                      <h5 class="center-text">#ID</h5>
+                      <h5 class="center-text">Name</h5>
                   </div>
                   <div class="edit-field">
-                      <input value="RA183422545CA" class="barContent">
+                      <input value="Mary Castillo" class="barContent">
                   </div>
                 </div>
-
+                <div class="edit-field-type">
+                  <div class="card-sub-content">
+                      <h5 class="center-text">Type</h5>
+                  </div>
+                  <select class="userType" id="category">
+                      <option value="user" class="option">User</option>
+                      <option value="administrator" class="option">Administrator</option>
+                  </select>
+                </div>
                 <div class="edit-field-type">
                   <div class="card-sub-content">
                       <h5 class="center-text">Address</h5>
                   </div>
                   <div class="edit-field">
-                    <input value="6817 43 Av Montreal QC H1T 2R9" class="barContent">
+                    <input value="4430 Ste Catherine Street O Westmount QC H3Z 3E4" class="barContent">
                   </div>
                 </div>
                 <div class="edit-field-type">
                   <div class="card-sub-content">
-                      <h5 class="center-text">Date</h5>
+                      <h5 class="center-text">Email</h5>
                   </div>
                   <div class="edit-field">
-                    <input value="2021-04-01" class="barContent">
+                    <input value="castillo@gmail.com" class="barContent">
                   </div>
                 </div>
                 <div class="edit-field-type">
                   <div class="card-sub-content">
-                      <h5 class="center-text">Time</h5>
+                      <h5 class="center-text">Password</h5>
                   </div>
                   <div class="edit-field">
-                    <input value="10:20" class="barContent">
+                    <input value="xC!lt*Z*" class="barContent">
                   </div>
                 </div>
-
-                <div class="edit-field-type">
-                    <div class="card-sub-content">
-                        <h5 class="center-text">Items</h5>
-                    </div>
-                </div>
-
-                <table class = "orderItems">
-                    <thead>
-                      <tr>
-                        <th>#ID</th>
-                        <th>Quantity</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><input value="1" class="barContentItems"></td>
-                        <td><input value="2" class="barContentItems"></td>
-                      </tr>
-                      <tr>
-                        <td><input value="1" class="barContentItems"></td>
-                        <td><input value="2" class="barContentItems"></td>
-                      </tr>
-                      <tr>
-                        <td><input value="1" class="barContentItems"></td>
-                        <td><input value="2" class="barContentItems"></td>
-                      </tr>
-                      <tr>
-                        <td><input value="1" class="barContentItems"></td>
-                        <td><input value="2" class="barContentItems"></td>
-                      </tr>
-                      <tr>
-                        <td><input value="1" class="barContentItems"></td>
-                        <td><input value="2" class="barContentItems"></td>
-                      </tr>
-                    </tbody>
-                  </table>
 
                 <div class="saveButton"> 
                   <input type="submit" class="btn custom-button" value="Save"></input>
