@@ -698,6 +698,9 @@ tbody td h5 {
     padding-bottom: 10px;
 }
 
+.orderItems tbody tr:hover { 
+    color: #272727;
+}
 .orderItems thead tr {
     background-color: #2bae66ff;
     color: white;
@@ -724,6 +727,11 @@ tbody td h5 {
 .backstore-navigation a {
     margin-top: 15px;
 }
+
+.aisleName { 
+    background-color: white;
+}
+
 
 
 
