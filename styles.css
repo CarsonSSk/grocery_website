@@ -141,7 +141,7 @@ img {
     color: white;
     padding-bottom: 30px;
     padding-top: 30px;
-    width: 400px;
+    width: 40%;
     text-align: center;
     font-weight: 600;
 }
@@ -167,6 +167,12 @@ img {
 
 .login-signup a:hover {
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+    .login-signup {
+        width: 80%;
+    }
 }
 
 /* Food ad-box styling */
