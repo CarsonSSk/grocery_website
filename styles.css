@@ -175,6 +175,11 @@ img {
     }
 }
 
+.aisle-banner {
+    object-fit: cover;
+    min-height: 120px;
+}
+
 /* Food ad-box styling */
 .aisle .col-md-6{
     margin: auto;
