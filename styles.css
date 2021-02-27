@@ -864,6 +864,10 @@ tbody td h5 {
     .clear {
         margin: 40px auto;
     }
+
+    .table-receipt {
+        margin: auto;
+    }
 }
 
 @media (max-width: 768px) {

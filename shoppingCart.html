@@ -111,6 +111,7 @@
               <div class="row aisle">
                 <div class="col-lg-8 col-md-6 col-sm-12">
                   <div class="row aisle">
+              
               <div class="col-lg-6  col-md-12 col-sm-12">
                 <div class="advertisement-holder">
                   <div class="img-holder">
@@ -120,7 +121,14 @@
                     <a><p class="food-name">Picked Apples</p></a>
                     <p class="food-details">1.0 kg</p>
                     <p class="food-price">4.99$</p>
-                    <input type="number" name= "Apples" id="Apples" value = "1" min="0">
+                    
+                    <input type="number" placeholder="Enter Quantity" name= "item1" id="item1" value="1" min="0" onchange='saveValue(this);' onkeyup='saveValue(this);'>
+                    <select class="quality" id="quality-selector1">
+                      <option value="economy" class="option" id="economy">Economy Value</option>
+                      <option value="regular" class="option" id="regular">Regular Value</option>
+                      <option value="deluxe" class="option" id="deluxe">Deluxe Value</option>
+                    </select>  
+                  
                   </div>
                 </div>
               </div>
@@ -134,7 +142,14 @@
                     <a><p class="food-name">Ripe Bananas</p></a>
                     <p class="food-details">1.0 kg</p>
                     <p class="food-price">2.99$</p>
-                    <input type="number" name= "Bananas" id="Bananas" value = "1" min="0">
+                    
+                    <input type="number" placeholder="Enter Quantity" name= "item2" id="item2" value="1" min="0" onchange='saveValue(this);' onkeyup='saveValue(this);'>
+                    <select class="quality" id="quality-selector2">
+                      <option value="economy" class="option" id="economy">Economy Value</option>
+                      <option value="regular" class="option" id="regular">Regular Value</option>
+                      <option value="deluxe" class="option" id="deluxe">Deluxe Value</option>
+                    </select>  
+                  
                   </div>
                 </div>
               </div>
@@ -148,7 +163,14 @@
                     <a><p class="food-name">Hot Peppers</p></a>
                     <p class="food-details">1.0 kg</p>
                     <p class="food-price">6.99$</p>
-                    <input type="number" name= "Peppers" id="Peppers" value = "1" min="0">
+                    
+                    <input type="number" placeholder="Enter Quantity" name= "item3" id="item3" value="1" min="0" onchange='saveValue(this);' onkeyup='saveValue(this);'>
+                    <select class="quality" id="quality-selector3">
+                      <option value="economy" class="option" id="economy">Economy Value</option>
+                      <option value="regular" class="option" id="regular">Regular Value</option>
+                      <option value="deluxe" class="option" id="deluxe">Deluxe Value</option>
+                    </select>  
+                  
                   </div>
                 </div>
               </div>
@@ -162,7 +184,14 @@
                     <a><p class="food-name">Fresh Chicken</p></a>
                     <p class="food-details">1.5 kg</p>
                     <p class="food-price">7.99$</p>
-                    <input type="number" name= "Chicken" id="Chicken" value = "1" min="0">
+                    
+                    <input type="number" placeholder="Enter Quantity" name= "item4" id="item4" value="1" min="0" onchange='saveValue(this);' onkeyup='saveValue(this);'>
+                    <select class="quality" id="quality-selector4">
+                      <option value="economy" class="option" id="economy">Economy Value</option>
+                      <option value="regular" class="option" id="regular">Regular Value</option>
+                      <option value="deluxe" class="option" id="deluxe">Deluxe Value</option>
+                    </select>  
+                  
                   </div>
                 </div>
               </div>
@@ -176,49 +205,14 @@
                     <a><p class="food-name">Sliced Beef</p></a>
                     <p class="food-details">1.2 kg</p>
                     <p class="food-price">10.99$</p>
-                    <input type="number" name= "Beef" id="Beef" value = "1" min="0">
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a><img src="img/meat/fish.jpg" alt="fish"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a><p class="food-name">Fish Fillet</p></a>
-                    <p class="food-details">0.8 kg</p>
-                    <p class="food-price">8.99$</p>
-                    <input type="number" name= "Fish" id="Fish" value = "1" min="0">
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a><img src="img/grain/bread.jpg" alt="bread"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a><p class="food-name">Wheat Bread</p></a>
-                    <p class="food-details">0.5 kg</p>
-                    <p class="food-price">2.99$</p>
-                    <input type="number" name= "Wheat" id="Wheat" value = "1" min="0">
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a><img src="img/grain/baguette.jpg" alt="baguette"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a><p class="food-name">Baked Baguette</p></a>
-                    <p class="food-details">0.4 kg</p>
-                    <p class="food-price">3.99$</p>
-                    <input type="number" name= "Baguette" id="Baguette" value = "1" min="0">
+                    
+                    <input type="number" placeholder="Enter Quantity" name= "item5" id="item5" value="1" min="0" onchange='saveValue(this);' onkeyup='saveValue(this);'>
+                    <select class="quality" id="quality-selector5">
+                      <option value="economy" class="option" id="economy">Economy Value</option>
+                      <option value="regular" class="option" id="regular">Regular Value</option>
+                      <option value="deluxe" class="option" id="deluxe">Deluxe Value</option>
+                    </select>  
+                  
                   </div>
                 </div>
               </div>
@@ -261,21 +255,6 @@
                   <td>Sliced Beef</td>
                   <td>1</td>
                   <td>$10.99</td>
-                </tr>
-                <tr>
-                  <td>Fish Fillet</td>
-                  <td>1</td>
-                  <td>$8.99</td>
-                </tr>
-                <tr>
-                  <td>Wheat Bread</td>
-                  <td>1</td>
-                  <td>$2.99</td>
-                </tr>
-                <tr>
-                  <td>Baked Baguette</td>
-                  <td>1</td>
-                  <td>$3.99</td>
                 </tr>
               </table>
 
@@ -335,5 +314,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     
+    <script src="scripts/retainquantitycart.js"></script>
+    <script src="scripts/retainqualitycart.js"></script>
+
   </body>
 </html>
