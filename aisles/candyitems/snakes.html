@@ -129,22 +129,24 @@
                         <br>
                         <h4>1 kg</h4>
                         <h3>15.99$</h3>
-                        <input type="number" placeholder="Enter Quantity" name= "item" id="item" min="0">
+                        <input type="number" placeholder="Enter Quantity" name= "item" id="item" min="0" onchange='saveValue(this);' onkeyup='saveValue(this);'>
 
-                        <div id="accordion">
-                            <div id="info-button">
-                                <h5 class="mb-0">
-                                    <button class="btn custom-button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    More Information<i class="fas fa-chevron-circle-down"></i>
-                                    </button>
-                                </h5>
-                            </div>
+                        <br/>
+                        <select class="quality" id="quality-selector">
+                            <option value="economy" class="option" id="economy">Economy Value</option>
+                            <option value="regular" class="option" id="regular">Regular Value</option>
+                            <option value="deluxe" class="option" id="deluxe">Deluxe Value</option>
+                        </select>
+
                         
-                            <div id="collapseOne" class="collapse border" aria-labelledby="info-button" data-parent="#accordion">
-                                <div class="card-body">
-                                     Sweet and sour snake shaped candy.
-                                </div>
-                            </div>
+                        <div id="info-button">
+                            <button class="btn custom-button more-info">
+                                More Information<i class="fas fa-chevron-circle-down"></i>
+                            </button>
+                        </div>
+                    
+                        <div class="border hidden">
+                            Sweet and sour snake shaped candy.
                         </div>
 
                         <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
@@ -193,5 +195,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
     
+    <script src="../../scripts/moreinfo.js"></script>
+    <script src="../../scripts/retainquality.js"></script>
+    <script src="../../scripts/retainquantity.js"></script>
+
   </body>
 </html>
