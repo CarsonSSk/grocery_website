@@ -45,7 +45,7 @@ function makeTable(){
         displayPrice = displayPrice.toFixed(2);
 
 
-        table.innerHTML += "<tr id=\"row"+i+"\"><td>" + foodName + "</td><td>" + foodQuantity + "</td><td>" + displayPrice + "$</td></tr>";
+        table.innerHTML += "<tr id=\"row"+i+"\"><td>" + foodName + "</td><td>" + foodQuantity + " (" + foodQuality + ")</td><td>" + displayPrice + "$</td></tr>";
 
         subtotal += parseFloat(displayPrice);
     }
