@@ -1,34 +1,6 @@
 //Saves value user enters for quality on each product page, so it remains displayed after refresh
 
-//Find aisle
-var aisle = window.location.href;
-if (aisle.includes("produceitems")) {
-    aisle = "produce";
-}
-if (aisle.includes("meatitems")) {
-    aisle = "meat";
-}
-if (aisle.includes("grainitems")) {
-    aisle = "grain";
-}
-if (aisle.includes("dairyitems")) {
-    aisle = "dairy";
-}
-if (aisle.includes("candyitems")) {
-    aisle = "candy";
-}
-
-//Find item id
-var number;
-var itemQual;
-var i;
-for (i = 1; i < 10; i++) {
-    if (document.getElementById("quality-selector" + i + aisle)) {
-        itemQual = document.getElementById("quality-selector" + i + aisle);
-        itemQual = itemQual.id;
-        break;
-    }
-}
+var itemQual = document.querySelector("select").id;
 
 //Whenever user changes quality, store the value locally
 document.getElementById(itemQual).onchange = function() {
