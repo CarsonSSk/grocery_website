@@ -2,20 +2,20 @@
 
 //Find aisle
 var aisle = window.location.href;
-if (aisle.includes("produceitems")) {
-    aisle = "produce";
+if (aisle.includes("Produce")) {
+    aisle = "producePage";
 }
-if (aisle.includes("meatitems")) {
-    aisle = "meat";
+if (aisle.includes("Meat")) {
+    aisle = "meatPage";
 }
-if (aisle.includes("grainitems")) {
-    aisle = "grain";
+if (aisle.includes("Grain")) {
+    aisle = "grainPage";
 }
-if (aisle.includes("dairyitems")) {
-    aisle = "dairy";
+if (aisle.includes("Dairy")) {
+    aisle = "dairyPage";
 }
-if (aisle.includes("candyitems")) {
-    aisle = "candy";
+if (aisle.includes("Candy")) {
+    aisle = "candyPage";
 }
 if (aisle.includes("shoppingCart")) {
     aisle = "cart";
