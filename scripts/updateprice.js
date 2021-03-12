@@ -24,11 +24,11 @@ function makeTable(){
         basePrice = document.querySelectorAll(".food-price")[i - 1].innerText;
         basePrice = basePrice.slice(0, -1); //Remove $ symbol
         
-        foodQuantity = document.getElementById("item" + i).value;
+        foodQuantity = document.getElementById("item" + i + "cart").value;
         if (!foodQuantity) //Set quantity to 0 if it is not defined
             foodQuantity = 0;
         
-        foodQuality = document.getElementById("quality-selector" + i).value;
+        foodQuality = document.getElementById("quality-selector" + i + "cart").value;
         switch(foodQuality) { //Find price modifier based on food quality
             case "economy":
                 priceModifier = 0.75;
@@ -67,12 +67,12 @@ makeTable();
 //Update table as user changes quantity and quality values
 for (var i = 1; i <= numOfObjects; i++){
     //Quantity change
-    document.getElementById("item" + i).addEventListener("change", function() {
+    document.getElementById("item" + i + "cart").addEventListener("change", function() {
         makeTable();
     });
 
     //Quality change
-    document.getElementById("quality-selector" + i).addEventListener("change", function() {
+    document.getElementById("quality-selector" + i + "cart").addEventListener("change", function() {
         makeTable();
     });
 }
