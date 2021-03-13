@@ -27,14 +27,14 @@ var numOfObjects = document.getElementsByClassName("advertisement-holder").lengt
 for (var j = 1; j < numOfObjects; j++){
     document.getElementById("quality-selector"+j+aisle).onchange = function() {
         for (var i = 1; i <= numOfObjects; i++){
-            localStorage.setItem('selectedItem'+i, document.getElementById("quality-selector"+i+aisle).value);
+            localStorage.setItem('selectedItem'+i+aisle, document.getElementById("quality-selector"+i+aisle).value);
         }
     }
 }
 
 //If there is local storage for the quality of each product, display it after refresh
 for (var i = 1; i <= numOfObjects; i++){
-    if (localStorage.getItem('selectedItem'+i)) {
-        document.getElementById("quality-selector"+i+aisle).value = localStorage.getItem('selectedItem'+i);
+    if (localStorage.getItem('selectedItem'+i+aisle)) {
+        document.getElementById("quality-selector"+i+aisle).value = localStorage.getItem('selectedItem'+i+aisle);
     }
 }
