@@ -31,13 +31,13 @@
 
   <body>
 
-    <div class="header-userpage">
+  <div class="header-userpage">
       <div class="row page-width">
         <div class="col-6">
           <a href="userlist.html"><i class="fas fa-door-open"></i>Backstore</a>
         </div>
         <div class="col-6 right-text">
-          <a href="login.html"><i class="fas fa-user-alt"></i>My Account</a>
+          <a href="login.php"><i class="fas fa-user-alt"></i>My Account</a>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@
         <div class="row">
           
           <div class="col-md-6 col-9">
-            <p class="header-name"><a href="index.html"><i class="fas fa-pepper-hot"></i>TastyGrocery</a></p>
+            <p class="header-name"><a href="index.php"><i class="fas fa-pepper-hot"></i>TastyGrocery</a></p>
           </div>
 
           <div class="col-md-6 col-3">
@@ -58,21 +58,21 @@
                   <span><i class="fas fa-search"></i>Aisles</span>
                 </div>
               <ul>
-                  <li>
-                      <a href="aisles/Produce.html"><i class="fas fa-pepper-hot"></i>Produce</a>
-                  </li>
-                  <li>
-                      <a href="aisles/Meat.html"><i class="fas fa-drumstick-bite"></i>Meat</a>
-                  </li>
-                  <li>
-                      <a href="aisles/Grain.html"><i class="fas fa-bread-slice"></i>Grain</a>
-                  </li>
-                  <li>
-                      <a href="aisles/Dairy.html"><i class="fas fa-cheese"></i>Dairy</a>
-                  </li>
-                  <li>
-                      <a href="aisles/Candy.html"><i class="fas fa-candy-cane"></i>Candy</a>
-                  </li>
+              <li>
+                  <a href="aisles/aisle_page.php?aisle=produce_food"><i class="fas fa-pepper-hot"></i>Produce</a>
+              </li>
+              <li>
+                  <a href="aisles/aisle_page.php?aisle=meat_food"><i class="fas fa-drumstick-bite"></i>Meat</a>
+              </li>
+              <li>
+                  <a href="aisles/aisle_page.php?aisle=grain_food"><i class="fas fa-bread-slice"></i>Grain</a>
+              </li>
+              <li>
+                  <a href="aisles/aisle_page.php?aisle=dairy_food"><i class="fas fa-cheese"></i>Dairy</a>
+              </li>
+              <li>
+                  <a href="aisles/aisle_page.php?aisle=candy_food"><i class="fas fa-candy-cane"></i>Candy</a>
+              </li>
               </ul>
             </div>
             
@@ -83,18 +83,18 @@
               </a>
             
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="shoppingCart.html"><i class="fas fa-shopping-cart"></i>Cart</a>
-                <a class="dropdown-item" href="aisles/Produce.html"><i class="fas fa-pepper-hot"></i>Produce</a>
-                <a class="dropdown-item" href="aisles/Meat.html"><i class="fas fa-drumstick-bite"></i>Meat</a>
-                <a class="dropdown-item" href="aisles/Grain.html"><i class="fas fa-bread-slice"></i>Grain</a>
-                <a class="dropdown-item" href="aisles/Dairy.html"><i class="fas fa-cheese"></i>Dairy</a>
-                <a class="dropdown-item" href="aisles/Candy.html"><i class="fas fa-candy-cane"></i>Candy</a>
+                <a class="dropdown-item" href="shoppingCart.php"><i class="fas fa-shopping-cart"></i>Cart</a>
+                <a class="dropdown-item" href="aisles/aisle_page.php?aisle=produce_food"><i class="fas fa-pepper-hot"></i>Produce</a>
+                <a class="dropdown-item" href="aisles/aisle_page.php?aisle=meat_food"><i class="fas fa-drumstick-bite"></i>Meat</a>
+                <a class="dropdown-item" href="aisles/aisle_page.php?aisle=grain_food"><i class="fas fa-bread-slice"></i>Grain</a>
+                <a class="dropdown-item" href="aisles/aisle_page.php?aisle=dairy_food"><i class="fas fa-cheese"></i>Dairy</a>
+                <a class="dropdown-item" href="aisles/aisle_page.php?aisle=candy_food"><i class="fas fa-candy-cane"></i>Candy</a>
               </div>
             </div>
 
             <!-- Cart check on mobile view -->
             <div class="cart-check desktop-only">
-                <a class="custom-button" href="shoppingCart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+                <a class="custom-button" href="shoppingCart.php"><i class="fas fa-shopping-cart"></i> Cart</a>
             </div>
           </div>
 
@@ -257,7 +257,7 @@
           <div class="row page-width">
 
             <div class="col-lg-3 col-md-12">
-              <p class="footer-name"><a href="index.html">TastyGrocery.com</a></p>
+              <p class="footer-name"><a href="index.php">TastyGrocery.com</a></p>
             </div>
 
             <div class="col-lg-6 col-md-12">

@@ -35,7 +35,7 @@
 
     <title> Produce Aisle | TastyGrocery </title>
     <meta name="description" content="Produce aisle of TastyGrocery">
-    <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png">
+    <link rel="shortcut icon" type="image/png" href="../img/favicon-32x32.png">
 
 </head>
 
@@ -47,7 +47,7 @@
                 <a href="../userlist.html"><i class="fas fa-door-open"></i>Backstore</a>
             </div>
             <div class="col-6 right-text">
-                <a href="../login.html"><i class="fas fa-user-alt"></i>My Account</a>
+                <a href="../login.php"><i class="fas fa-user-alt"></i>My Account</a>
             </div>
         </div>
     </div>
@@ -57,7 +57,7 @@
             <div class="row">
 
                 <div class="col-md-6 col-9">
-                    <p class="header-name"><a href="../index.html"><i class="fas fa-pepper-hot"></i>TastyGrocery</a></p>
+                    <p class="header-name"><a href="../index.php"><i class="fas fa-pepper-hot"></i>TastyGrocery</a></p>
                 </div>
 
                 <div class="col-md-6 col-3">
@@ -94,7 +94,7 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="../shoppingCart.html"><i
+                            <a class="dropdown-item" href="../shoppingCart.php"><i
                                     class="fas fa-shopping-cart"></i>Cart</a>
                             <a class="dropdown-item" href="aisle_page.php?aisle=produce_food"><i class="fas fa-pepper-hot"></i>Produce</a>
                             <a class="dropdown-item" href="aisle_page.php?aisle=meat_food"><i class="fas fa-drumstick-bite"></i>Meat</a>
@@ -106,7 +106,7 @@
 
                     <!-- Cart check on desktop view -->
                     <div class="cart-check desktop-only">
-                        <a class="custom-button" href="../shoppingCart.html"><i class="fas fa-shopping-cart"></i>
+                        <a class="custom-button" href="../shoppingCart.php"><i class="fas fa-shopping-cart"></i>
                             Cart</a>
                     </div>
                 </div>
@@ -202,7 +202,7 @@
             <div class="row page-width">
 
                 <div class="col-lg-3 col-md-12">
-                    <p class="footer-name"><a href="../index.html">TastyGrocery.com</a></p>
+                    <p class="footer-name"><a href="../index.php">TastyGrocery.com</a></p>
                 </div>
 
                 <div class="col-lg-6 col-md-12">
