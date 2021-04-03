@@ -33,76 +33,8 @@
 
 <body>
 
-<div class="header-userpage">
-      <div class="row page-width">
-        <div class="col-6">
-          <a href="userlist.html"><i class="fas fa-door-open"></i>Backstore</a>
-        </div>
-        <div class="col-6 right-text">
-          <a href="login.php"><i class="fas fa-user-alt"></i>My Account</a>
-        </div>
-      </div>
-    </div>
-
-    <header class="sticky-top">
-      <div class="page-width">
-        <div class="row">
-          
-          <div class="col-md-6 col-9">
-            <p class="header-name"><a href="index.php"><i class="fas fa-pepper-hot"></i>TastyGrocery</a></p>
-          </div>
-
-          <div class="col-md-6 col-3">
-
-            <!-- Aisle menu on desktop view -->
-            <div class="aisle-menu desktop-only">
-                <div class="aisle-box">
-                  <span><i class="fas fa-search"></i>Aisles</span>
-                </div>
-              <ul>
-              <li>
-                  <a href="aisles/aisle_page.php?aisle=produce_food"><i class="fas fa-pepper-hot"></i>Produce</a>
-              </li>
-              <li>
-                  <a href="aisles/aisle_page.php?aisle=meat_food"><i class="fas fa-drumstick-bite"></i>Meat</a>
-              </li>
-              <li>
-                  <a href="aisles/aisle_page.php?aisle=grain_food"><i class="fas fa-bread-slice"></i>Grain</a>
-              </li>
-              <li>
-                  <a href="aisles/aisle_page.php?aisle=dairy_food"><i class="fas fa-cheese"></i>Dairy</a>
-              </li>
-              <li>
-                  <a href="aisles/aisle_page.php?aisle=candy_food"><i class="fas fa-candy-cane"></i>Candy</a>
-              </li>
-              </ul>
-            </div>
-            
-            <!-- Aisle and cart menu on mobile view -->
-            <div class="dropdown show">
-              <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Menu
-              </a>
-            
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="shoppingCart.php"><i class="fas fa-shopping-cart"></i>Cart</a>
-                <a class="dropdown-item" href="aisles/aisle_page.php?aisle=produce_food"><i class="fas fa-pepper-hot"></i>Produce</a>
-                <a class="dropdown-item" href="aisles/aisle_page.php?aisle=meat_food"><i class="fas fa-drumstick-bite"></i>Meat</a>
-                <a class="dropdown-item" href="aisles/aisle_page.php?aisle=grain_food"><i class="fas fa-bread-slice"></i>Grain</a>
-                <a class="dropdown-item" href="aisles/aisle_page.php?aisle=dairy_food"><i class="fas fa-cheese"></i>Dairy</a>
-                <a class="dropdown-item" href="aisles/aisle_page.php?aisle=candy_food"><i class="fas fa-candy-cane"></i>Candy</a>
-              </div>
-            </div>
-
-            <!-- Cart check on mobile view -->
-            <div class="cart-check desktop-only">
-                <a class="custom-button" href="shoppingCart.php"><i class="fas fa-shopping-cart"></i> Cart</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </header>
+  <?php include_once 'templates/navbar.php'; ?>
+  <?php include_once 'templates/header.php'; ?>
 
     <br />
 
@@ -125,7 +57,7 @@
 
                     <p class="header-name">Sign Up</p> <br />
 
-                    <form class="signup" action="index.html" method="post">
+                    <form class="signup" action="index.html" method="POST">
 
                         <label for="firstName">First Name</label> <br />
                         <input class="login-boxes" type="text" id="firstName" name="firstName" placeholder="Enter your first name"> <br /> <br />
@@ -150,33 +82,7 @@
 
         </div>
 
-        <footer>
-            <div class="row page-width">
-
-                <div class="col-lg-3 col-md-12">
-                    <p class="footer-name"><a href="index.php">TastyGrocery.com</a></p>
-                </div>
-
-                <div class="col-lg-6 col-md-12">
-                    <div class="icon-bar-foot">
-                        <a href="https://www.facebook.com" target="_blank" class="facebook"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.twitter.com" target="_blank" class="twitter"><i
-                                class="fab fa-twitter"></i></a>
-                        <a href="https://www.pinterest.com" target="_blank" class="pinterest"><i
-                                class="fab fa-pinterest"></i></a>
-                        <a href="https://www.tumblr.com" target="_blank" class="tumblr"><i
-                                class="fab fa-tumblr"></i></a>
-                        <a href="mailto:?" class="email"><i class="far fa-envelope"></i></a>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-12">
-                    <p class="contact"><a href="mailto:grocery@mailinator.com">Contact us</a></p>
-                </div>
-
-            </div>
-        </footer>
+        <?php include_once 'templates/footer.php'; ?>
     </div>
 
 
