@@ -1,4 +1,4 @@
-<!-- By James Partsafas. Do not edit. -->
+<?php include_once 'includes/session.php'; ?>
 
 <!doctype html>
 <html lang="en">

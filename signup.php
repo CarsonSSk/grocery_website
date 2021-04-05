@@ -1,3 +1,35 @@
+<?php include_once 'includes/session.php'; ?>
+<?php
+    $errors = array();
+    if(isset($_POST['login'])) {
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $address = $_POST['address'];
+        $password = $_POST['password'];
+        $c_password = $_POST['c_password'];
+        if(file_exists('database/users/' . $email . '.xml')) {
+            $errors[] = 'Email already exists';
+        }
+        if($username == '' || $email == '' || $address == '' || $password == '' || $c_password == '') {
+            $errors[] = 'Please fill all fields';
+        }
+        if($password != $c_password) {
+            $errors[] = 'Passwords do not match';
+        }
+        if(count($errors) == 0) {
+            $xml = new SimpleXMLElement('<user></user>');
+            $xml->addChild('password', md5($password));
+            $xml->addChild('email', $email);
+            $xml->addChild('name', $username);
+            $xml->addChild('address', $address);
+            $xml->addChild('admin', 'false');
+            $xml->asXML('database/users/' . $email . '.xml');
+            header('Location: login.php');
+            die("Issue creating account. Our servers may be experiencing issues. Please try again later.");
+        }
+    }
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -57,21 +89,32 @@
 
                     <p class="header-name">Sign Up</p> <br />
 
-                    <form class="signup" action="index.html" method="POST">
+                    <form class="signup" action="" method="post">
 
-                        <label for="firstName">First Name</label> <br />
-                        <input class="login-boxes" type="text" id="firstName" name="firstName" placeholder="Enter your first name"> <br /> <br />
+                        <?php
+                            if(count($errors) > 0) {
+                                foreach($errors as $e) {
+                                    echo '<p>' . $e . '</p>';
+                                }
+                            }
+                        ?>
 
-                        <label for="lastName">Last Name</label> <br />
-                        <input class="login-boxes" type="text" id="lastName" name="lastName" placeholder="Enter your last name"> <br /> <br />
+                        <label for="name">Full Name</label> <br />
+                        <input class="login-boxes" type="text" id="name" name="username" placeholder="Enter your name"> <br /> <br />
+
+                        <label for="address">Address</label> <br />
+                        <input class="login-boxes" type="text" id="address" name="address" placeholder="Enter your address"> <br /> <br />
 
                         <label for="email">Email</label> <br />
                         <input class="login-boxes" type="text" id="email" name="email" placeholder="Enter your email"> <br /> <br />
 
                         <label for="password">Password</label> <br />
-                        <input class="login-boxes" type="text" id="password" name="password" placeholder="Enter your password"> <br /> <br />
+                        <input class="login-boxes" type="password" id="password" name="password" placeholder="Enter your password"> <br /> <br />
 
-                        <input class="login-buttons" type="submit" name="createAccount" value="Create Account">
+                        <label for="password">Confirm Password</label> <br />
+                        <input class="login-boxes" type="password" id="password" name="c_password" placeholder="Enter your password"> <br /> <br />
+
+                        <input class="login-buttons" type="submit" name="login" value="Login">
                         <input class="login-buttons" type="reset" name="reset" value="Reset"> <br /> <br />
 
                         <p>Already have an account? <a href="login.php">Login here</a> </p>

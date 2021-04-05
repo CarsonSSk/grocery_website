@@ -1,3 +1,5 @@
+<?php include_once '../includes/session.php'; ?>
+
 <?php
     if(!isset($_GET['aisle'])){
         header('Location: ../index.php'); //Redirect on nonexistent aisle tag to homepage

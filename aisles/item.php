@@ -1,3 +1,5 @@
+<?php include_once '../includes/session.php'; ?>
+
 <?php
     if(isset($_GET['aisle']) && isset($_GET['food'])){
         include_once '../includes/dbh.inc.php';
