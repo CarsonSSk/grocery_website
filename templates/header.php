@@ -39,7 +39,11 @@
               </a>
             
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="/Grocery/grocery_website/shoppingCart.php"><i class="fas fa-shopping-cart"></i>Cart</a>
+                <?php
+                  if($isUser) {
+                    echo '<a class="dropdown-item" href="/Grocery/grocery_website/shoppingCart.php"><i class="fas fa-shopping-cart"></i>Cart</a>';
+                  }
+                ?>
                 <a class="dropdown-item" href="/Grocery/grocery_website/aisles/aisle_page.php?aisle=produce_food"><i class="fas fa-pepper-hot"></i>Produce</a>
                 <a class="dropdown-item" href="/Grocery/grocery_website/aisles/aisle_page.php?aisle=meat_food"><i class="fas fa-drumstick-bite"></i>Meat</a>
                 <a class="dropdown-item" href="/Grocery/grocery_website/aisles/aisle_page.php?aisle=grain_food"><i class="fas fa-bread-slice"></i>Grain</a>
@@ -48,10 +52,14 @@
               </div>
             </div>
 
-            <!-- Cart check on mobile view -->
-            <div class="cart-check desktop-only">
-                <a class="custom-button" href="/Grocery/grocery_website/shoppingCart.php"><i class="fas fa-shopping-cart"></i> Cart</a>
-            </div>
+            <!-- Cart check on desktop view -->
+            <?php
+              if($isUser) {
+                echo '<div class="cart-check desktop-only">';
+                    echo '<a class="custom-button" href="/Grocery/grocery_website/shoppingCart.php"><i class="fas fa-shopping-cart"></i> Cart</a>';
+                echo '</div>';
+              }
+            ?>
           </div>
 
         </div>

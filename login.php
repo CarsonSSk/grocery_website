@@ -1,3 +1,25 @@
+<?php include_once 'includes/session.php'; ?>
+<?php
+  //Runs when user clicks the login button
+  $error = false;
+
+  if(isset($_POST['login'])) {
+    $email = $_POST['email'];
+    $password = md5($_POST['password']); //Encrypt password before checking it
+
+    if(file_exists('database/users/' . $email . '.xml')) {
+      $xml = new SimpleXMLElement('database/users/' . $email . '.xml', 0, true);
+      if($password == $xml->password) {
+        session_start();
+        $_SESSION['email'] = $email;
+        header('Location: index.php');
+        die;
+      }
+    }
+    $error = true;
+  }
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -57,16 +79,29 @@
 
           <p class="header-name">Login</p> <br />
 
-          <form class="login" action="index.html" method="POST">
+          <?php
+              if($isUser) {
+                echo '<h3>You are now logged in!</h3>';
+              }
+              else
+                echo '<h3>You are not currently logged in</h3>'
+          ?>
+
+          <form class="login" action="" method="post">
 
             <label for="email">Email</label> <br />
             <input class="login-boxes" type="text" id="email" name="email" placeholder="Enter your email"> <br /> <br />
 
             <label for="password">Password</label> <br />
-            <input class="login-boxes" type="text" id="password" name="password" placeholder="Enter your password"> <br /> <br />
+            <input class="login-boxes" type="password" id="password" name="password" placeholder="Enter your password"> <br /> <br />
+
+            <?php
+              if($error) {
+                echo '<p>Invalid login. Try again.</p>';
+              }
+            ?>
 
             <input class="login-buttons" type="submit" name="login" value="Login">
-            <input class="login-buttons" type="submit" name="forgot_password" value="Forgot Password"> <br /> <br />
 
             <p>Don't have an account? <a href="signup.php">Sign up here</a> </p>
 
