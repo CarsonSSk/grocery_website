@@ -7,6 +7,7 @@
         $address = $_POST['address'];
         $password = $_POST['password'];
         $c_password = $_POST['c_password'];
+        //Check for errors
         if(file_exists('database/users/' . $email . '.xml')) {
             $errors[] = 'Email already exists';
         }
@@ -16,14 +17,24 @@
         if($password != $c_password) {
             $errors[] = 'Passwords do not match';
         }
+        //Write to file
         if(count($errors) == 0) {
+            $userCount = fopen("database/users/usercount.txt", "r") or die("Issue creating account. Our servers may be experiencing issues. Please try again later.");
+            $num = fread($userCount,filesize("database/users/usercount.txt")); //Get number of accounts created to generate new ID
+            $num = $num + 1;
             $xml = new SimpleXMLElement('<user></user>');
+            $xml->addChild('id', $num);
             $xml->addChild('password', md5($password));
             $xml->addChild('email', $email);
             $xml->addChild('name', $username);
             $xml->addChild('address', $address);
             $xml->addChild('admin', 'false');
             $xml->asXML('database/users/' . $email . '.xml');
+            fclose($userCount);
+            //Write new user count to file
+            $userCount = fopen("database/users/usercount.txt", "w") or die("Issue creating account. Our servers may be experiencing issues. Please try again later.");
+            fwrite($userCount, $num);
+            fclose($userCount);
             header('Location: login.php');
             die("Issue creating account. Our servers may be experiencing issues. Please try again later.");
         }

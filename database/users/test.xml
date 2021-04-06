@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
 <user>
+    <id>1</id>
     <password>b50875276f2b943c6bcc1b8283338fae</password>
     <email>test@example.com</email>
+    <name>A test</name>
+    <address>A test address</address>
+    <admin>false</admin>
 </user>
