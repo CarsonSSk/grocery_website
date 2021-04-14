@@ -125,7 +125,7 @@
                         <label for="password">Confirm Password</label> <br />
                         <input class="login-boxes" type="password" id="password" name="c_password" placeholder="Enter your password"> <br /> <br />
 
-                        <input class="login-buttons" type="submit" name="login" value="Login">
+                        <input class="login-buttons" type="submit" name="login" value="Create Account">
                         <input class="login-buttons" type="reset" name="reset" value="Reset"> <br /> <br />
 
                         <p>Already have an account? <a href="login.php">Login here</a> </p>
