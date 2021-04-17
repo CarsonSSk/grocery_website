@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<products>
+
+    <produce id="1">
+        <name>Sliced Apples</name>
+        <desc>Freshly picked apples from the local orchard.</desc>
+        <weight>1.00</weight>
+        <price>4.99</price>
+        <inv>60</inv>
+        <qty>0</qty>
+        <img>../img/produce/apple.jpg</img>
+    </produce>
+    <produce id="2">
+        <name>Ripe Bananas</name>
+        <desc>Ripe Bananas imported from Florida. Excellent source of potassium and vitamin B6.</desc>
+        <weight>1.00</weight>
+        <price>2.99</price>
+        <inv>46</inv>
+        <qty>0</qty>
+        <img>../img/produce/banana.jpg</img>
+    </produce>
+    <produce id="3">
+        <name>Hot Peppers</name>
+        <desc>Perfect for spicy cuisine. Caution: Very hot.</desc>
+        <weight>1.00</weight>
+        <price>6.99</price>
+        <inv>70</inv>
+        <qty>0</qty>
+        <img>../img/produce/pepper.jpg</img>
+    </produce>
+    <produce id="4">
+        <name>Fresh Tomatoes</name>
+        <desc>Freshly picked tomatoes from the local orchard.</desc>
+        <weight>1.00</weight>
+        <price>10.99</price>
+        <inv>66</inv>
+        <qty>0</qty>
+        <img>../img/produce/tomato.jpg</img>
+    </produce>
+    <produce id="5">
+        <name>Large Avocados</name>
+        <desc>Large Avocados, great for making guacamole.</desc>
+        <weight>1.00</weight>
+        <price>9.99</price>
+        <inv>54</inv>
+        <qty>0</qty>
+        <img>../img/produce/avocado.jpg</img>
+    </produce>
+    <produce id="6">
+        <name>Large Broccolis</name>
+        <desc>Don't forget to eat your broccoli!</desc>
+        <weight>1.00</weight>
+        <price>11.99</price>
+        <inv>60</inv>
+        <qty>0</qty>
+        <img>../img/produce/broccoli.jpg</img>
+    </produce>
+<produce id="7"><name>asdasd</name><desc>asdasd</desc><weight>asdasd</weight><price>asdasd</price><inv>asdasd</inv><img>../img/produce/asdasd.jpg</img></produce></products>

@@ -109,128 +109,48 @@
               <!--Main content starts here!-->
                   
                 <div class="card-content">
-                    <h5 class="center-text">User Management</h5>
+                    <h5 class="center-text">Product List</h5>
                 </div>
 
                 <div class="topbar">
-                  <input type="text" class="searchBar" placeholder="Search...">
-                  <button type="button" class="btn custom-button"><i class="fa fa-search"></i></button>
-                  <button type="button" class="btn add custom-button">Add User</button>
+                  <a href="addProduct.php" class="btn add custom-button">Add Product</a>
                 </div>
                 <table id ="table">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>Name</th>
-                      <th class="desktop-only">Email</th>
-                      <th>Added</th>
-                      <th>Manage</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        
-                      </td>
-                      <td>Nicholas Aguilar</td>
-                      <td class="desktop-only">nicholas@gmail.com</td>
-                      <td>2021-01-12</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="users/nicholasaguilar.html" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Leah Watson</td>
-                      <td class="desktop-only">leahwatson@outlook.com</td>
-                      <td>2021-10-21</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="users/leahwatson.html" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Pat Jacobs</td>
-                      <td class="desktop-only">patty@hotmail.com</td>
-                      <td>2021-12-06</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="users/patjacobs.html" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td>Alfred Morrison</td>
-                      <td class="desktop-only">alfredo@outlook.com</td>
-                      <td>2021-12-09</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="users/alfredmorrison.html" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>5</td>
-                      <td>Eva Rose</td>
-                      <td class="desktop-only">roseeva@gmail.com</td>
-                      <td>2021-12-23</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="users/evarose.html" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>6</td>
-                      <td>Lucille Mendoza</td>
-                      <td class="desktop-only">mendoza@outlook.com</td>
-                      <td>2021-01-06</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="users/lucillemendoza.html" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>7</td>
-                      <td>Isabel Pearson</td>
-                      <td class="desktop-only">isabelpearson@hotmail.com</td>
-                      <td>2021-01-14</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="users/isabelpearson.html" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>8</td>
-                      <td>Mary Castillo</td>
-                      <td class="desktop-only">castillo@gmail.com</td>
-                      <td>2021-04-20</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="users/marycastillo.html" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>9</td>
-                      <td>Viola Harrington</td>
-                      <td class="desktop-only">viola1@outlook.com</td>
-                      <td>2021-07-08</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="users/violaharrington.html" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>10</td>
-                      <td>Leigh Walsh</td>
-                      <td class="desktop-only">leigh420@hotmail.com</td>
-                      <td>2021-11-10</td>
-                      <td>
-                        <button type="button" class="btn custom-button"><i class="fa fa-trash"></i></button>
-                        <a href="users/leighwalsh.html" class="custom-button"><i class="fa fa-edit"></i></button>
-                      </td>
-                    </tr>
-                  </tbody>
+                    <?php
+                        $xml = simplexml_load_file("products.xml");
+                        $list = $xml->produce;
+                        $counter = count($list);
+                        echo '
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Weight per unit (kg)</th>
+                            <th>Price per unit(CAD)</th>
+                            <th>Units in stock</th>
+                            <th>Manage</th>
+                        </tr>
+                        </thead>';
+                        for ($i = 0; $i < count($list); $i++) { 
+                          $id = $i + 1;
+                          $idCount = fopen("idcountproduce.txt", "w");
+                          fwrite($idCount, $counter);
+                          fclose($idCount);
+                            echo '<tr>';
+                                echo '<td>' . $i + 1 . '</td>';
+                                echo '<td>' . $list[$i]->name . '</td>';
+                                echo '<td>' . $list[$i]->desc . '</td>';
+                                echo '<td>' . $list[$i]->weight . '</td>';
+                                echo '<td>' . $list[$i]->price . '</td>';
+                                echo '<td>' . $list[$i]->inv . '</td>';
+                                echo '<td>' . 
+                                "<button type='button' class='btn custom-button'><i class='fa fa-trash'></i></button>
+                                <a href = 'addeditproducts/editfood.php?aisle=produce&id=$id' class = 'custom-button'><i class = 'fa fa-edit'</i></button>" 
+                                . '</td>';
+                            echo '</tr>';
+                        }
+                    ?>
                 </table>
 
                 <br/>
