@@ -6,7 +6,21 @@ if (isset($_POST["add_to_cart"])) {
 
     if (isset($_SESSION["shopping_cart"])) {
         $product_array_id = array_column($_SESSION["shopping_cart"], "product_id");
-
+        if (in_array($_GET["id"], $product_array_id)) {
+          echo '<script>alert("Product Already Added")</script>';
+        }
+        else {
+          $index = count($_SESSION["shopping_cart"]);
+          $product_array = array (
+            'product_id' => $_GET["id"],
+            'product_name' => $_POST["hidden_name"],
+            'product_weight' => $_POST["hidden_weight"],
+            'product_price' => $_POST["hidden_price"],
+            'product_quantity' => $_POST["quantity"],
+            'product_img' => $_POST["image_path"],
+          );
+          $_SESSION["shopping_cart"][$index] = $product_array;
+        }
     }
     else {
         $product_array = array (
@@ -19,6 +33,18 @@ if (isset($_POST["add_to_cart"])) {
         );
         $_SESSION["shopping_cart"][0] = $product_array;
     }
+}
+
+if (isset($_GET["action"])) {
+  if ($_GET["action" == "delete"]) {
+    foreach ($_SESSION["shopping_cart"] as $keys => $values) {
+      if ($values["product_id"] == $_GET["id"]) {
+        unset($_SESSION["shopping_cart"][$keys]);
+        echo '<script>alert("Product has been removed")</script>';
+        echo '<script>window.location="shoppingCart.php"</script>';
+      }
+    }
+  }
 }
 
 ?>
@@ -71,7 +97,6 @@ if (isset($_POST["add_to_cart"])) {
 
                     <?php
                     if (!empty($_SESSION["shopping_cart"])) {
-                        $total = 0;
                         foreach ($_SESSION["shopping_cart"] as $keys => $values) {
                             ?>
                             <div class="col-lg-6  col-md-12 col-sm-12">
@@ -89,7 +114,9 @@ if (isset($_POST["add_to_cart"])) {
                                     <option value="economy" class="option" id="economy">Economy Value (0.75x price)</option>
                                     <option value="regular" class="option" id="regular">Regular Value (normal price)</option>
                                     <option value="deluxe" class="option" id="deluxe">Deluxe Value (1.25x price)</option>
-                                    </select>  
+                                    </select>
+                                    
+                                    <a href="shoppingCart.php?action=delete&id=<?php echo $values["product_id"]; ?>" class="custom-button">Remove</a>
                                 
                                 </div>
                                 </div>
@@ -99,7 +126,7 @@ if (isset($_POST["add_to_cart"])) {
                     }
                     else {
                       echo "Your shopping cart is currently empty";
-                    } ?>
+                    } ?>  
 
             </div>
 
