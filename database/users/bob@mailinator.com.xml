@@ -1,2 +1,9 @@
 <?xml version="1.0"?>
-<user><id>6</id><password>827ccb0eea8a706c4c34a16891f84e7b</password><email>bob@mailinator.com</email><name>bob guy</name><address>McGill Street</address><admin>false</admin></user>
+<user>
+    <id>1</id>
+    <password>827ccb0eea8a706c4c34a16891f84e7b</password>
+    <email>bob@mailinator.com</email>
+    <name>bob guy</name>
+    <address>McGill Street</address>
+    <admin>false</admin>
+</user>
