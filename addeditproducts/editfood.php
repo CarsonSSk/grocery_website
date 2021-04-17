@@ -1,3 +1,16 @@
+<?php  
+$id = $_GET['id'];
+$aisle = $_GET['aisle'];
+echo $id;
+echo $aisle;
+$xml = simplexml_load_file("../products.xml");
+
+echo $xml->$aisle['id'];
+$name = $xml->produce->name;
+$list = $xml->produce;
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -23,7 +36,7 @@
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     
-    <title>Add Product | TastyGrocery.com</title>
+    <title>Edit Product | TastyGrocery.com</title>
     <meta name="description" content="The userlist of Grocery.com, home of great online grocery shopping!">
     <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png">
     
@@ -107,44 +120,46 @@
             
             <div class="main page-width">
               <!--Main content starts here!-->
+              <form method = "POST" action = "editfood.php">
               <div class="card-content">
-                <h5 class="center-text"><b>Add Product</b></h5>
+                <h5 class="center-text"><b>Edit Product</b></h5>
               </div>
                   <hr/>
                   <div class="center-text">
-                  <a class="custom-button" href="">Add Image</a>
+                    <img src="../img/produce/apple.jpg">
+                  <a class="custom-button" href=""> Change Image</a>
                 
                   <hr/>
                   <div class="edit-field-type">
                     <div class="card-sub-content">
-                        <h5 class="center-text">Product Name</h5>
+                        <h5 class="center-text">Name</h5>
                     </div>
                     <div class="edit-field">
-                        <input value="" class="barContent">
+                        <input value=<?php echo $name?> name = "name" class="barContent">
                     </div>
                   </div>
                   <div class="edit-field-type">
                     <div class="card-sub-content">
-                        <h5 class="center-text">Product Weight</h5>
+                        <h5 class="center-text">Weight</h5>
                     </div>
                     <div class="edit-field">
-                        <input value="kg" class="barContent">
+                        <input value= <?php echo $weight?> name = "weight" class="barContent">
                     </div>
                   </div>
                   <div class="edit-field-type">
                     <div class="card-sub-content">
-                        <h5 class="center-text">Product Price</h5>
+                        <h5 class="center-text">Price</h5>
                     </div>
                     <div class="edit-field">
-                        <input value="0.99" class="barContent">
+                        <input value=<?php echo $price?> name = "price" class="barContent">
                     </div>
                   </div>
                   <div class="edit-field-type">
                     <div class="card-sub-content">
-                        <h5 class="center-text">Product Description</h5>
+                        <h5 class="center-text">Description</h5>
                     </div>
                     <div class="edit-field">
-                        <input value="" class="barContent">
+                        <input value=<?php echo $desc?> name = "desc" class="barContent">
                     </div>
                   </div>
                   <div class="edit-field-type">
@@ -152,26 +167,26 @@
                         <h5 class="center-text">Aisle</h5>
                     </div>
                     <select class="userType" id="category">
+                        <option value="Produce" class="option">Produce</option>
                         <option value="Grain" class="option">Grain</option>
                         <option value="Meat" class="option">Meat</option>
-                        <option value="Produce" class="option">Produce</option>
                         <option value="Dairy" class="option">Dairy</option>
                         <option value="Candy" class="option">Candy</option>
                     </select>
                   </div>
                   <div class="edit-field-type">
                     <div class="card-sub-content">
-                        <h5 class="center-text">Inventory Quantity</h5>
+                        <h5 class="center-text">Quantity</h5>
                     </div>
                     <div class="edit-field">
-                        <input value="70" class="barContent">
+                        <input value=<?php echo $inv?> name = "inv" class="barContent">
                     </div>
                   </div>
 
                   <div class="saveButton"> 
-                    <input type="submit" class="btn custom-button" value="Save"></input>
+                    <input type="submit" class="btn custom-button" name = "insert" value="Save"></input>
                   </div>
-
+                </form>
                   <hr class="clear">
 
                   <p class="subtitle">Backstore Navigation</p>

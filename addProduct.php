@@ -1,3 +1,44 @@
+<?php  
+  if(isset($_POST['insert'])) { 
+    $xml = new DomDocument("1.0","UTF-8");
+    $xml->load('products.xml');
+    
+    $name = $_POST['name'];
+    $weight = $_POST['weight'];
+    $price = $_POST['price'];
+    $description = $_POST['desc'];
+    $inventory = $_POST['inv'];
+    $aisle = $_POST['aisle'];
+
+    $idCount = fopen("idcount$aisle.txt", "r");
+    $id = fread($idCount,filesize("idcount$aisle.txt"));
+    fclose($idCount);
+
+    $productsTag = $xml->getElementsByTagName("products")->item(0);
+
+      $aisleTag = $xml->createElement($aisle);
+        $nameTag = $xml->createElement("name", $name);
+        $descTag = $xml->createElement("desc", $description);
+        $weightTag = $xml->createElement("weight", $weight);
+        $priceTag = $xml->createElement("price", $price);
+        $invTag = $xml->createElement("inv", $inventory);
+        $imageTag = $xml->createElement("img", "../img/$aisle/$name.jpg");
+
+        $aisleTag->appendChild($nameTag);
+        $aisleTag->appendChild($descTag);
+        $aisleTag->appendChild($weightTag);
+        $aisleTag->appendChild($priceTag);
+        $aisleTag->appendChild($invTag);
+        $aisleTag->appendChild($imageTag);
+        $aisleTag->setAttribute("id", ($id + 1));
+
+      $productsTag->appendChild($aisleTag);
+      $xml->save('products.xml');
+  }
+?>
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -10,7 +51,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     
     <!-- CSS Sheet -->
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -23,7 +64,7 @@
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     
-    <title>Add Product | TastyGrocery.com</title>
+    <title>Userlist | TastyGrocery.com</title>
     <meta name="description" content="The userlist of Grocery.com, home of great online grocery shopping!">
     <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png">
     
@@ -34,10 +75,10 @@
     <div class="header-userpage">
       <div class="row page-width">
         <div class="col-6">
-          <a href="../userlist.html"><i class="fas fa-door-open"></i>Backstore</a>
+          <a href="userlist.html"><i class="fas fa-door-open"></i>Backstore</a>
         </div>
         <div class="col-6 right-text">
-          <a href="../login.html"><i class="fas fa-user-alt"></i>My Account</a>
+          <a href="login.html"><i class="fas fa-user-alt"></i>My Account</a>
         </div>
       </div>
     </div>
@@ -47,7 +88,7 @@
         <div class="row">
           
           <div class="col-md-6 col-9">
-            <p class="header-name"><a href="../index.html"><i class="fas fa-pepper-hot"></i>TastyGrocery</a></p>
+            <p class="header-name"><a href="index.html"><i class="fas fa-pepper-hot"></i>TastyGrocery</a></p>
           </div>
 
           <div class="col-md-6 col-3">
@@ -59,19 +100,19 @@
                 </div>
               <ul>
                   <li>
-                      <a href="../aisles/Produce.html"><i class="fas fa-pepper-hot"></i>Produce</a>
+                      <a href="aisles/Produce.html"><i class="fas fa-pepper-hot"></i>Produce</a>
                   </li>
                   <li>
-                      <a href="../aisles/Meat.html"><i class="fas fa-drumstick-bite"></i>Meat</a>
+                      <a href="aisles/Meat.html"><i class="fas fa-drumstick-bite"></i>Meat</a>
                   </li>
                   <li>
-                      <a href="../aisles/Grain.html"><i class="fas fa-bread-slice"></i>Grain</a>
+                      <a href="aisles/Grain.html"><i class="fas fa-bread-slice"></i>Grain</a>
                   </li>
                   <li>
-                      <a href="../aisles/Dairy.html"><i class="fas fa-cheese"></i>Dairy</a>
+                      <a href="aisles/Dairy.html"><i class="fas fa-cheese"></i>Dairy</a>
                   </li>
                   <li>
-                      <a href="../aisles/Candy.html"><i class="fas fa-candy-cane"></i>Candy</a>
+                      <a href="aisles/Candy.html"><i class="fas fa-candy-cane"></i>Candy</a>
                   </li>
               </ul>
             </div>
@@ -83,18 +124,18 @@
               </a>
             
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="../shoppingCart.html"><i class="fas fa-shopping-cart"></i>Cart</a>
-                <a class="dropdown-item" href="../aisles/Produce.html"><i class="fas fa-pepper-hot"></i>Produce</a>
-                <a class="dropdown-item" href="../aisles/Meat.html"><i class="fas fa-drumstick-bite"></i>Meat</a>
-                <a class="dropdown-item" href="../aisles/Grain.html"><i class="fas fa-bread-slice"></i>Grain</a>
-                <a class="dropdown-item" href="../aisles/Dairy.html"><i class="fas fa-cheese"></i>Dairy</a>
-                <a class="dropdown-item" href="../aisles/Candy.html"><i class="fas fa-candy-cane"></i>Candy</a>
+                <a class="dropdown-item" href="shoppingCart.html"><i class="fas fa-shopping-cart"></i>Cart</a>
+                <a class="dropdown-item" href="aisles/Produce.html"><i class="fas fa-pepper-hot"></i>Produce</a>
+                <a class="dropdown-item" href="aisles/Meat.html"><i class="fas fa-drumstick-bite"></i>Meat</a>
+                <a class="dropdown-item" href="aisles/Grain.html"><i class="fas fa-bread-slice"></i>Grain</a>
+                <a class="dropdown-item" href="aisles/Dairy.html"><i class="fas fa-cheese"></i>Dairy</a>
+                <a class="dropdown-item" href="aisles/Candy.html"><i class="fas fa-candy-cane"></i>Candy</a>
               </div>
             </div>
 
             <!-- Cart check on mobile view -->
             <div class="cart-check desktop-only">
-                <a class="custom-button" href="../shoppingCart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+                <a class="custom-button" href="shoppingCart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
             </div>
           </div>
 
@@ -107,56 +148,58 @@
             
             <div class="main page-width">
               <!--Main content starts here!-->
+
+            <form method = "POST" action = "addProduct.php">
               <div class="card-content">
                 <h5 class="center-text"><b>Add Product</b></h5>
               </div>
                   <hr/>
                   <div class="center-text">
-                  <a class="custom-button" href="">Add Image</a>
+                  <a class="custom-button" href=""> Add Image</a>
                 
                   <hr/>
                   <div class="edit-field-type">
                     <div class="card-sub-content">
-                        <h5 class="center-text">Product Name</h5>
+                        <h5 class="center-text">Name</h5>
                     </div>
                     <div class="edit-field">
-                        <input value="" class="barContent">
+                        <input type= "text" name = "name">
                     </div>
                   </div>
                   <div class="edit-field-type">
                     <div class="card-sub-content">
-                        <h5 class="center-text">Product Weight</h5>
+                        <h5 class="center-text">Weight</h5>
                     </div>
                     <div class="edit-field">
-                        <input value="kg" class="barContent">
+                        <input type= "text" name = "weight">
                     </div>
                   </div>
                   <div class="edit-field-type">
                     <div class="card-sub-content">
-                        <h5 class="center-text">Product Price</h5>
+                        <h5 class="center-text">Price</h5>
                     </div>
                     <div class="edit-field">
-                        <input value="0.99" class="barContent">
+                        <input type= "text" name = "price">
                     </div>
                   </div>
                   <div class="edit-field-type">
                     <div class="card-sub-content">
-                        <h5 class="center-text">Product Description</h5>
+                        <h5 class="center-text">Description</h5>
                     </div>
                     <div class="edit-field">
-                        <input value="" class="barContent">
+                        <input type= "text" name = "desc">
                     </div>
                   </div>
                   <div class="edit-field-type">
                     <div class="card-sub-content">
                         <h5 class="center-text">Aisle</h5>
                     </div>
-                    <select class="userType" id="category">
-                        <option value="Grain" class="option">Grain</option>
-                        <option value="Meat" class="option">Meat</option>
-                        <option value="Produce" class="option">Produce</option>
-                        <option value="Dairy" class="option">Dairy</option>
-                        <option value="Candy" class="option">Candy</option>
+                    <select name="aisle" id="category">
+                        <option value="grain" class="option" name = grain>Grain</option>
+                        <option value="meat" class="option" name = meat>Meat</option>
+                        <option value="produce" class="option" name = produce>Produce</option>
+                        <option value="dairy" class="option" name = dairy>Dairy</option>
+                        <option value="candy" class="option" name = candy>Candy</option>
                     </select>
                   </div>
                   <div class="edit-field-type">
@@ -164,14 +207,14 @@
                         <h5 class="center-text">Inventory Quantity</h5>
                     </div>
                     <div class="edit-field">
-                        <input value="70" class="barContent">
+                        <input type= "text" name = "inv">
                     </div>
                   </div>
 
                   <div class="saveButton"> 
-                    <input type="submit" class="btn custom-button" value="Save"></input>
+                    <input type="submit" class="btn custom-button" name = "insert" value="Save"></input>
                   </div>
-
+            </form>
                   <hr class="clear">
 
                   <p class="subtitle">Backstore Navigation</p>
@@ -188,6 +231,8 @@
               </div>
             </div>
                 </div>
+
+              
               <!--Main content ends here!-->
             </div>
 
@@ -197,7 +242,7 @@
           <div class="row page-width">
 
             <div class="col-lg-3 col-md-12">
-              <p class="footer-name"><a href="../index.html">TastyGrocery.com</a></p>
+              <p class="footer-name"><a href="index.html">TastyGrocery.com</a></p>
             </div>
 
             <div class="col-lg-6 col-md-12">

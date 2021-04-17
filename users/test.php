@@ -23,9 +23,9 @@
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     
-    <title>Add Product | TastyGrocery.com</title>
+    <title>User Edit | TastyGrocery.com</title>
     <meta name="description" content="The userlist of Grocery.com, home of great online grocery shopping!">
-    <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png">
+    <link rel="shortcut icon" type="image/png" href="../img/favicon-32x32.png">
     
   </head>
 
@@ -107,74 +107,63 @@
             
             <div class="main page-width">
               <!--Main content starts here!-->
-              <div class="card-content">
-                <h5 class="center-text"><b>Add Product</b></h5>
-              </div>
-                  <hr/>
-                  <div class="center-text">
-                  <a class="custom-button" href="">Add Image</a>
-                
-                  <hr/>
-                  <div class="edit-field-type">
-                    <div class="card-sub-content">
-                        <h5 class="center-text">Product Name</h5>
-                    </div>
-                    <div class="edit-field">
-                        <input value="" class="barContent">
-                    </div>
-                  </div>
-                  <div class="edit-field-type">
-                    <div class="card-sub-content">
-                        <h5 class="center-text">Product Weight</h5>
-                    </div>
-                    <div class="edit-field">
-                        <input value="kg" class="barContent">
-                    </div>
-                  </div>
-                  <div class="edit-field-type">
-                    <div class="card-sub-content">
-                        <h5 class="center-text">Product Price</h5>
-                    </div>
-                    <div class="edit-field">
-                        <input value="0.99" class="barContent">
-                    </div>
-                  </div>
-                  <div class="edit-field-type">
-                    <div class="card-sub-content">
-                        <h5 class="center-text">Product Description</h5>
-                    </div>
-                    <div class="edit-field">
-                        <input value="" class="barContent">
-                    </div>
-                  </div>
-                  <div class="edit-field-type">
-                    <div class="card-sub-content">
-                        <h5 class="center-text">Aisle</h5>
-                    </div>
-                    <select class="userType" id="category">
-                        <option value="Grain" class="option">Grain</option>
-                        <option value="Meat" class="option">Meat</option>
-                        <option value="Produce" class="option">Produce</option>
-                        <option value="Dairy" class="option">Dairy</option>
-                        <option value="Candy" class="option">Candy</option>
-                    </select>
-                  </div>
-                  <div class="edit-field-type">
-                    <div class="card-sub-content">
-                        <h5 class="center-text">Inventory Quantity</h5>
-                    </div>
-                    <div class="edit-field">
-                        <input value="70" class="barContent">
-                    </div>
-                  </div>
 
-                  <div class="saveButton"> 
-                    <input type="submit" class="btn custom-button" value="Save"></input>
+              <div class="edit-holder">
+
+                <div class="card-content">
+                  <h5 class="center-text"><b>User Editor</b></h5>
+                </div>
+
+                <div class="edit-field-type">
+                  <div class="card-sub-content">
+                      <h5 class="center-text">Name</h5>
                   </div>
+                  <div class="edit-field">
+                      <input value="Nicholas Aguilar" class="barContent">
+                  </div>
+                </div>
+                <div class="edit-field-type">
+                  <div class="card-sub-content">
+                      <h5 class="center-text">Type</h5>
+                  </div>
+                  <select class="userType" id="category">
+                      <option value="user" class="option">User</option>
+                      <option value="administrator" class="option">Administrator</option>
+                  </select>
+                </div>
+                <div class="edit-field-type">
+                  <div class="card-sub-content">
+                      <h5 class="center-text">Address</h5>
+                  </div>
+                  <div class="edit-field">
+                    <input value="6817 43 Av Montreal QC H1T 2R9" class="barContent">
+                  </div>
+                </div>
+                <div class="edit-field-type">
+                  <div class="card-sub-content">
+                      <h5 class="center-text">Email</h5>
+                  </div>
+                  <div class="edit-field">
+                    <input value="nicholas@gmail.com" class="barContent">
+                  </div>
+                </div>
+                <div class="edit-field-type">
+                  <div class="card-sub-content">
+                      <h5 class="center-text">Password</h5>
+                  </div>
+                  <div class="edit-field">
+                    <input value="qVC%rc" class="barContent">
+                  </div>
+                </div>
 
-                  <hr class="clear">
+                <div class="saveButton"> 
+                  <input type="submit" class="btn custom-button" value="Save"></input>
+                </div>
+            </div>
 
-                  <p class="subtitle">Backstore Navigation</p>
+            <hr class="clear">
+
+            <p class="subtitle">Backstore Navigation</p>
 
             <div class="row backstore-navigation">
               <div class="col-lg-4 col-12">
@@ -187,7 +176,7 @@
                 <a href="../productlist.html" class="custom-button">Product List</a>
               </div>
             </div>
-                </div>
+              
               <!--Main content ends here!-->
             </div>
 
