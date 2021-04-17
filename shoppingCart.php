@@ -1,4 +1,27 @@
-<?php include_once 'includes/session.php'; ?>
+<?php 
+
+include_once 'includes/session.php'; 
+
+if (isset($_POST["add_to_cart"])) {
+
+    if (isset($_SESSION["shopping_cart"])) {
+        $product_array_id = array_column($_SESSION["shopping_cart"], "product_id");
+
+    }
+    else {
+        $product_array = array (
+            'product_id' => $_GET["id"],
+            'product_name' => $_POST["hidden_name"],
+            'product_weight' => $_POST["hidden_weight"],
+            'product_price' => $_POST["hidden_price"],
+            'product_quantity' => $_POST["quantity"],
+            'product_img' => $_POST["image_path"],
+        );
+        $_SESSION["shopping_cart"][0] = $product_array;
+    }
+}
+
+?>
 
 <!doctype html>
 <html lang="en">
@@ -45,111 +68,38 @@
               <div class="row aisle">
                 <div class="col-lg-8 col-md-6 col-sm-12">
                   <div class="row aisle">
-              
-              <div class="col-lg-6  col-md-12 col-sm-12">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a><img src="img/produce/apple.jpg" alt="apples"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a><p class="food-name">Picked Apples</p></a>
-                    <p class="food-details">1.0 kg</p>
-                    <p class="food-price">4.99$</p>
-                    
-                    <input type="number" placeholder="Enter Quantity" name= "item1" id="item1cart" value="1" min="0" onchange='saveValue(this);' onkeyup='saveValue(this);'>
-                    <select class="quality" id="quality-selector1cart">
-                      <option value="economy" class="option" id="economy">Economy Value (0.75x price)</option>
-                      <option value="regular" class="option" id="regular">Regular Value (normal price)</option>
-                      <option value="deluxe" class="option" id="deluxe">Deluxe Value (1.25x price)</option>
-                    </select>  
-                  
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a><img src="img/produce/banana.jpg" alt="bananas"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a><p class="food-name">Ripe Bananas</p></a>
-                    <p class="food-details">1.0 kg</p>
-                    <p class="food-price">2.99$</p>
-                    
-                    <input type="number" placeholder="Enter Quantity" name= "item2" id="item2cart" value="1" min="0" onchange='saveValue(this);' onkeyup='saveValue(this);'>
-                    <select class="quality" id="quality-selector2cart">
-                      <option value="economy" class="option" id="economy">Economy Value (0.75x price)</option>
-                      <option value="regular" class="option" id="regular">Regular Value (normal price)</option>
-                      <option value="deluxe" class="option" id="deluxe">Deluxe Value (1.25x price)</option>
-                    </select>  
-                  
-                  </div>
-                </div>
-              </div>
 
-              <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a><img src="img/produce/pepper.jpg" alt="peppers"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a><p class="food-name">Hot Peppers</p></a>
-                    <p class="food-details">1.0 kg</p>
-                    <p class="food-price">6.99$</p>
-                    
-                    <input type="number" placeholder="Enter Quantity" name= "item3" id="item3cart" value="1" min="0" onchange='saveValue(this);' onkeyup='saveValue(this);'>
-                    <select class="quality" id="quality-selector3cart">
-                      <option value="economy" class="option" id="economy">Economy Value (0.75x price)</option>
-                      <option value="regular" class="option" id="regular">Regular Value (normal price)</option>
-                      <option value="deluxe" class="option" id="deluxe">Deluxe Value (1.25x price)</option>
-                    </select>  
-                  
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a><img src="img/meat/chicken.jpg" alt="chicken"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a><p class="food-name">Fresh Chicken</p></a>
-                    <p class="food-details">1.5 kg</p>
-                    <p class="food-price">7.99$</p>
-                    
-                    <input type="number" placeholder="Enter Quantity" name= "item4" id="item4cart" value="1" min="0" onchange='saveValue(this);' onkeyup='saveValue(this);'>
-                    <select class="quality" id="quality-selector4cart">
-                      <option value="economy" class="option" id="economy">Economy Value (0.75x price)</option>
-                      <option value="regular" class="option" id="regular">Regular Value (normal price)</option>
-                      <option value="deluxe" class="option" id="deluxe">Deluxe Value (1.25x price)</option>
-                    </select>  
-                  
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-lg-6 col-md-12 col-sm-12">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a><img src="img/meat/beef.jpg" alt="beef"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a><p class="food-name">Sliced Beef</p></a>
-                    <p class="food-details">1.2 kg</p>
-                    <p class="food-price">10.99$</p>
-                    
-                    <input type="number" placeholder="Enter Quantity" name= "item5" id="item5cart" value="1" min="0" onchange='saveValue(this);' onkeyup='saveValue(this);'>
-                    <select class="quality" id="quality-selector5cart">
-                      <option value="economy" class="option" id="economy">Economy Value (0.75x price)</option>
-                      <option value="regular" class="option" id="regular">Regular Value (normal price)</option>
-                      <option value="deluxe" class="option" id="deluxe">Deluxe Value (1.25x price)</option>
-                    </select>  
-                  
-                  </div>
-                </div>
-              </div>
+                    <?php
+                    if (!empty($_SESSION["shopping_cart"])) {
+                        $total = 0;
+                        foreach ($_SESSION["shopping_cart"] as $keys => $values) {
+                            ?>
+                            <div class="col-lg-6  col-md-12 col-sm-12">
+                                <div class="advertisement-holder">
+                                <div class="img-holder">
+                                    <a><img src=<?php echo $values["product_img"]; ?> alt=<?php echo $values["product_name"]; ?>></a>
+                                </div>
+                                <div class="info-holder">
+                                    <a><p class="food-name"><?php echo $values["product_name"]; ?></p></a>
+                                    <p class="food-details"><?php echo $values["product_weight"]; ?></p>
+                                    <p class="food-price"><?php echo $values["product_price"]; ?>$</p>
+                                    
+                                    <input type="number" placeholder="Enter Quantity" name= "item1" id="item1cart" value="<?php echo $values["product_quantity"]; ?>" min="0" onchange='saveValue(this);' onkeyup='saveValue(this);'>
+                                    <select class="quality" id="quality-selector1cart">
+                                    <option value="economy" class="option" id="economy">Economy Value (0.75x price)</option>
+                                    <option value="regular" class="option" id="regular">Regular Value (normal price)</option>
+                                    <option value="deluxe" class="option" id="deluxe">Deluxe Value (1.25x price)</option>
+                                    </select>  
+                                
+                                </div>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                    }
+                    else {
+                      echo "Your shopping cart is currently empty";
+                    } ?>
 
             </div>
 
