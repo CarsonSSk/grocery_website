@@ -1,13 +1,20 @@
 <?php  
 $id = $_GET['id'];
 $aisle = $_GET['aisle'];
-echo $id;
-echo $aisle;
 $xml = simplexml_load_file("../products.xml");
 
-echo $xml->$aisle['id'];
-$name = $xml->produce->name;
 $list = $xml->produce;
+$counter = count($list);
+for ($i = 0; $i < count($list); $i++) {
+  if (($list[$i]->id) == $id) {
+    $name = $list[$i]->name;
+    $description = $list[$i]->desc;
+    $weight = $list[$i]->weight;
+    $price = $list[$i]->price;
+    $inv = $list[$i]->inv;
+    break;
+  }
+}
 
 ?>
 
