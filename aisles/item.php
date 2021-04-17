@@ -1,24 +1,5 @@
 <?php include_once '../includes/session.php'; ?>
 
-<?php
-    if(isset($_GET['aisle']) && isset($_GET['food'])){
-        include_once '../includes/dbh.inc.php';
-        $aisle = mysqli_real_escape_string($conn, $_GET['aisle']);
-        $food = mysqli_real_escape_string($conn, $_GET['food']);
-
-        $sql = "SELECT * FROM $aisle WHERE codename='$food'";
-        $result = mysqli_query($conn, $sql) or die(header('Location: ../index.php')); //Redirect on broken "aisle" tags to homepage
-        $row = mysqli_fetch_array($result);
-        
-        if(!mysqli_num_rows ( $result )) {
-            (header('Location: ../index.php')); //Redirect on broken "food" tags to homepage
-        }
-    } 
-    else {
-        header('Location: ../index.php'); //Redirect on missing aisle or food tags to homepage
-    }
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -72,20 +53,57 @@
               <hr>
               <div class="row aisle">
 
+              <?php
+    
+                if(isset($_GET['aisle']) && isset($_GET['id'])){
+                include_once '../includes/dbh.inc.php';
+        
+                $aisle = $_GET['aisle'];
+                $id = $_GET['id'];
+
+                 if ($aisle == "produce_food") $aisleName="produce";
+                elseif ($aisle == "meat_food") $aisleName="meat";
+                elseif ($aisle == "grain_food") $aisleName="grain";
+                elseif ($aisle == "dairy_food") $aisleName="dairy";
+                elseif ($aisle == "candy_food") $aisleName="candy";
+        
+                $xml = simplexml_load_file("../products.xml");
+
+
+                $list = $xml->$aisleName;
+                $counter = count($list);
+                for ($i = 0; $i < count($list); $i++) {
+                if (($list[$i]->id) == $id) {
+                $name = $list[$i]->name;
+                $description = $list[$i]->desc;
+                $weight = $list[$i]->weight;
+                $price = $list[$i]->price;
+                $inv = $list[$i]->inv;
+                $img = $list[$i]->img;
+                break;
+                }
+                }
+                    }   
+                    ?>
+
+
+
+
                 <div class="col-md-6">
-                    <div class="product-page"><?php echo "<img src=\"../img/"; echo $row['imagename']; echo "\" alt=\""; echo $row['name']; echo "\">" ?></div>
+                    <div class="product-page"><?php echo "<img src=../"; echo $img; echo "\" alt=\"\""; echo $name; echo "\">" ?></div>
                 </div>
 
                 <div class="col-md-6">
+                <form method="post" action="index.php?action=add&id=<?php echo $row['id']; ?> ">
                     <div class="product-page-content">
-                        <h2><?php echo $row["name"]; ?></h2>
+                        <h2><?php echo $name; ?></h2>
                         <br>
-                        <h4><?php echo $row["weight"]; ?> kg</h4>
-                        <h3><?php echo $row["price"]; ?>$</h3>
-                        <input type="number" placeholder="Enter Quantity" name= "item" id="item<?php echo $row['id'].$aisle; ?>" min="0" onchange='saveValue(this);' onkeyup='saveValue(this);'>
+                        <h4><?php echo $weight; ?> kg</h4>
+                        <h3><?php echo $price; ?>$</h3>
+                        <input type="number" placeholder="Enter Quantity" name= "item" id="item<?php echo $id.$aisle; ?>\" min="0" onchange='saveValue(this);' onkeyup='saveValue(this);'>
 
                         <br/>
-                        <select class="quality" id="quality-selector<?php echo $row['id'].$aisle; ?>">
+                        <select class="quality" id="quality-selector<?php echo $id.$aisle; ?>">
                             <option value="economy" class="option" id="economy">Economy Value (0.75x price)</option>
                             <option value="regular" class="option" id="regular">Regular Value (normal price)</option>
                             <option value="deluxe" class="option" id="deluxe">Deluxe Value (1.25x price)</option>
@@ -99,18 +117,26 @@
                         </div>
                     
                         <div class="border hidden">
-                            <?php echo $row["description"]; ?>
+                            <?php echo $description; ?>
                         </div>
-
-                        <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
                         
+                        <input type="submit" value="Add to Cart" name="add_to_cart" class="custom-button">
+
+                        <input type="hidden" name="hidden_name" value="<?php echo $name;?>">
+                        <input type="hidden" name="hidden_weight" value="<?php echo $weight;?>" >
+                        <input type="hidden" name="hidden_price" value="<?php echo $price;?>" >
+                        <input type="hidden" name="image_path" value="../ "<?php echo $img; ?>>
+
+
                     </div>
                 </div>
-
+                </form>
               </div>
 
+              
+
               <hr> 
-              <div class="center-text"><a href="../Grain.html" class="custom-button"><i class="fas fa-arrow-left"></i>Return to aisle</a></div>
+              <div class="center-text"><a href="../aisle_page.php?aisle="<?php echo $aisle ?> class="custom-button"><i class="fas fa-arrow-left\"></i>Return to aisle</a></div>
               
               <!--Main content ends here!-->
             </div>
@@ -120,7 +146,6 @@
         <?php include_once '../templates/footer.php'; ?>
     </div>
 
-    
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>

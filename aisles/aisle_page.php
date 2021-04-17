@@ -5,7 +5,7 @@
         header('Location: ../index.php'); //Redirect on nonexistent aisle tag to homepage
     }
 
-    include_once '../includes/dbh.inc.php';
+    /*include_once '../includes/dbh.inc.php';*/
 ?>
 
 <!DOCTYPE html>
@@ -81,44 +81,76 @@
 
 
                     <?php
-                        //Display all items by looping through the appropriate database table                           
-                        $sql = "SELECT * FROM $aisle";
-                        $result = mysqli_query($conn, $sql) or die("Bad query. Check URL or try again later.");
 
-                        if(mysqli_num_rows($result) > 0) {
-                            while($row = mysqli_fetch_array($result)) {
+                        if ($aisle == "produce_food") $aisleName="produce";
+                        elseif ($aisle == "meat_food") $aisleName="meat";
+                        elseif ($aisle == "grain_food") $aisleName="grain";
+                        elseif ($aisle == "dairy_food") $aisleName="dairy";
+                        elseif ($aisle == "candy_food") $aisleName="candy";
+
+
+
+
+                        //Display all items by looping through the appropriate database table                           
+                        $xml = simplexml_load_file("../products.xml");
+                        
+
+                        /*foreach($result as $row)*/
+                        
+                        $list = $xml->$aisleName;
+                        $counter = count($list);
+                        for ($i = 0; $i < count($list); $i++) {
+                        
+                        $name = $list[$i]->name;
+                        $description = $list[$i]->desc;
+                        $weight = $list[$i]->weight;
+                        $price = $list[$i]->price;
+                        $inv = $list[$i]->inv;
+                        $id = $list[$i]->id;
+                        $img = $list[$i]->img;
+                         
+                        {
+                            {
                                 echo "<div class=\"col-lg-4 col-sm-6\">
+                                <form method=\"post\" action=\"index.php?action=add&id=<?php echo $id; ?> \">
                                         <div class=\"advertisement-holder\">
                                             <div class=\"img-holder\">
-                                                <a href=\"item.php?aisle="; echo $aisle; echo "&food="; echo $row['codename']; echo"\">
-                                                    <img src=\"../img/"; echo $row['imagename']; echo "\" alt=\""; echo $row['name']; echo "\">
+                                                <a href=\"item.php?aisle="; echo $aisle; echo "&id="; echo $id; echo"\">
+                                                    <img src=\"../"; echo $img; echo "\" alt=\""; echo $name; echo "\">
                                                 </a>
                                             </div>
                                             <div class=\"info-holder\">
-                                                <a href=\"item.php?aisle="; echo $aisle; echo "&food="; echo $row['codename']; echo"\">
+                                                <a href=\"item.php?aisle="; echo $aisle; echo "&id="; echo $id; echo"\">
                                                 <p class=\"food-name\">";
-                                                    echo $row['name'];
+                                                    echo $name;
                                                 echo "</p>
                                                 </a>
                                                 <p class=\"food-details\">";
-                                                    echo $row['weight']; echo " kg</p>
-                                                <p class=\"food-price\">"; echo $row['price']; echo"$</p>
-                                                <a href=\"\" class=\"custom-button\"><i class=\"fas fa-shopping-cart\"></i>Add to Cart</a>
+                                                    echo $weight; echo " kg</p>
+                                                <p class=\"food-price\">"; echo $price; echo"$</p>
+
+                                                <input type=\"submit\" value=\"Add to Cart\" name=\"add_to_cart\" class=\"custom-button\">
     
-                                                <input type=\"number\" placeholder=\"Enter Quantity\" name= \"item"; echo $row['id']; echo "\" id=\"item"; echo $row['id'].$aisle; echo "\" value=\"1\" min=\"0\" onchange='saveValue(this);' onkeyup='saveValue(this);'>
-                                        <select class=\"quality\" id=\"quality-selector"; echo $row['id'].$aisle; echo "\">
+                                                <input type=\"number\" placeholder=\"Enter Quantity\" name= \"item"; echo $id; echo "\" id=\"item"; echo ($i+1).$aisle; echo "\" value=\"1\" min=\"0\" onchange='saveValue(this);' onkeyup='saveValue(this);'>
+                                        <select class=\"quality\" id=\"quality-selector"; echo ($i+1).$aisle; echo "\">
                                             <option value=\"economy\" class=\"option\" id=\"economy\">Economy Value (0.75x price)</option>
                                             <option value=\"regular\" class=\"option\" id=\"regular\">Regular Value (normal price)</option>
                                             <option value=\"deluxe\" class=\"option\" id=\"deluxe\">Deluxe Value (1.25x price)</option>
                                         </select>
+
+                                        <input type=\"hidden\" name=\"hidden_name\" value=\""; echo $name; echo "\">
+                                        <input type=\"hidden\" name=\"hidden_weight\" value=\""; echo $weight; echo "\">
+                                        <input type=\"hidden\" name=\"hidden_price\" value=\""; echo $price; echo "\">
+                                        <input type=\"hidden\" name=\"image_path\" value=\"../img/"; echo $img; echo "\">
                                             </div>
                                         </div>
+                                        </form>
                                     </div>";
                             }
-                        }
-                        else {
+                        }}
+                       /*else {
                             echo "<p>No items to display. Our servers may be experiencing issues. Check back later.</p>";
-                        }
+                        }*/
                     ?>
 
                 </div>
