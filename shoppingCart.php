@@ -9,11 +9,11 @@ if (isset($_POST["add_to_cart"])) {
 
     }
     else {
-        $product_array = array(
+        $product_array = array (
             'product_id' => $_GET["id"],
             'product_name' => $_POST["hidden_name"],
             'product_weight' => $_POST["hidden_weight"],
-            'product_price' => $_POST["price"],
+            'product_price' => $_POST["hidden_price"],
             'product_quantity' => $_POST["quantity"],
             'product_img' => $_POST["image_path"],
         );
@@ -81,7 +81,7 @@ if (isset($_POST["add_to_cart"])) {
                                 </div>
                                 <div class="info-holder">
                                     <a><p class="food-name"><?php echo $values["product_name"]; ?></p></a>
-                                    <p class="food-details"><?php echo $values["product_weight"]; ?> kg</p>
+                                    <p class="food-details"><?php echo $values["product_weight"]; ?></p>
                                     <p class="food-price"><?php echo $values["product_price"]; ?>$</p>
                                     
                                     <input type="number" placeholder="Enter Quantity" name= "item1" id="item1cart" value="<?php echo $values["product_quantity"]; ?>" min="0" onchange='saveValue(this);' onkeyup='saveValue(this);'>
@@ -96,6 +96,9 @@ if (isset($_POST["add_to_cart"])) {
                             </div>
                             <?php
                         }
+                    }
+                    else {
+                      echo "Your shopping cart is currently empty";
                     } ?>
 
             </div>

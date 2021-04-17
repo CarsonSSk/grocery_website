@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+
+    <produce id="1">
+        <id>1</id>
+        <name>Sliced_Apples</name>
+        <desc>Freshly_picked_apples_from_the_local_orchard.</desc>
+        <weight>1.00kg</weight>
+        <price>4.99</price>
+        <inv>60</inv>
+        <img>img/produce/apple.jpg</img>
+    </produce>
+
+    <produce id="2">
+        <id>2</id>
+        <name>Ripe_Bananas</name>
+        <desc>Ripe_Bananas_imported_from_Florida._Excellent_source_of_potassium_and_vitamin_B6.</desc>
+        <weight>1.00kg</weight>
+        <price>2.99</price>
+        <inv>46</inv>
+        <img>img/produce/banana.jpg</img>
+    </produce>
+
+    <produce id="3">
+        <id>3</id>
+        <name>Hot_Peppers</name>
+        <desc>Perfect_for_spicy_cuisine._Caution:_Very_hot.</desc>
+        <weight>1.00kg</weight>
+        <price>6.99</price>
+        <inv>70</inv>
+        <img>img/produce/pepper.jpg</img>
+    </produce>
+
+    <produce id="4">
+        <id>4</id>
+        <name>Fresh_Tomatoes</name>
+        <desc>Freshly_picked_tomatoes_from_the_local_orchard.</desc>
+        <weight>1.00kg</weight>
+        <price>10.99</price>
+        <inv>66</inv>
+        <img>img/produce/tomato.jpg</img>
+    </produce>
+
+    <produce id="5">
+        <id>5</id>
+        <name>Large_Avocados</name>
+        <desc>Large_Avocados,_great_for_making_guacamole.</desc>
+        <weight>1.00kg</weight>
+        <price>9.99</price>
+        <inv>54</inv>
+        <img>img/produce/avocado.jpg</img>
+    </produce>
+
+    <produce id="6">
+        <id>6</id>
+        <name>Large_Broccolis</name>
+        <desc>Don't_forget_to_eat_your_broccoli!</desc>
+        <weight>1.00kg</weight>
+        <price>11.99</price>
+        <inv>60</inv>
+        <img>img/produce/broccoli.jpg</img>
+    </produce>
+
+    <meat id="7">
+        <id>7</id>
+        <name>Sliced_Chicken</name>
+        <desc>Unseasoned_slices_of_fresh_chicken.</desc>
+        <weight>1.75kg</weight>
+        <price>7.99</price>
+        <inv>147</inv>
+        <img>img/meat/chicken.jpg</img>
+    </meat>
+
+    <meat id="8">
+        <id>8</id>
+        <name>Sliced_Beef</name>
+        <desc>Thinly_sliced_seasoned_beef.</desc>
+        <weight>1.20kg</weight>
+        <price>10.99</price>
+        <inv>134</inv>
+        <img>img/meat/chicken.jpg</img>
+    </meat>
+
+    <meat id="9">
+        <id>9</id>
+        <name>Fish_Fillet</name>
+        <desc>Slices_of_fish.</desc>
+        <weight>0.80kg</weight>
+        <price>8.99</price>
+        <inv>70</inv>
+        <img>img/meat/beef.jpg</img>
+    </meat>
+
+    <meat id="10">
+        <id>10</id>
+        <name>Medium_Ground_Beef</name>
+        <desc>Medium_Ground_Beef.</desc>
+        <weight>0.80kg</weight>
+        <price>14.99</price>
+        <inv>150</inv>
+        <img>img/meat/groundbeef.jpg</img>
+    </meat>
+
+    <meat id="11">
+        <id>11</id>
+        <name>Sliced_Salami</name>
+        <desc>Slices_of_heavly_seasoned_italian_sausage._Seasoned_with_bold_spices.</desc>
+        <weight>0.20kg</weight>
+        <price>4.99</price>
+        <inv>112</inv>
+        <img>img/meat/salami.jpg</img>
+    </meat>
+
+    <meat id="12">
+        <id>12</id>
+        <name>Top_Sirloin_Steaks</name>
+        <desc>A_juicy,_tender_and_boneless_cut_of_beef._Full_of_proteine.</desc>
+        <weight>0.30kg</weight>
+        <price>8.99</price>
+        <inv>90</inv>
+        <img>img/meat/sirloin.jpg</img>
+    </meat>
+
+    <grain id="13">
+        <id>13</id>
+        <name>Wheat_Bread</name>
+        <desc>This_is_tasty_wheat_bread,_the_wheat_freshly_grown_from_our_rooftop garden._Does_it_get_any_better_than_this?</desc>
+        <weight>0.50kg</weight>
+        <price>4.99</price>
+        <inv>44</inv>
+        <img>img/grain/bread.jpg</img>
+    </grain>
+
+    <grain id="14">
+        <id>14</id>
+        <name>Baked_Baguette</name>
+        <desc>The_baguette_has_been_baked_to_perfection,_with_a_hard_exterior_and_a_soft interior. Great with cheese.</desc>
+        <weight>0.40 kg</weight>
+        <price>3.99</price>
+        <inv>36</inv>
+        <img>img/grain/baguette.jpg</img>
+    </grain>
+
+    <grain id="15">
+        <id>15</id>
+        <name>Fluffy Croissant</name>
+        <desc>The croissants are so fluffy it's like you're biting into air. Absolutely heavenly. Imported directly from Paris.</desc>
+        <weight>0.60 kg</weight>
+        <price>4.99</price>
+        <inv>76</inv>
+        <img>img/grain/croissant.jpg</img>
+    </grain>
+
+    <grain id="16">
+        <id>16</id>
+        <name>White Bread</name>
+        <desc>Bread so white it's blinding. Packed with sugar for an ultra sweet taste.</desc>
+        <weight>0.70 kg</weight>
+        <price>4.99</price>
+        <inv>25</inv>
+        <img>img/grain/whitebread.jpg</img>
+    </grain>
+
+    <grain id="17">
+        <id>17</id>
+        <name>Cinnamon Buns</name>
+        <desc>Sweet cinnamon buns glazed over with our signature white cream. Tasty as heaven.</desc>
+        <weight>0.40 kg</weight>
+        <price>4.99</price>
+        <inv>60</inv>
+        <img>img/grain/cinnamonbun.jpg</img>
+    </grain>
+
+    <grain id="18">
+        <id>18</id>
+        <name>Raisin Bread</name>
+        <desc>Stuffed with so many raisins you'll wonder why we bothered with the bread.</desc>
+        <weight>0.60 kg</weight>
+        <price>4.99</price>
+        <inv>20</inv>
+        <img>img/grain/cinnamonbun.jpg</img>
+    </grain>
+
+    <dairy id="19">
+        <id>19</id>
+        <name>Brie Cheese</name>
+        <desc>Stuffed with so many raisins you'll wonder why we bothered with the bread.</desc>
+        <weight>0.20 kg</weight>
+        <price>3.99</price>
+        <inv>111</inv>
+        <img>img/dairy/Optimized-BrieCheese.jpg</img>
+    </dairy>
+
+    <dairy id="20">
+        <id>20</id>
+        <name>Ice Cream</name>
+        <desc>A soft serve cone, only comes in homemade vanilla.</desc>
+        <weight>1 cone</weight>
+        <price>2.99</price>
+        <inv>59</inv>
+        <img>img/dairy/Optimized-IceCream.jpg</img>
+    </dairy>
+
+    <dairy id="21">
+        <id>21</id>
+        <name>Jug of Milk</name>
+        <desc>A Large jug of Milk, fresh from our local farm, 2% lactose.</desc>
+        <weight>3L</weight>
+        <price>4.99</price>
+        <inv>104</inv>
+        <img>img/dairy/Optimized-Milk.jpg</img>
+    </dairy>
+
+    <dairy id="22">
+        <id>22</id>
+        <name>Parmesan Cheese</name>
+        <desc>A 2 inch slice of parmesan cheese, needs to be cut or grated to be enjoyed best. DO NOT EAT THE CRUST.</desc>
+        <weight>0.20 kg</weight>
+        <price>4.99</price>
+        <inv>91</inv>
+        <img>img/dairy/Optimized-ParmesanCheese(1).jpg</img>
+    </dairy>
+
+    <dairy id="23">
+        <id>23</id>
+        <name>Parmesan Cheese</name>
+        <desc>A 2 inch slice of parmesan cheese, needs to be cut or grated to be enjoyed best. DO NOT EAT THE CRUST.</desc>
+        <weight>0.20 kg</weight>
+        <price>4.99</price>
+        <inv>91</inv>
+        <img>img/dairy/Optimized-ParmesanCheese(1).jpg</img>
+    </dairy>
+
+    <dairy id="24">
+        <id>24</id>
+        <name>Swiss Cheese</name>
+        <desc>A 2 inch slice of swiss cheese, size of the holes in the cheese may vary.</desc>
+        <weight>0.20 kg</weight>
+        <price>4.99</price>
+        <inv>46</inv>
+        <img>img/dairy/Optimized-SwissCheese.jpg</img>
+    </dairy>
+
+    <dairy id="25">
+        <id>25</id>
+        <name>Yogurt Bowl</name>
+        <desc>A small custom-made yogurt bowl, served with assorted fruits and nuts.</desc>
+        <weight>0.40 kg</weight>
+        <price>5.99</price>
+        <inv>37</inv>
+        <img>img/dairy/Optimized-Yogurt.jpg</img>
+    </dairy>
+    
+    <candy id="26">
+        <id>26</id>
+        <name>Skittles</name>
+        <desc>A hard and chewy fruit-flavored candy that will leave you wanting more!</desc>
+        <weight>1.00 kg</weight>
+        <price>9.99</price>
+        <inv>44</inv>
+        <img>img/Candy/Skittles.jpg</img>
+    </candy>
+
+    <candy id="27">
+        <id>27</id>
+        <name>Assorted Hard Candy</name>
+        <desc>A multitude of hard candy that offers a sweet, sour and fruity taste.</desc>
+        <weight>1.00 kg</weight>
+        <price>8.99</price>
+        <inv>60</inv>
+        <img>img/Candy/assortedHardCandy.jpeg</img>
+    </candy>
+
+    <candy id="28">
+        <id>28</id>
+        <name>Gummy Bears</name>
+        <desc>Fruit flavored candy that will leave you wanting more!</desc>
+        <weight>1.00 kg</weight>
+        <price>9.99</price>
+        <inv>51</inv>
+        <img>img/Candy/Gummybears.jpeg</img>
+    </candy>
+
+    <candy id="29">
+        <id>29</id>
+        <name>Starbursts</name>
+        <desc>A bright fruit-flavored taffy candy that are sour, juicy sweet and chewy!</desc>
+        <weight>1.00 kg</weight>
+        <price>11.99</price>
+        <inv>50</inv>
+        <img>img/Candy/Starbursts.jpg</img>
+    </candy>
+
+    <candy id="30">
+        <id>30</id>
+        <name>Jelly Beans</name>
+        <desc>Extremely chewy Jellybeans that come in an endless list of different flavors.</desc>
+        <weight>1.00 kg</weight>
+        <price>8.99</price>
+        <inv>32</inv>
+        <img>img/Candy/Jellybeans.jpg</img>
+    </candy>
+
+    <candy id="31">
+        <id>31</id>
+        <name>Sour Snakes</name>
+        <desc>Sweet and sour snake shaped candy.</desc>
+        <weight>1.00 kg</weight>
+        <price>15.99</price>
+        <inv>45</inv>
+        <img>img/Candy/candySnakes.jpeg</img>
+    </candy>
+
+</products>
