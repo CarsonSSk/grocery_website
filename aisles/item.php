@@ -102,15 +102,7 @@
                         <h2><?php echo $name; ?></h2>
                         <br>
                         <h4><?php echo $weight; ?> kg</h4>
-                        <h3><?php echo $price; ?>$</h3>
-                        <input type="number" placeholder="Enter Quantity" name= "item" id="item<?php echo $id.$aisle; ?>\" min="0" onchange='saveValue(this);' onkeyup='saveValue(this);'>
-
-                        <br/>
-                        <select class="quality" id="quality-selector<?php echo $id.$aisle; ?>">
-                            <option value="economy" class="option" id="economy">Economy Value (0.75x price)</option>
-                            <option value="regular" class="option" id="regular">Regular Value (normal price)</option>
-                            <option value="deluxe" class="option" id="deluxe">Deluxe Value (1.25x price)</option>
-                        </select>                        
+                        <h3><?php echo $price; ?>$</h3>                        
 
                         
                         <div id="info-button">
@@ -128,7 +120,7 @@
                         <input type="hidden" name="hidden_name" value="<?php echo $name;?>">
                         <input type="hidden" name="hidden_weight" value="<?php echo $weight;?>" >
                         <input type="hidden" name="hidden_price" value="<?php echo $price;?>" >
-                        <input type="hidden" name="image_path" value="../ "<?php echo $img; ?>>
+                        <input type="hidden" name="image_path" value="<?php echo $img; ?>">
 
                         </form>
                     </div>

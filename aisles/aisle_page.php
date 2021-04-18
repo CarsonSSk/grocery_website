@@ -129,15 +129,8 @@
                                                     echo $weight; echo " kg</p>
                                                 <p class=\"food-price\">"; echo $price; echo"$</p>
 
-                                                <input type=\"submit\" value=\"Add to Cart\" name=\"add_to_cart\" class=\"custom-button\">
     
-                                                <input type=\"number\" placeholder=\"Enter Quantity\" name= \"quantity\" id=\"item"; echo ($i+1).$aisle; echo "\" value=\"1\" min=\"0\" onchange='saveValue(this);' onkeyup='saveValue(this);'>
-
-                                        <select class=\"quality\" id=\"quality-selector"; echo ($i+1).$aisle; echo "\">
-                                            <option value=\"economy\" class=\"option\" id=\"economy\">Economy Value (0.75x price)</option>
-                                            <option value=\"regular\" class=\"option\" id=\"regular\">Regular Value (normal price)</option>
-                                            <option value=\"deluxe\" class=\"option\" id=\"deluxe\">Deluxe Value (1.25x price)</option>
-                                        </select>
+                                                
 
                                         <input type=\"hidden\" name=\"hidden_name\" value=\""; echo $name; echo "\">
                                         <input type=\"hidden\" name=\"hidden_weight\" value=\""; echo $weight; echo "\">
