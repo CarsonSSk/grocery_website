@@ -49,7 +49,7 @@
           <div class="main page-width">
             <!--Main content starts here!-->
             
-            <a href="aisles/item.php?aisle=meat_food&food=chicken">
+            <a href="aisles/item.php?aisle=meat_food&id=7">
               <div class="row banner">
                 <div class="col-lg-8 col-md-12 green-background"><img src="img/live_chicken.jpg" alt="chicken"></div>
                 <div class="col-lg-4 col-md-12">
@@ -70,10 +70,10 @@
               <div class="col-lg-4 col-sm-6">
                 <div class="advertisement-holder">
                   <div class="img-holder">
-                    <a href="aisles/item.php?aisle=produce_food&food=apples"><img src="img/produce/apple.jpg" alt="apples"></a>
+                    <a href="aisles/item.php?aisle=produce_food&id=1"><img src="img/produce/apple.jpg" alt="apples"></a>
                   </div>
                   <div class="info-holder">
-                    <a href="aisles/item.php?aisle=produce_food&food=apples"><p class="food-name">Picked Apples</p></a>
+                    <a href="aisles/item.php?aisle=produce_food&id=1"><p class="food-name">Picked Apples</p></a>
                     <p class="food-details">1.0 kg</p>
                     <p class="food-price">4.99$</p>
                     <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
@@ -84,10 +84,10 @@
               <div class="col-lg-4 col-sm-6">
                 <div class="advertisement-holder">
                   <div class="img-holder">
-                    <a href="aisles/item.php?aisle=produce_food&food=bananas"><img src="img/produce/banana.jpg" alt="bananas"></a>
+                    <a href="aisles/item.php?aisle=produce_food&id=2"><img src="img/produce/banana.jpg" alt="bananas"></a>
                   </div>
                   <div class="info-holder">
-                    <a href="aisles/item.php?aisle=produce_food&food=bananas"><p class="food-name">Ripe Bananas</p></a>
+                    <a href="aisles/item.php?aisle=produce_food&id=2"><p class="food-name">Ripe Bananas</p></a>
                     <p class="food-details">1.0 kg</p>
                     <p class="food-price">2.99$</p>
                     <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
@@ -98,10 +98,10 @@
               <div class="col-lg-4 col-sm-12">
                 <div class="advertisement-holder">
                   <div class="img-holder">
-                    <a href="aisles/item.php?aisle=produce_food&food=peppers"><img src="img/produce/pepper.jpg" alt="peppers"></a>
+                    <a href="aisles/item.php?aisle=produce_food&id=3"><img src="img/produce/pepper.jpg" alt="peppers"></a>
                   </div>
                   <div class="info-holder">
-                    <a href="aisles/item.php?aisle=produce_food&food=peppers"><p class="food-name">Hot Peppers</p></a>
+                    <a href="aisles/item.php?aisle=produce_food&id=3"><p class="food-name">Hot Peppers</p></a>
                     <p class="food-details">1.0 kg</p>
                     <p class="food-price">6.99$</p>
                     <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
@@ -111,7 +111,7 @@
             </div>
 
             <div class="center-text">
-              <a href="aisles/Produce.html" class="custom-button"><i class="fas fa-pepper-hot"></i>See all produce</a>
+              <a href="/Grocery/grocery_website/aisles/aisle_page.php?aisle=produce_food" class="custom-button"><i class="fas fa-pepper-hot"></i>See all produce</a>
             </div>
 
             <hr>
@@ -122,10 +122,10 @@
               <div class="col-lg-4 col-sm-6">
                 <div class="advertisement-holder">
                   <div class="img-holder">
-                    <a href="aisles/item.php?aisle=meat_food&food=chicken"><img src="img/meat/chicken.jpg" alt="chicken"></a>
+                    <a href="aisles/item.php?aisle=meat_food&id=7"><img src="img/meat/chicken.jpg" alt="chicken"></a>
                   </div>
                   <div class="info-holder">
-                    <a href="aisles/item.php?aisle=meat_food&food=chicken"><p class="food-name">Fresh Chicken</p></a>
+                    <a href="aisles/item.php?aisle=meat_food&id=7"><p class="food-name">Fresh Chicken</p></a>
                     <p class="food-details">1.5 kg</p>
                     <p class="food-price">7.99$</p>
                     <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
@@ -136,10 +136,10 @@
               <div class="col-lg-4 col-sm-6">
                 <div class="advertisement-holder">
                   <div class="img-holder">
-                    <a href="aisles/item.php?aisle=meat_food&food=beef"><img src="img/meat/beef.jpg" alt="beef"></a>
+                    <a href="aisles/item.php?aisle=meat_food&idd=8"><img src="img/meat/beef.jpg" alt="beef"></a>
                   </div>
                   <div class="info-holder">
-                    <a href="aisles/item.php?aisle=meat_food&food=beef"><p class="food-name">Sliced Beef</p></a>
+                    <a href="aisles/item.php?aisle=meat_food&id=8"><p class="food-name">Sliced Beef</p></a>
                     <p class="food-details">1.2 kg</p>
                     <p class="food-price">10.99$</p>
                     <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
@@ -150,10 +150,10 @@
               <div class="col-lg-4 col-sm-12">
                 <div class="advertisement-holder">
                   <div class="img-holder">
-                    <a href="aisles/aisles/item.php?aisle=meat_food&food=fish"><img src="img/meat/fish.jpg" alt="fish"></a>
+                    <a href="aisles/aisles/item.php?aisle=meat_food&id=9"><img src="img/meat/fish.jpg" alt="fish"></a>
                   </div>
                   <div class="info-holder">
-                    <a href="aisles/aisles/item.php?aisle=meat_food&food=fish"><p class="food-name">Fish Fillet</p></a>
+                    <a href="aisles/aisles/item.php?aisle=meat_food&id=9"><p class="food-name">Fish Fillet</p></a>
                     <p class="food-details">0.8 kg</p>
                     <p class="food-price">8.99$</p>
                     <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
@@ -164,7 +164,7 @@
             </div>
 
             <div class="center-text">
-              <a href="aisles/Meat.html" class="custom-button"><i class="fas fa-drumstick-bite"></i>See all meat</a>
+              <a href="/Grocery/grocery_website/aisles/aisle_page.php?aisle=meat_food" class="custom-button"><i class="fas fa-drumstick-bite"></i>See all meat</a>
             </div>
 
             <hr>
@@ -175,10 +175,10 @@
               <div class="col-lg-4 col-sm-6">
                 <div class="advertisement-holder">
                   <div class="img-holder">
-                    <a href="aisles/item.php?aisle=grain_food&food=wheatbread"><img src="img/grain/bread.jpg" alt="bread"></a>
+                    <a href="aisles/item.php?aisle=grain_food&id=13"><img src="img/grain/bread.jpg" alt="bread"></a>
                   </div>
                   <div class="info-holder">
-                    <a href="aisles/item.php?aisle=grain_food&food=wheatbread"><p class="food-name">Wheat Bread</p></a>
+                    <a href="aisles/item.php?aisle=grain_food&id=13"><p class="food-name">Wheat Bread</p></a>
                     <p class="food-details">0.5 kg</p>
                     <p class="food-price">2.99$</p>
                     <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
@@ -189,10 +189,10 @@
               <div class="col-lg-4 col-sm-6">
                 <div class="advertisement-holder">
                   <div class="img-holder">
-                    <a href="aisles/item.php?aisle=grain_food&food=baguette"><img src="img/grain/baguette.jpg" alt="baguette"></a>
+                    <a href="aisles/item.php?aisle=grain_food&id=14"><img src="img/grain/baguette.jpg" alt="baguette"></a>
                   </div>
                   <div class="info-holder">
-                    <a href="aisles/item.php?aisle=grain_food&food=baguette"><p class="food-name">Baked Baguette</p></a>
+                    <a href="aisles/item.php?aisle=grain_food&id=14"><p class="food-name">Baked Baguette</p></a>
                     <p class="food-details">0.4 kg</p>
                     <p class="food-price">3.99$</p>
                     <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
@@ -203,10 +203,10 @@
               <div class="col-lg-4 col-sm-12">
                 <div class="advertisement-holder">
                   <div class="img-holder">
-                    <a href="aisles/item.php?aisle=grain_food&food=croissant"><img src="img/grain/croissant.jpg" alt="croissants"></a>
+                    <a href="aisles/item.php?aisle=grain_food&id=15"><img src="img/grain/croissant.jpg" alt="croissants"></a>
                   </div>
                   <div class="info-holder">
-                    <a href="aisles/item.php?aisle=grain_food&food=croissant"><p class="food-name">Fluffy Croissants</p></a>
+                    <a href="aisles/item.php?aisle=grain_food&id=15"><p class="food-name">Fluffy Croissants</p></a>
                     <p class="food-details">0.6 kg</p>
                     <p class="food-price">4.99$</p>
                     <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
@@ -217,7 +217,7 @@
             </div>
 
             <div class="center-text">
-              <a href="aisles/Grain.html" class="custom-button"><i class="fas fa-bread-slice"></i>See all grains</a>
+              <a href="/Grocery/grocery_website/aisles/aisle_page.php?aisle=grain_food" class="custom-button"><i class="fas fa-bread-slice"></i>See all grains</a>
             </div>
 
             <hr>
@@ -228,10 +228,10 @@
               <div class="col-lg-4 col-sm-6">
                 <div class="advertisement-holder">
                   <div class="img-holder">
-                    <a href="aisles/item.php?aisle=dairy_food&food=brie"><img src="img/dairy/Optimized-BrieCheese.jpg" alt="brie cheese"></a>
+                    <a href="aisles/item.php?aisle=dairy_food&id=19"><img src="img/dairy/Optimized-BrieCheese.jpg" alt="brie cheese"></a>
                   </div>
                   <div class="info-holder">
-                    <a href="aisles/item.php?aisle=dairy_food&food=brie"><p class="food-name">Brie Cheese</p></a>
+                    <a href="aisles/item.php?aisle=dairy_food&id=19"><p class="food-name">Brie Cheese</p></a>
                     <p class="food-details">0.2 kg</p>
                     <p class="food-price">3.99$</p>
                     <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
@@ -242,10 +242,10 @@
               <div class="col-lg-4 col-sm-6">
                 <div class="advertisement-holder">
                   <div class="img-holder">
-                    <a href="aisles/item.php?aisle=dairy_food&food=icecream"><img src="img/dairy/Optimized-IceCream.jpg" alt="ice cream"></a>
+                    <a href="aisles/item.php?aisle=dairy_food&id=20"><img src="img/dairy/Optimized-IceCream.jpg" alt="ice cream"></a>
                   </div>
                   <div class="info-holder">
-                    <a href="aisles/item.php?aisle=dairy_food&food=icecream"><p class="food-name">Ice Cream</p></a>
+                    <a href="aisles/item.php?aisle=dairy_food&id=20"><p class="food-name">Ice Cream</p></a>
                     <p class="food-details">1.0 kg</p>
                     <p class="food-price">2.99$</p>
                     <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
@@ -256,10 +256,10 @@
               <div class="col-lg-4 col-sm-12">
                 <div class="advertisement-holder">
                   <div class="img-holder">
-                    <a href="aisles/item.php?aisle=dairy_food&food=milk"><img src="img/dairy/Optimized-Milk.jpg" alt="Milk"></a>
+                    <a href="aisles/item.php?aisle=dairy_food&id=21"><img src="img/dairy/Optimized-Milk.jpg" alt="Milk"></a>
                   </div>
                   <div class="info-holder">
-                    <a href="aisles/item.php?aisle=dairy_food&food=milk"><p class="food-name">Jug of Milk</p></a>
+                    <a href="aisles/item.php?aisle=dairy_food&id=21"><p class="food-name">Jug of Milk</p></a>
                     <p class="food-details">3.0 kg</p>
                     <p class="food-price">4.99$</p>
                     <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
@@ -270,7 +270,7 @@
             </div>
 
             <div class="center-text">
-              <a href="aisles/Dairy.html" class="custom-button"><i class="fas fa-cheese"></i></i>See all dairy</a>
+              <a href="/Grocery/grocery_website/aisles/aisle_page.php?aisle=dairy_food" class="custom-button"><i class="fas fa-cheese"></i></i>See all dairy</a>
             </div>
 
             <hr>
@@ -281,10 +281,10 @@
               <div class="col-lg-4 col-sm-6">
                 <div class="advertisement-holder">
                   <div class="img-holder">
-                    <a href="aisles/item.php?aisle=candy_food&food=skittles"><img src="img/Candy/Skittles.jpg" alt="Skittles"></a>
+                    <a href="aisles/item.php?aisle=candy_food&id=26"><img src="img/Candy/Skittles.jpg" alt="Skittles"></a>
                   </div>
                   <div class="info-holder">
-                    <a href="aisles/item.php?aisle=candy_food&food=skittles"><p class="food-name">Skittles</p></a>
+                    <a href="aisles/item.php?aisle=candy_food&fid=26"><p class="food-name">Skittles</p></a>
                     <p class="food-details">1.0 kg</p>
                     <p class="food-price">9.99$</p>
                     <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
@@ -295,10 +295,10 @@
               <div class="col-lg-4 col-sm-6">
                 <div class="advertisement-holder">
                   <div class="img-holder">
-                    <a href="aisles/item.php?aisle=candy_food&food=hardcandy"><img src="img/Candy/assortedHardCandy.jpeg" alt="Hard Candies"></a>
+                    <a href="aisles/item.php?aisle=candy_food&id=27"><img src="img/Candy/assortedHardCandy.jpeg" alt="Hard Candies"></a>
                   </div>
                   <div class="info-holder">
-                    <a href="aisles/item.php?aisle=candy_food&food=hardcandy"><p class="food-name">Assorted Hard Candy</p></a>
+                    <a href="aisles/item.php?aisle=candy_food&id=27"><p class="food-name">Assorted Hard Candy</p></a>
                     <p class="food-details">1.0 kg</p>
                     <p class="food-price">8.99$</p>
                     <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
@@ -309,10 +309,10 @@
               <div class="col-lg-4 col-sm-12">
                 <div class="advertisement-holder">
                   <div class="img-holder">
-                    <a href="aisles/item.php?aisle=candy_food&food=gummybears"><img src="img/Candy/Gummybears.jpeg" alt="Gummy Bears"></a>
+                    <a href="aisles/item.php?aisle=candy_food&id=28"><img src="img/Candy/Gummybears.jpeg" alt="Gummy Bears"></a>
                   </div>
                   <div class="info-holder">
-                    <a href="aisles/item.php?aisle=candy_food&food=gummybears"><p class="food-name">Gummy Bears</p></a>
+                    <a href="aisles/item.php?aisle=candy_food&id=28"><p class="food-name">Gummy Bears</p></a>
                     <p class="food-details">1.0 kg</p>
                     <p class="food-price">9.99$</p>
                     <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
@@ -323,12 +323,12 @@
             </div>
 
             <div class="center-text">
-              <a href="aisles/Candy.html" class="custom-button"><i class="fas fa-candy-cane"></i>See all candy</a>
+              <a href="/Grocery/grocery_website/aisles/aisle_page.php?aisle=candy_food" class="custom-button"><i class="fas fa-candy-cane"></i>See all candy</a>
             </div>
 
             <hr>
 
-            <a href="aisles/item.php?aisle=grain_food&food=baguette">
+            <a href="aisles/item.php?aisle=grain_food&id=14">
               <div class="row banner">
                 <div class="col-lg-8 col-md-12 green-background"><img src="img/baker.jpg" alt="baker"></div>
                 <div class="col-lg-4 col-md-12">

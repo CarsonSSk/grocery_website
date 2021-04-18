@@ -56,7 +56,7 @@
               <?php
     
                 if(isset($_GET['aisle']) && isset($_GET['id'])){
-                include_once '../includes/dbh.inc.php';
+                
         
                 $aisle = $_GET['aisle'];
                 $id = $_GET['id'];
@@ -82,19 +82,22 @@
                 $img = $list[$i]->img;
                 break;
                 }
-                }
+            }
                     }   
                     ?>
 
 
 
 
-                <div class="col-md-6">
-                    <div class="product-page"><?php echo "<img src=../"; echo $img; echo "\" alt=\"\""; echo $name; echo "\">" ?></div>
+            <div class="col-md-6">
+                    <div class="product-page">
+                    <img src="../<?php echo $img; ?>" alt="<?php echo $name; ?>">
                 </div>
+                
+            </div>
 
                 <div class="col-md-6">
-                <form method="post" action="index.php?action=add&id=<?php echo $row['id']; ?> ">
+                    
                     <div class="product-page-content">
                         <h2><?php echo $name; ?></h2>
                         <br>
@@ -115,7 +118,7 @@
                                 More Information<i class="fas fa-chevron-circle-down"></i>
                             </button>
                         </div>
-                    
+                        <form method="post" action="../shoppingCart.php?action=add&id=<?php echo $id; ?> ">
                         <div class="border hidden">
                             <?php echo $description; ?>
                         </div>
@@ -127,16 +130,17 @@
                         <input type="hidden" name="hidden_price" value="<?php echo $price;?>" >
                         <input type="hidden" name="image_path" value="../ "<?php echo $img; ?>>
 
-
+                        </form>
                     </div>
+                    
                 </div>
-                </form>
-              </div>
+                
+              
 
               
 
               <hr> 
-              <div class="center-text"><a href="../aisle_page.php?aisle="<?php echo $aisle ?> class="custom-button"><i class="fas fa-arrow-left\"></i>Return to aisle</a></div>
+              <div class="center-text"><a href="../aisles/aisle_page.php?aisle=<?php echo $aisle; ?>" class="custom-button"><i class="fas fa-arrow-left\"></i>Return to aisle</a></div>
               
               <!--Main content ends here!-->
             </div>
