@@ -80,6 +80,8 @@
                 $price = $list[$i]->price;
                 $inv = $list[$i]->inv;
                 $img = $list[$i]->img;
+
+                $name= str_replace('_'," ",$name);
                 break;
                 }
             }
