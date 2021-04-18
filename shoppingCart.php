@@ -2,6 +2,7 @@
 
 include_once 'includes/session.php'; 
 
+//  Cart arrays
 if (isset($_POST["add_to_cart"])) {
 
     if (isset($_SESSION["shopping_cart"])) {
@@ -16,7 +17,6 @@ if (isset($_POST["add_to_cart"])) {
             'product_name' => $_POST["hidden_name"],
             'product_weight' => $_POST["hidden_weight"],
             'product_price' => $_POST["hidden_price"],
-            'product_quantity' => $_POST["quantity"],
             'product_img' => $_POST["image_path"],
           );
           $_SESSION["shopping_cart"][$index] = $product_array;
@@ -28,15 +28,15 @@ if (isset($_POST["add_to_cart"])) {
             'product_name' => $_POST["hidden_name"],
             'product_weight' => $_POST["hidden_weight"],
             'product_price' => $_POST["hidden_price"],
-            'product_quantity' => $_POST["quantity"],
             'product_img' => $_POST["image_path"],
         );
         $_SESSION["shopping_cart"][0] = $product_array;
     }
 }
 
+//  Delete function
 if (isset($_GET["action"])) {
-  if ($_GET["action" == "delete"]) {
+  if ($_GET["action"] == "delete") {
     foreach ($_SESSION["shopping_cart"] as $keys => $values) {
       if ($values["product_id"] == $_GET["id"]) {
         unset($_SESSION["shopping_cart"][$keys]);
@@ -94,38 +94,44 @@ if (isset($_GET["action"])) {
               <div class="row aisle">
                 <div class="col-lg-8 col-md-6 col-sm-12">
                   <div class="row aisle">
-
+                    
                     <?php
+                    //  Cart display
                     if (!empty($_SESSION["shopping_cart"])) {
+                      $counter = 0;
                         foreach ($_SESSION["shopping_cart"] as $keys => $values) {
+                          $counter = $counter + 1;
                             ?>
                             <div class="col-lg-6  col-md-12 col-sm-12">
-                                <div class="advertisement-holder">
+                              <div class="advertisement-holder">
                                 <div class="img-holder">
                                     <a><img src=<?php echo $values["product_img"]; ?> alt=<?php echo $values["product_name"]; ?>></a>
                                 </div>
                                 <div class="info-holder">
-                                    <a><p class="food-name"><?php echo $values["product_name"]; ?></p></a>
+                                    <a><p class="food-name"><?php 
+                                    $stringname = $values["product_name"];
+                                    $name = str_replace("_"," ",$stringname);
+                                    echo $name; ?></p></a>
                                     <p class="food-details"><?php echo $values["product_weight"]; ?></p>
                                     <p class="food-price"><?php echo $values["product_price"]; ?>$</p>
                                     
-                                    <input type="number" placeholder="Enter Quantity" name= "item1" id="item1cart" value="<?php echo $values["product_quantity"]; ?>" min="0" onchange='saveValue(this);' onkeyup='saveValue(this);'>
-                                    <select class="quality" id="quality-selector1cart">
+                                    <input type="number" placeholder="Enter Quantity" name= "item<?php echo $counter;?>" id="item<?php echo $counter;?>cart" value="1" min="1" onchange='saveValue(this);' onkeyup='saveValue(this);'>
+                                    <select class="quality" name ="quality-selector<?php echo $counter;?>" id="quality-selector<?php echo $counter;?>cart">
                                     <option value="economy" class="option" id="economy">Economy Value (0.75x price)</option>
-                                    <option value="regular" class="option" id="regular">Regular Value (normal price)</option>
+                                    <option value="regular" class="option" id="regular" Selected>Regular Value (normal price)</option>
                                     <option value="deluxe" class="option" id="deluxe">Deluxe Value (1.25x price)</option>
                                     </select>
-                                    
+                                    </br>
+                                    </br>
                                     <a href="shoppingCart.php?action=delete&id=<?php echo $values["product_id"]; ?>" class="custom-button">Remove</a>
-                                
                                 </div>
-                                </div>
+                              </div>
                             </div>
                             <?php
                         }
                     }
                     else {
-                      echo "Your shopping cart is currently empty";
+                      echo "<div class=\"icon-bar-foot\">Your shopping cart is currently empty</div></br></br>";
                     } ?>  
 
             </div>
