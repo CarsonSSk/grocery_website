@@ -17,6 +17,7 @@
     $productsTag = $xml->getElementsByTagName("products")->item(0);
 
       $aisleTag = $xml->createElement($aisle);
+        $idTag = $xml->createElement("id", ($id+1));
         $nameTag = $xml->createElement("name", $name);
         $descTag = $xml->createElement("desc", $description);
         $weightTag = $xml->createElement("weight", $weight);
@@ -24,6 +25,7 @@
         $invTag = $xml->createElement("inv", $inventory);
         $imageTag = $xml->createElement("img", "../img/$aisle/$name.jpg");
 
+        $aisleTag->appendChild($idTag);
         $aisleTag->appendChild($nameTag);
         $aisleTag->appendChild($descTag);
         $aisleTag->appendChild($weightTag);

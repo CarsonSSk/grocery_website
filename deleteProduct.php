@@ -1,3 +1,24 @@
+<?php  
+$id = $_GET['id'];
+$aisle = $_GET['aisle'];
+?>
+
+<?php  
+if(isset($_POST['delete'])) { 
+    $file = "products.xml";
+    $doc = new SimpleXMLElement($file);
+    foreach($doc->produce as $produce) { 
+        if($produce['id'] == $id) { 
+            $dom = dom_import_simplexml($produce);
+            $dom->parentNode->removeChild($dom);
+            break;
+        }
+    }
+}
+  
+?>
+
+
 
 <!doctype html>
 <html lang="en">
@@ -108,71 +129,36 @@
             
             <div class="main page-width">
               <!--Main content starts here!-->
-                  
-                <div class="card-content">
-                    <h5 class="center-text">Product List</h5>
+
+            <form method = "POST" action = <?php "deleteProduct.php?aisle=$aisle&id=$id"?>>
+              <div class="card-content">
+                <h5 class="center-text"><b>Delete Product</b></h5>
+              </div>
+                  <hr/>
+                  <div class="center-text">
+                  Are you sure you want to delete this product?
+                  <hr/>
+                  <div class="saveButton"> 
+                    <input type="submit" class="btn custom-button" name = "delete" value="Delete"></input>
+                  </div>
+            </form>
+                  <hr class="clear">
+
+                  <p class="subtitle">Backstore Navigation</p>
+
+            <div class="row backstore-navigation">
+              <div class="col-lg-4 col-12">
+                <a href="../userlist.html" class="custom-button">User List</a>
+              </div>
+              <div class="col-lg-4 col-12">
+                <a href="../orderlist.html" class="custom-button">Order List</a>
+              </div>
+              <div class="col-lg-4 col-12">
+                <a href="../productlist.html" class="custom-button">Product List</a>
+              </div>
+            </div>
                 </div>
 
-                <div class="topbar">
-                  <a href="addProduct.php" class="btn add custom-button">Add Product</a>
-                </div>
-                <table id ="table">
-                    <?php
-                        $xml = simplexml_load_file("products.xml");
-                        $list = $xml->produce;
-                        $counter = count($list);
-                        echo '
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Weight per unit (kg)</th>
-                            <th>Price per unit(CAD)</th>
-                            <th>Units in stock</th>
-                            <th>Manage</th>
-                        </tr>
-                        </thead>';
-                        for ($i = 0; $i < count($list); $i++) { 
-                          $id = $i + 1;
-                          $idCount = fopen("idcountproduce.txt", "w");
-                          fwrite($idCount, $counter);
-                          fclose($idCount);
-                          $stringname = $list[$i]->name;
-                          $name = str_replace("_"," ",$stringname);
-                          $stringdesc = $list[$i]->desc;
-                          $desc = str_replace("_"," ",$stringdesc);
-                            echo '<tr>';
-                                echo '<td>' . $i + 1 . '</td>';
-                                echo '<td>' . $name . '</td>';
-                                echo '<td>' . $desc . '</td>';
-                                echo '<td>' . $list[$i]->weight . '</td>';
-                                echo '<td>' . $list[$i]->price . '</td>';
-                                echo '<td>' . $list[$i]->inv . '</td>';
-                                echo '<td>' . 
-                                "<a href = 'deleteProduct.php?aisle=produce&id=$id' class='btn custom-button'><i class='fa fa-trash'></i></button>
-                                <a href = 'addeditproducts/editfood.php?aisle=produce&id=$id' class = 'btn custom-button'><i class = 'fa fa-edit'</i></button>" 
-                                . '</td>';
-                            echo '</tr>';
-                        }
-                    ?>
-                </table>
-
-                <br/>
-                <p class="subtitle">Backstore Navigation</p>
-
-                <div class="row backstore-navigation">
-                  <div class="col-lg-4 col-12">
-                    <a href="userlist.html" class="custom-button">User List</a>
-                  </div>
-                  <div class="col-lg-4 col-12">
-                    <a href="orderlist.html" class="custom-button">Order List</a>
-                  </div>
-                  <div class="col-lg-4 col-12">
-                    <a href="productlist.html" class="custom-button">Product List</a>
-                  </div>
-                </div>
-          
               
               <!--Main content ends here!-->
             </div>

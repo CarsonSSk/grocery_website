@@ -3,20 +3,162 @@ $id = $_GET['id'];
 $aisle = $_GET['aisle'];
 $xml = simplexml_load_file("../products.xml");
 
-$list = $xml->produce;
-$counter = count($list);
-for ($i = 0; $i < count($list); $i++) {
-  if (($list[$i]->id) == $id) {
-    $name = $list[$i]->name;
-    $description = $list[$i]->desc;
-    $weight = $list[$i]->weight;
-    $price = $list[$i]->price;
-    $inv = $list[$i]->inv;
-    break;
-  }
+switch($aisle) { 
+  case "produce":
+    $list = $xml->produce;
+    for ($i = 0; $i < count($list); $i++) {
+      if (($list[$i]->id) == $id) {
+        $name = $list[$i]->name;
+        $desc = $list[$i]->desc;
+        $weight = $list[$i]->weight;
+        $price = $list[$i]->price;
+        $inv = $list[$i]->inv;
+        break;
+      }
+    }
+  break;
+  case "meat":
+    $list = $xml->meat;
+    for ($i = 0; $i < count($list); $i++) {
+      if (($list[$i]->id) == $id) {
+        $name = $list[$i]->name;
+        $desc = $list[$i]->desc;
+        $weight = $list[$i]->weight;
+        $price = $list[$i]->price;
+        $inv = $list[$i]->inv;
+        break;
+      }
+    }
+  break;
+  case "candy":
+    $list = $xml->candy;
+    for ($i = 0; $i < count($list); $i++) {
+      if (($list[$i]->id) == $id) {
+        $name = $list[$i]->name;
+        $desc = $list[$i]->desc;
+        $weight = $list[$i]->weight;
+        $price = $list[$i]->price;
+        $inv = $list[$i]->inv;
+        break;
+      }
+    }
+  break;
+  case "dairy":
+    $list = $xml->dairy;
+    for ($i = 0; $i < count($list); $i++) {
+      if (($list[$i]->id) == $id) {
+        $name = $list[$i]->name;
+        $desc = $list[$i]->desc;
+        $weight = $list[$i]->weight;
+        $price = $list[$i]->price;
+        $inv = $list[$i]->inv;
+        break;
+      }
+    }
+  break;
+  case "grain":
+    $list = $xml->grain;
+    for ($i = 0; $i < count($list); $i++) {
+      if (($list[$i]->id) == $id) {
+        $name = $list[$i]->name;
+        $desc = $list[$i]->desc;
+        $weight = $list[$i]->weight;
+        $price = $list[$i]->price;
+        $inv = $list[$i]->inv;
+        break;
+      }
+    }
+  break;
 }
-
 ?>
+
+<?php  
+ if(isset($_POST['insert'])) { 
+  //$xml = new DomDocument("1.0","UTF-8");
+  //$xml->load('../products.xml');
+  switch($aisle) { 
+    case "produce":
+      $list = $xml->produce;
+      for ($i = 0; $i < count($list); $i++) {
+        
+        if (($list[$i]->id) == $id) {
+          //what needs to be replaced
+          for($j = 0; $j < count($list); $j++){
+            $oldValues[$j] = [$list[$j]];
+          }
+          
+          $newname = $_POST['name'];
+          $newweight = $_POST['weight'];
+          $newprice = $_POST['price'];
+          $newdescription = $_POST['desc'];
+          $newinventory = $_POST['inv'];
+          //new content
+          $newValues = [$newname,$newweight,$newprice,$newdescription,$newinventory];
+
+          $newXml = simplexml_load_string( str_replace( $oldValues, $newValues, $xml->asXml()));
+          $newXml->asXml('updated.xml');
+          break;
+        }
+      }
+    break;
+    case "meat":
+      $list = $xml->meat;
+      for ($i = 0; $i < count($list); $i++) {
+        if (($list[$i]->id) == $id) {
+          $name = $list[$i]->name;
+          $desc = $list[$i]->desc;
+          $weight = $list[$i]->weight;
+          $price = $list[$i]->price;
+          $inv = $list[$i]->inv;
+          break;
+        }
+      }
+    break;
+    case "candy":
+      $list = $xml->candy;
+      for ($i = 0; $i < count($list); $i++) {
+        if (($list[$i]->id) == $id) {
+          $name = $list[$i]->name;
+          $desc = $list[$i]->desc;
+          $weight = $list[$i]->weight;
+          $price = $list[$i]->price;
+          $inv = $list[$i]->inv;
+          break;
+        }
+      }
+    break;
+    case "dairy":
+      $list = $xml->dairy;
+      for ($i = 0; $i < count($list); $i++) {
+        if (($list[$i]->id) == $id) {
+          $name = $list[$i]->name;
+          $desc = $list[$i]->desc;
+          $weight = $list[$i]->weight;
+          $price = $list[$i]->price;
+          $inv = $list[$i]->inv;
+          break;
+        }
+      }
+    break;
+    case "grain":
+      $list = $xml->grain;
+      for ($i = 0; $i < count($list); $i++) {
+        if (($list[$i]->id) == $id) {
+          $name = $list[$i]->name;
+          $desc = $list[$i]->desc;
+          $weight = $list[$i]->weight;
+          $price = $list[$i]->price;
+          $inv = $list[$i]->inv;
+          break;
+        }
+      }
+    break;
+
+  }
+  $xml->save('products.xml');
+}
+?>
+
 
 <!doctype html>
 <html lang="en">
@@ -127,13 +269,13 @@ for ($i = 0; $i < count($list); $i++) {
             
             <div class="main page-width">
               <!--Main content starts here!-->
-              <form method = "POST" action = "editfood.php">
+              <form method = "POST" action = <?php "addeditproducts/editfood.php?aisle=$aisle&id=$id" ?>>
               <div class="card-content">
                 <h5 class="center-text"><b>Edit Product</b></h5>
               </div>
                   <hr/>
                   <div class="center-text">
-                    <img src="../img/produce/apple.jpg">
+                    <img src=<?php echo "../img/$aisle/$name.jpg"?>>
                   <a class="custom-button" href=""> Change Image</a>
                 
                   <hr/>
@@ -142,7 +284,7 @@ for ($i = 0; $i < count($list); $i++) {
                         <h5 class="center-text">Name</h5>
                     </div>
                     <div class="edit-field">
-                        <input value=<?php echo $name?> name = "name" class="barContent">
+                        <input value=<?php echo $name;?> name = "name" class="barContent">
                     </div>
                   </div>
                   <div class="edit-field-type">
@@ -150,7 +292,7 @@ for ($i = 0; $i < count($list); $i++) {
                         <h5 class="center-text">Weight</h5>
                     </div>
                     <div class="edit-field">
-                        <input value= <?php echo $weight?> name = "weight" class="barContent">
+                        <input value= <?php echo $weight;?> name = "weight" class="barContent">
                     </div>
                   </div>
                   <div class="edit-field-type">
@@ -158,7 +300,7 @@ for ($i = 0; $i < count($list); $i++) {
                         <h5 class="center-text">Price</h5>
                     </div>
                     <div class="edit-field">
-                        <input value=<?php echo $price?> name = "price" class="barContent">
+                        <input value=<?php echo $price;?> name = "price" class="barContent">
                     </div>
                   </div>
                   <div class="edit-field-type">
@@ -166,27 +308,15 @@ for ($i = 0; $i < count($list); $i++) {
                         <h5 class="center-text">Description</h5>
                     </div>
                     <div class="edit-field">
-                        <input value=<?php echo $desc?> name = "desc" class="barContent">
+                        <input value=<?php echo $desc;?> name = "desc" class="barContent">
                     </div>
-                  </div>
-                  <div class="edit-field-type">
-                    <div class="card-sub-content">
-                        <h5 class="center-text">Aisle</h5>
-                    </div>
-                    <select class="userType" id="category">
-                        <option value="Produce" class="option">Produce</option>
-                        <option value="Grain" class="option">Grain</option>
-                        <option value="Meat" class="option">Meat</option>
-                        <option value="Dairy" class="option">Dairy</option>
-                        <option value="Candy" class="option">Candy</option>
-                    </select>
                   </div>
                   <div class="edit-field-type">
                     <div class="card-sub-content">
                         <h5 class="center-text">Quantity</h5>
                     </div>
                     <div class="edit-field">
-                        <input value=<?php echo $inv?> name = "inv" class="barContent">
+                        <input value=<?php echo $inv;?> name = "inv" class="barContent">
                     </div>
                   </div>
 
