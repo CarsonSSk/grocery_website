@@ -4,9 +4,9 @@
   $isUser = false;
   $isAdmin = false;
   if(isset($_SESSION['email'])) {
-    if (file_exists('database/users/' . $_SESSION['email'] . '.xml')) {
+    if (file_exists($_SERVER['DOCUMENT_ROOT'].'/Grocery/grocery_website/database/users/' . $_SESSION['email'] . '.xml')) {
       $isUser = true;
-      $xml = simplexml_load_file('database/users/' . $_SESSION['email'] . '.xml') or header('Location: index.php');
+      $xml = simplexml_load_file($_SERVER['DOCUMENT_ROOT'].'/Grocery/grocery_website/database/users/' . $_SESSION['email'] . '.xml') or header('Location: index.php');
       $isAdmin = $xml->admin;
     }
   }
