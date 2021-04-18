@@ -110,7 +110,7 @@
               <!--Main content starts here!-->
                   
                 <div class="card-content">
-                    <h5 class="center-text">Product List</h5>
+                    <h5 class="center-text">Produce List</h5>
                 </div>
 
                 <div class="topbar">
@@ -120,7 +120,6 @@
                     <?php
                         $xml = simplexml_load_file("products.xml");
                         $list = $xml->produce;
-                        $counter = count($list);
                         echo '
                         <thead>
                         <tr>
@@ -134,16 +133,13 @@
                         </tr>
                         </thead>';
                         for ($i = 0; $i < count($list); $i++) { 
-                          $id = $i + 1;
-                          $idCount = fopen("idcountproduce.txt", "w");
-                          fwrite($idCount, $counter);
-                          fclose($idCount);
+                          $id = $list[$i]->id;
                           $stringname = $list[$i]->name;
                           $name = str_replace("_"," ",$stringname);
                           $stringdesc = $list[$i]->desc;
                           $desc = str_replace("_"," ",$stringdesc);
                             echo '<tr>';
-                                echo '<td>' . $i + 1 . '</td>';
+                                echo '<td>' . $list[$i]->id . '</td>';
                                 echo '<td>' . $name . '</td>';
                                 echo '<td>' . $desc . '</td>';
                                 echo '<td>' . $list[$i]->weight . '</td>';

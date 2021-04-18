@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -109,7 +110,7 @@
               <!--Main content starts here!-->
                   
                 <div class="card-content">
-                    <h5 class="center-text">Product List</h5>
+                    <h5 class="center-text">Dairy List</h5>
                 </div>
 
                 <div class="topbar">
@@ -118,7 +119,7 @@
                 <table id ="table">
                     <?php
                         $xml = simplexml_load_file("products.xml");
-                        $list = $xml->produce;
+                        $list = $xml->dairy;
                         echo '
                         <thead>
                         <tr>
@@ -132,20 +133,21 @@
                         </tr>
                         </thead>';
                         for ($i = 0; $i < count($list); $i++) { 
+                          $id = $list[$i]->id;
+                          $stringname = $list[$i]->name;
+                          $name = str_replace("_"," ",$stringname);
+                          $stringdesc = $list[$i]->desc;
+                          $desc = str_replace("_"," ",$stringdesc);
                             echo '<tr>';
-                                $str = $list[$i]->name;
-                                $string = str_replace(' ','',$str);
-                                $newstring = strtolower($string);
-                                $id = $list[$i]->id;
                                 echo '<td>' . $list[$i]->id . '</td>';
-                                echo '<td>' . $list[$i]->name . '</td>';
-                                echo '<td>' . $list[$i]->desc . '</td>';
+                                echo '<td>' . $name . '</td>';
+                                echo '<td>' . $desc . '</td>';
                                 echo '<td>' . $list[$i]->weight . '</td>';
                                 echo '<td>' . $list[$i]->price . '</td>';
                                 echo '<td>' . $list[$i]->inv . '</td>';
                                 echo '<td>' . 
-                                "<button type='button' class='btn custom-button'><i class='fa fa-trash'></i></button>
-                                <a href = 'addeditproducts/editfood.php?aisle=produce&id=$id' class = 'custom-button'><i class = 'fa fa-edit'</i></button>" 
+                                "<a href = 'deleteProduct.php?aisle=dairy&id=$id' class='btn custom-button'><i class='fa fa-trash'></i></button>
+                                <a href = 'addeditproducts/editfood.php?aisle=dairy&id=$id' class = 'btn custom-button'><i class = 'fa fa-edit'</i></button>" 
                                 . '</td>';
                             echo '</tr>';
                         }

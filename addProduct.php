@@ -4,26 +4,32 @@
     $xml->load('products.xml');
     
     $name = $_POST['name'];
+    $image = $_POST['image'];
     $weight = $_POST['weight'];
     $price = $_POST['price'];
     $description = $_POST['desc'];
     $inventory = $_POST['inv'];
     $aisle = $_POST['aisle'];
 
-    $idCount = fopen("idcount$aisle.txt", "r");
-    $id = fread($idCount,filesize("idcount$aisle.txt"));
-    fclose($idCount);
+    $idGenerate = fopen("idGenerator.txt", "r");
+    $idRead = fread($idGenerate,filesize("idGenerator.txt"));
+    $newid = $idRead + 1;
+    fclose($idGenerate);
+
+    $idGenerate = fopen("idGenerator.txt", "w");
+    fwrite($idGenerate, $newid);
+    fclose($idGenerate);
 
     $productsTag = $xml->getElementsByTagName("products")->item(0);
 
       $aisleTag = $xml->createElement($aisle);
-        $idTag = $xml->createElement("id", ($id+1));
+        $idTag = $xml->createElement("id", $newid);
         $nameTag = $xml->createElement("name", $name);
         $descTag = $xml->createElement("desc", $description);
         $weightTag = $xml->createElement("weight", $weight);
         $priceTag = $xml->createElement("price", $price);
         $invTag = $xml->createElement("inv", $inventory);
-        $imageTag = $xml->createElement("img", "../img/$aisle/$name.jpg");
+        $imageTag = $xml->createElement("img", "../img/$aisle/$image");
 
         $aisleTag->appendChild($idTag);
         $aisleTag->appendChild($nameTag);
@@ -32,7 +38,7 @@
         $aisleTag->appendChild($priceTag);
         $aisleTag->appendChild($invTag);
         $aisleTag->appendChild($imageTag);
-        $aisleTag->setAttribute("id", ($id + 1));
+        $aisleTag->setAttribute("id", $newid);
 
       $productsTag->appendChild($aisleTag);
       $xml->save('products.xml');
@@ -155,17 +161,20 @@
               <div class="card-content">
                 <h5 class="center-text"><b>Add Product</b></h5>
               </div>
-                  <hr/>
-                  <div class="center-text">
-                  <a class="custom-button" href=""> Add Image</a>
-                
-                  <hr/>
                   <div class="edit-field-type">
                     <div class="card-sub-content">
                         <h5 class="center-text">Name</h5>
                     </div>
                     <div class="edit-field">
                         <input type= "text" name = "name">
+                    </div>
+                  </div>
+                  <div class="edit-field-type">
+                    <div class="card-sub-content">
+                        <h5 class="center-text">Image Name</h5>
+                    </div>
+                    <div class="edit-field">
+                        <input type= "text" name = "image">
                     </div>
                   </div>
                   <div class="edit-field-type">
@@ -223,13 +232,13 @@
 
             <div class="row backstore-navigation">
               <div class="col-lg-4 col-12">
-                <a href="../userlist.html" class="custom-button">User List</a>
+                <a href="userlist.html" class="custom-button">User List</a>
               </div>
               <div class="col-lg-4 col-12">
-                <a href="../orderlist.html" class="custom-button">Order List</a>
+                <a href="orderlist.html" class="custom-button">Order List</a>
               </div>
               <div class="col-lg-4 col-12">
-                <a href="../productlist.html" class="custom-button">Product List</a>
+                <a href="productlist.html" class="custom-button">Product List</a>
               </div>
             </div>
                 </div>

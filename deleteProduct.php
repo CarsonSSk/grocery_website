@@ -1,19 +1,48 @@
-<?php  
+
+<?php
 $id = $_GET['id'];
 $aisle = $_GET['aisle'];
-?>
 
-<?php  
 if(isset($_POST['delete'])) { 
-    $file = "products.xml";
-    $doc = new SimpleXMLElement($file);
-    foreach($doc->produce as $produce) { 
-        if($produce['id'] == $id) { 
-            $dom = dom_import_simplexml($produce);
-            $dom->parentNode->removeChild($dom);
-            break;
-        }
+  $xml = new DomDocument("1.0","UTF-8");
+  $xml->load('products.xml');
+
+  $xpath = new DOMXPATH($xml);
+
+  switch($aisle) { 
+    case "produce":
+      foreach($xpath->query("/products/produce[id = '$id']") as $node) { 
+        $node->parentNode->removeChild($node);
+      }
+      break;
+    case "meat":
+      foreach($xpath->query("/products/meat[id = '$id']") as $node) { 
+        $node->parentNode->removeChild($node);
+      }
+      break;
+    case "dairy":
+      foreach($xpath->query("/products/dairy[id = '$id']") as $node) { 
+        $node->parentNode->removeChild($node);
+      }
+      break;
+    case "candy":
+      foreach($xpath->query("/products/candy[id = '$id']") as $node) { 
+        $node->parentNode->removeChild($node);
+      }
+      break;
+    case "grain":
+      foreach($xpath->query("/products/grain[id = '$id']") as $node) { 
+        $node->parentNode->removeChild($node);
+      }
+      break;
+  }
+  /*if($aisle == "produce") { 
+    foreach($xpath->query("/products/produce[id = '$id']") as $node) { 
+      $node->parentNode->removeChild($node);
     }
+  }*/
+  $xml->formatoutput = true;
+  $xml->save('products.xml');
 }
   
 ?>
@@ -130,7 +159,7 @@ if(isset($_POST['delete'])) {
             <div class="main page-width">
               <!--Main content starts here!-->
 
-            <form method = "POST" action = <?php "deleteProduct.php?aisle=$aisle&id=$id"?>>
+            <form method = "POST" action = <?php "listProduce.php"?>>
               <div class="card-content">
                 <h5 class="center-text"><b>Delete Product</b></h5>
               </div>
@@ -148,13 +177,13 @@ if(isset($_POST['delete'])) {
 
             <div class="row backstore-navigation">
               <div class="col-lg-4 col-12">
-                <a href="../userlist.html" class="custom-button">User List</a>
+                <a href="userlist.html" class="custom-button">User List</a>
               </div>
               <div class="col-lg-4 col-12">
-                <a href="../orderlist.html" class="custom-button">Order List</a>
+                <a href="orderlist.html" class="custom-button">Order List</a>
               </div>
               <div class="col-lg-4 col-12">
-                <a href="../productlist.html" class="custom-button">Product List</a>
+                <a href="productlist.html" class="custom-button">Product List</a>
               </div>
             </div>
                 </div>
