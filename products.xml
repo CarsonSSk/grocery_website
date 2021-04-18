@@ -78,7 +78,7 @@
 <weight>1.20</weight>
 <price>10.99</price>
 <inv>134</inv>
-<img>img/meat/beef.jpg</img>
+<img>img/meat/chicken.jpg</img>
 </meat>
 
 <meat id="9">
@@ -88,7 +88,7 @@
 <weight>0.80</weight>
 <price>8.99</price>
 <inv>70</inv>
-<img>img/meat/fish.jpg</img>
+<img>img/meat/beef.jpg</img>
 </meat>
 
 <meat id="10">
@@ -178,7 +178,7 @@
 <weight>0.60</weight>
 <price>4.99</price>
 <inv>20</inv>
-<img>img/grain/raisinbread.jpg</img>
+<img>img/grain/cinnamonbun.jpg</img>
 </grain>
 
 <dairy id="19">
@@ -216,6 +216,16 @@
 <name>Parmesan_Cheese</name>
 <desc>A_2_inch_slice_of_parmesan_cheese,_needs_to_be_cut_or_grated_to_be_enjoyed_best._DO_NOT_EAT_THE_CRUST.</desc>
 <weight>0.20</weight>
+<price>4.99</price>
+<inv>91</inv>
+<img>img/dairy/Optimized-ParmesanCheese(1).jpg</img>
+</dairy>
+
+<dairy id="23">
+<id>23</id>
+<name>Parmesan_Cheese</name>
+<desc>A_2_inch_slice_of_parmesan_cheese,_needs_to_be_cut_or_grated_to_be_enjoyed_best._DO_NOT_EAT_THE_CRUST.</desc>
+<weight>0.20kg</weight>
 <price>4.99</price>
 <inv>91</inv>
 <img>img/dairy/Optimized-ParmesanCheese(1).jpg</img>
@@ -288,7 +298,7 @@
 <weight>1.00</weight>
 <price>8.99</price>
 <inv>32</inv>
-<img>img/Candy/Jellybeans.jpeg</img>
+<img>img/Candy/Jellybeans.jpg</img>
 </candy>
 
 <candy id="31">

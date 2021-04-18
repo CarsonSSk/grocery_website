@@ -2,7 +2,6 @@
 $id = $_GET['id'];
 $aisle = $_GET['aisle'];
 $xml = simplexml_load_file("../products.xml");
-
 switch($aisle) { 
   case "produce":
     $list = $xml->produce;
@@ -13,6 +12,7 @@ switch($aisle) {
         $weight = $list[$i]->weight;
         $price = $list[$i]->price;
         $inv = $list[$i]->inv;
+        $image = $list[$i]->img;
         break;
       }
     }
@@ -26,6 +26,7 @@ switch($aisle) {
         $weight = $list[$i]->weight;
         $price = $list[$i]->price;
         $inv = $list[$i]->inv;
+        $image = $list[$i]->img;
         break;
       }
     }
@@ -39,6 +40,7 @@ switch($aisle) {
         $weight = $list[$i]->weight;
         $price = $list[$i]->price;
         $inv = $list[$i]->inv;
+        $image = $list[$i]->img;
         break;
       }
     }
@@ -52,6 +54,7 @@ switch($aisle) {
         $weight = $list[$i]->weight;
         $price = $list[$i]->price;
         $inv = $list[$i]->inv;
+        $image = $list[$i]->img;
         break;
       }
     }
@@ -65,38 +68,39 @@ switch($aisle) {
         $weight = $list[$i]->weight;
         $price = $list[$i]->price;
         $inv = $list[$i]->inv;
+        $image = $list[$i]->img;
         break;
       }
     }
   break;
 }
-?>
 
-<?php  
- if(isset($_POST['insert'])) { 
-  //$xml = new DomDocument("1.0","UTF-8");
-  //$xml->load('../products.xml');
+if(isset($_POST['edit'])) { 
   switch($aisle) { 
     case "produce":
       $list = $xml->produce;
       for ($i = 0; $i < count($list); $i++) {
-        
         if (($list[$i]->id) == $id) {
-          //what needs to be replaced
-          for($j = 0; $j < count($list); $j++){
-            $oldValues[$j] = [$list[$j]];
-          }
-          
           $newname = $_POST['name'];
           $newweight = $_POST['weight'];
           $newprice = $_POST['price'];
-          $newdescription = $_POST['desc'];
-          $newinventory = $_POST['inv'];
-          //new content
-          $newValues = [$newname,$newweight,$newprice,$newdescription,$newinventory];
+          $newdesc = $_POST['desc'];
+          $newinv = $_POST['inv'];
+          $newimage = $_POST['image'];
 
-          $newXml = simplexml_load_string( str_replace( $oldValues, $newValues, $xml->asXml()));
-          $newXml->asXml('updated.xml');
+          $xml->produce->name = $newname;
+          $xml->produce->weight = $newweight;
+          $xml->produce->price = $newprice;
+          $xml->produce->desc = $newdesc;
+          $xml->produce->inv = $newinv;
+          $xml->produce->img = $newimage;
+          
+          $name = $newname;
+          $desc = $newweight;
+          $weight = $newprice;
+          $price = $newdesc;
+          $inv = $newinv;
+          $image = $newimage;
           break;
         }
       }
@@ -105,11 +109,26 @@ switch($aisle) {
       $list = $xml->meat;
       for ($i = 0; $i < count($list); $i++) {
         if (($list[$i]->id) == $id) {
-          $name = $list[$i]->name;
-          $desc = $list[$i]->desc;
-          $weight = $list[$i]->weight;
-          $price = $list[$i]->price;
-          $inv = $list[$i]->inv;
+          $newname = $_POST['name'];
+          $newweight = $_POST['weight'];
+          $newprice = $_POST['price'];
+          $newdesc = $_POST['desc'];
+          $newinv = $_POST['inv'];
+          $newimage = $_POST['image'];
+
+          $xml->meat->name = $newname;
+          $xml->meat->weight = $newweight;
+          $xml->meat->price = $newprice;
+          $xml->meat->desc = $newdesc;
+          $xml->meat->inv = $newinv;
+          $xml->meat->img = $newimage;
+          
+          $name = $newname;
+          $desc = $newweight;
+          $weight = $newprice;
+          $price = $newdesc;
+          $inv = $newinv;
+          $image = $newimage;
           break;
         }
       }
@@ -118,11 +137,26 @@ switch($aisle) {
       $list = $xml->candy;
       for ($i = 0; $i < count($list); $i++) {
         if (($list[$i]->id) == $id) {
-          $name = $list[$i]->name;
-          $desc = $list[$i]->desc;
-          $weight = $list[$i]->weight;
-          $price = $list[$i]->price;
-          $inv = $list[$i]->inv;
+          $newname = $_POST['name'];
+          $newweight = $_POST['weight'];
+          $newprice = $_POST['price'];
+          $newdesc = $_POST['desc'];
+          $newinv = $_POST['inv'];
+          $newimage = $_POST['image'];
+
+          $xml->candy->name = $newname;
+          $xml->candy->weight = $newweight;
+          $xml->candy->price = $newprice;
+          $xml->candy->desc = $newdesc;
+          $xml->candy->inv = $newinv;
+          $xml->candy->img = $newimage;
+          
+          $name = $newname;
+          $desc = $newweight;
+          $weight = $newprice;
+          $price = $newdesc;
+          $inv = $newinv;
+          $image = $newimage;
           break;
         }
       }
@@ -131,11 +165,26 @@ switch($aisle) {
       $list = $xml->dairy;
       for ($i = 0; $i < count($list); $i++) {
         if (($list[$i]->id) == $id) {
-          $name = $list[$i]->name;
-          $desc = $list[$i]->desc;
-          $weight = $list[$i]->weight;
-          $price = $list[$i]->price;
-          $inv = $list[$i]->inv;
+          $newname = $_POST['name'];
+          $newweight = $_POST['weight'];
+          $newprice = $_POST['price'];
+          $newdesc = $_POST['desc'];
+          $newinv = $_POST['inv'];
+          $newimage = $_POST['image'];
+
+          $xml->dairy->name = $newname;
+          $xml->dairy->weight = $newweight;
+          $xml->dairy->price = $newprice;
+          $xml->dairy->desc = $newdesc;
+          $xml->dairy->inv = $newinv;
+          $xml->dairy->img = $newimage;
+          
+          $name = $newname;
+          $desc = $newweight;
+          $weight = $newprice;
+          $price = $newdesc;
+          $inv = $newinv;
+          $image = $newimage;
           break;
         }
       }
@@ -144,18 +193,33 @@ switch($aisle) {
       $list = $xml->grain;
       for ($i = 0; $i < count($list); $i++) {
         if (($list[$i]->id) == $id) {
-          $name = $list[$i]->name;
-          $desc = $list[$i]->desc;
-          $weight = $list[$i]->weight;
-          $price = $list[$i]->price;
-          $inv = $list[$i]->inv;
+          $newname = $_POST['name'];
+          $newweight = $_POST['weight'];
+          $newprice = $_POST['price'];
+          $newdesc = $_POST['desc'];
+          $newinv = $_POST['inv'];
+          $newimage = $_POST['image'];
+
+          $xml->grain->name = $newname;
+          $xml->grain->weight = $newweight;
+          $xml->grain->price = $newprice;
+          $xml->grain->desc = $newdesc;
+          $xml->grain->inv = $newinv;
+          $xml->grain->img = $newimage;
+          
+          $name = $newname;
+          $desc = $newweight;
+          $weight = $newprice;
+          $price = $newdesc;
+          $inv = $newinv;
+          $image = $newimage;
           break;
         }
       }
     break;
 
   }
-  $xml->save('products.xml');
+  $xml->asXML('../products.xml');
 }
 ?>
 
@@ -275,9 +339,7 @@ switch($aisle) {
               </div>
                   <hr/>
                   <div class="center-text">
-                    <img src=<?php echo "../img/$aisle/$name.jpg"?>>
-                  <a class="custom-button" href=""> Change Image</a>
-                
+                    <img src=<?php echo "../$image"?>>
                   <hr/>
                   <div class="edit-field-type">
                     <div class="card-sub-content">
@@ -285,6 +347,14 @@ switch($aisle) {
                     </div>
                     <div class="edit-field">
                         <input value=<?php echo $name;?> name = "name" class="barContent">
+                    </div>
+                  </div>
+                  <div class="edit-field-type">
+                    <div class="card-sub-content">
+                        <h5 class="center-text">Image Name</h5>
+                    </div>
+                    <div class="edit-field">
+                        <input value=<?php echo $image;?> name = "image" class="barContent">
                     </div>
                   </div>
                   <div class="edit-field-type">
@@ -321,7 +391,7 @@ switch($aisle) {
                   </div>
 
                   <div class="saveButton"> 
-                    <input type="submit" class="btn custom-button" name = "insert" value="Save"></input>
+                    <input type="submit" class="btn custom-button" name = "edit" value="Save"></input>
                   </div>
                 </form>
                   <hr class="clear">
