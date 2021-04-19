@@ -109,6 +109,7 @@
                         $id = $list[$i]->id;
                         $img = $list[$i]->img;
                          
+                        $name= str_replace('_'," ",$name);
                         {
                             {
                                 echo "<div class=\"col-lg-4 col-sm-6\">

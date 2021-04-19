@@ -48,7 +48,17 @@
             
           <div class="main page-width">
             <!--Main content starts here!-->
+            <?php 
             
+            
+            
+            ?>
+
+
+
+
+
+
             <a href="aisles/item.php?aisle=meat_food&id=7">
               <div class="row banner">
                 <div class="col-lg-8 col-md-12 green-background"><img src="img/live_chicken.jpg" alt="chicken"></div>
@@ -67,48 +77,60 @@
             <p class="subtitle-secondary">Produce Aisle</p>
             <div class="row aisle">
 
-              <div class="col-lg-4 col-sm-6">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a href="aisles/item.php?aisle=produce_food&id=1"><img src="img/produce/apple.jpg" alt="apples"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a href="aisles/item.php?aisle=produce_food&id=1"><p class="food-name">Picked Apples</p></a>
-                    <p class="food-details">1.0 kg</p>
-                    <p class="food-price">4.99$</p>
-                    <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
-                  </div>
-                </div>
-              </div>
 
-              <div class="col-lg-4 col-sm-6">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a href="aisles/item.php?aisle=produce_food&id=2"><img src="img/produce/banana.jpg" alt="bananas"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a href="aisles/item.php?aisle=produce_food&id=2"><p class="food-name">Ripe Bananas</p></a>
-                    <p class="food-details">1.0 kg</p>
-                    <p class="food-price">2.99$</p>
-                    <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
-                  </div>
-                </div>
-              </div>
 
-              <div class="col-lg-4 col-sm-12">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a href="aisles/item.php?aisle=produce_food&id=3"><img src="img/produce/pepper.jpg" alt="peppers"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a href="aisles/item.php?aisle=produce_food&id=3"><p class="food-name">Hot Peppers</p></a>
-                    <p class="food-details">1.0 kg</p>
-                    <p class="food-price">6.99$</p>
-                    <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
-                  </div>
-                </div>
+              <?php 
+
+                $xml = simplexml_load_file("products.xml");
+
+
+              $aisleName="produce";
+
+                $list = $xml->$aisleName;
+                
+                for ($i = 0; $i < 3; $i++) {
+                 {
+                $name = $list[$i]->name;
+                $description = $list[$i]->desc;
+                $weight = $list[$i]->weight;
+                $price = $list[$i]->price;
+                $inv = $list[$i]->inv;
+                $img = $list[$i]->img;
+                $id = $list[$i]->id;
+                
+                $name= str_replace('_'," ",$name);
+
+
+
+              {
+                echo "<div class=\"col-lg-4 col-sm-6\">
+                        <div class=\"advertisement-holder\">
+                            <div class=\"img-holder\">
+                                <a href=\"/Grocery/grocery_website/aisles/item.php?aisle=produce_food"; echo "&id="; echo $id; echo"\">
+                                    <img src=\""; echo $img; echo "\" alt=\""; echo $name; echo "\">
+                                </a>
+                            </div>
+                            <div class=\"info-holder\">
+                                <a href=\"/Grocery/grocery_website/aisles/item.php?aisle=produce_food&id="; echo $id; echo"\">
+                                <p class=\"food-name\">";
+                                    echo $name;
+                                echo "</p>
+                                </a>
+                                <p class=\"food-details\">";
+                                    echo $weight; echo " kg</p>
+                                <p class=\"food-price\">"; echo $price; echo"$</p>
+
+                                
+                            </div>
+                        </div>
+                        
+                    </div>";
+                    }
+
+                   }
+                  }
+              ?>
               </div>
-            </div>
 
             <div class="center-text">
               <a href="/Grocery/grocery_website/aisles/aisle_page.php?aisle=produce_food" class="custom-button"><i class="fas fa-pepper-hot"></i>See all produce</a>
@@ -119,47 +141,57 @@
             <p class="subtitle-secondary">Meat Aisle</p>
             <div class="row aisle">
 
-              <div class="col-lg-4 col-sm-6">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a href="aisles/item.php?aisle=meat_food&id=7"><img src="img/meat/chicken.jpg" alt="chicken"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a href="aisles/item.php?aisle=meat_food&id=7"><p class="food-name">Fresh Chicken</p></a>
-                    <p class="food-details">1.5 kg</p>
-                    <p class="food-price">7.99$</p>
-                    <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
-                  </div>
-                </div>
-              </div>
+            <?php 
 
-              <div class="col-lg-4 col-sm-6">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a href="aisles/item.php?aisle=meat_food&idd=8"><img src="img/meat/beef.jpg" alt="beef"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a href="aisles/item.php?aisle=meat_food&id=8"><p class="food-name">Sliced Beef</p></a>
-                    <p class="food-details">1.2 kg</p>
-                    <p class="food-price">10.99$</p>
-                    <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
-                  </div>
-                </div>
-              </div>
+              $xml = simplexml_load_file("products.xml");
 
-              <div class="col-lg-4 col-sm-12">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a href="aisles/aisles/item.php?aisle=meat_food&id=9"><img src="img/meat/fish.jpg" alt="fish"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a href="aisles/aisles/item.php?aisle=meat_food&id=9"><p class="food-name">Fish Fillet</p></a>
-                    <p class="food-details">0.8 kg</p>
-                    <p class="food-price">8.99$</p>
-                    <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
-                  </div>
-                </div>
-              </div>
+
+              $aisleName="meat";
+
+            $list = $xml->$aisleName;
+
+              for ($i = 0; $i < 3; $i++) {
+              {
+                $name = $list[$i]->name;
+                $description = $list[$i]->desc;
+                $weight = $list[$i]->weight;
+                $price = $list[$i]->price;
+                $inv = $list[$i]->inv;
+                $img = $list[$i]->img;
+                $id = $list[$i]->id;
+
+
+                $name= str_replace('_'," ",$name);
+
+
+{
+echo "<div class=\"col-lg-4 col-sm-6\">
+        <div class=\"advertisement-holder\">
+            <div class=\"img-holder\">
+                <a href=\"/Grocery/grocery_website/aisles/item.php?aisle=meat_food"; echo "&id="; echo $id; echo"\">
+                    <img src=\""; echo $img; echo "\" alt=\""; echo $name; echo "\">
+                </a>
+            </div>
+            <div class=\"info-holder\">
+                <a href=\"/Grocery/grocery_website/aisles/item.php?aisle=meat_food&id="; echo $id; echo"\">
+                <p class=\"food-name\">";
+                    echo $name;
+                echo "</p>
+                </a>
+                <p class=\"food-details\">";
+                    echo $weight; echo " kg</p>
+                <p class=\"food-price\">"; echo $price; echo"$</p>
+
+                
+            </div>
+        </div>
+        
+    </div>";
+    }
+
+   }
+  }
+?>
 
             </div>
 
@@ -172,47 +204,57 @@
             <p class="subtitle-secondary">Grain Aisle</p>
             <div class="row aisle">
 
-              <div class="col-lg-4 col-sm-6">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a href="aisles/item.php?aisle=grain_food&id=13"><img src="img/grain/bread.jpg" alt="bread"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a href="aisles/item.php?aisle=grain_food&id=13"><p class="food-name">Wheat Bread</p></a>
-                    <p class="food-details">0.5 kg</p>
-                    <p class="food-price">2.99$</p>
-                    <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
-                  </div>
-                </div>
-              </div>
+            <?php 
 
-              <div class="col-lg-4 col-sm-6">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a href="aisles/item.php?aisle=grain_food&id=14"><img src="img/grain/baguette.jpg" alt="baguette"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a href="aisles/item.php?aisle=grain_food&id=14"><p class="food-name">Baked Baguette</p></a>
-                    <p class="food-details">0.4 kg</p>
-                    <p class="food-price">3.99$</p>
-                    <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
-                  </div>
-                </div>
-              </div>
+$xml = simplexml_load_file("products.xml");
 
-              <div class="col-lg-4 col-sm-12">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a href="aisles/item.php?aisle=grain_food&id=15"><img src="img/grain/croissant.jpg" alt="croissants"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a href="aisles/item.php?aisle=grain_food&id=15"><p class="food-name">Fluffy Croissants</p></a>
-                    <p class="food-details">0.6 kg</p>
-                    <p class="food-price">4.99$</p>
-                    <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
-                  </div>
-                </div>
-              </div>
+
+$aisleName="grain";
+
+$list = $xml->$aisleName;
+
+for ($i = 0; $i < 3; $i++) {
+{
+  $name = $list[$i]->name;
+  $description = $list[$i]->desc;
+  $weight = $list[$i]->weight;
+  $price = $list[$i]->price;
+  $inv = $list[$i]->inv;
+  $img = $list[$i]->img;
+  $id = $list[$i]->id;
+
+  $name= str_replace('_'," ",$name);
+
+
+
+{
+echo "<div class=\"col-lg-4 col-sm-6\">
+<div class=\"advertisement-holder\">
+<div class=\"img-holder\">
+  <a href=\"/Grocery/grocery_website/aisles/item.php?aisle=grain_food"; echo "&id="; echo $id; echo"\">
+      <img src=\""; echo $img; echo "\" alt=\""; echo $name; echo "\">
+  </a>
+</div>
+<div class=\"info-holder\">
+  <a href=\"/Grocery/grocery_website/aisles/item.php?aisle=grain_food&id="; echo $id; echo"\">
+  <p class=\"food-name\">";
+      echo $name;
+  echo "</p>
+  </a>
+  <p class=\"food-details\">";
+      echo $weight; echo " kg</p>
+  <p class=\"food-price\">"; echo $price; echo"$</p>
+
+  
+</div>
+</div>
+
+</div>";
+}
+
+}
+}
+?>
 
             </div>
 
@@ -225,47 +267,57 @@
             <p class="subtitle-secondary">Dairy Aisle</p>
             <div class="row aisle">
 
-              <div class="col-lg-4 col-sm-6">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a href="aisles/item.php?aisle=dairy_food&id=19"><img src="img/dairy/Optimized-BrieCheese.jpg" alt="brie cheese"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a href="aisles/item.php?aisle=dairy_food&id=19"><p class="food-name">Brie Cheese</p></a>
-                    <p class="food-details">0.2 kg</p>
-                    <p class="food-price">3.99$</p>
-                    <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
-                  </div>
-                </div>
-              </div>
+            <?php 
 
-              <div class="col-lg-4 col-sm-6">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a href="aisles/item.php?aisle=dairy_food&id=20"><img src="img/dairy/Optimized-IceCream.jpg" alt="ice cream"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a href="aisles/item.php?aisle=dairy_food&id=20"><p class="food-name">Ice Cream</p></a>
-                    <p class="food-details">1.0 kg</p>
-                    <p class="food-price">2.99$</p>
-                    <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
-                  </div>
-                </div>
-              </div>
+$xml = simplexml_load_file("products.xml");
 
-              <div class="col-lg-4 col-sm-12">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a href="aisles/item.php?aisle=dairy_food&id=21"><img src="img/dairy/Optimized-Milk.jpg" alt="Milk"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a href="aisles/item.php?aisle=dairy_food&id=21"><p class="food-name">Jug of Milk</p></a>
-                    <p class="food-details">3.0 kg</p>
-                    <p class="food-price">4.99$</p>
-                    <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
-                  </div>
-                </div>
-              </div>
+
+$aisleName="dairy";
+
+$list = $xml->$aisleName;
+
+for ($i = 0; $i < 3; $i++) {
+{
+  $name = $list[$i]->name;
+  $description = $list[$i]->desc;
+  $weight = $list[$i]->weight;
+  $price = $list[$i]->price;
+  $inv = $list[$i]->inv;
+  $img = $list[$i]->img;
+  $id = $list[$i]->id;
+
+
+  $name= str_replace('_'," ",$name);
+
+
+{
+echo "<div class=\"col-lg-4 col-sm-6\">
+<div class=\"advertisement-holder\">
+<div class=\"img-holder\">
+  <a href=\"/Grocery/grocery_website/aisles/item.php?aisle=dairy_food"; echo "&id="; echo $id; echo"\">
+      <img src=\""; echo $img; echo "\" alt=\""; echo $name; echo "\">
+  </a>
+</div>
+<div class=\"info-holder\">
+  <a href=\"/Grocery/grocery_website/aisles/item.php?aisle=dairy_food&id="; echo $id; echo"\">
+  <p class=\"food-name\">";
+      echo $name;
+  echo "</p>
+  </a>
+  <p class=\"food-details\">";
+      echo $weight; echo " kg</p>
+  <p class=\"food-price\">"; echo $price; echo"$</p>
+
+  
+</div>
+</div>
+
+</div>";
+}
+
+}
+}
+?>
 
             </div>
 
@@ -278,47 +330,57 @@
             <p class="subtitle-secondary">Candy Aisle</p>
             <div class="row aisle">
 
-              <div class="col-lg-4 col-sm-6">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a href="aisles/item.php?aisle=candy_food&id=26"><img src="img/Candy/Skittles.jpg" alt="Skittles"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a href="aisles/item.php?aisle=candy_food&fid=26"><p class="food-name">Skittles</p></a>
-                    <p class="food-details">1.0 kg</p>
-                    <p class="food-price">9.99$</p>
-                    <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
-                  </div>
-                </div>
-              </div>
+            <?php 
 
-              <div class="col-lg-4 col-sm-6">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a href="aisles/item.php?aisle=candy_food&id=27"><img src="img/Candy/assortedHardCandy.jpeg" alt="Hard Candies"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a href="aisles/item.php?aisle=candy_food&id=27"><p class="food-name">Assorted Hard Candy</p></a>
-                    <p class="food-details">1.0 kg</p>
-                    <p class="food-price">8.99$</p>
-                    <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
-                  </div>
-                </div>
-              </div>
+$xml = simplexml_load_file("products.xml");
 
-              <div class="col-lg-4 col-sm-12">
-                <div class="advertisement-holder">
-                  <div class="img-holder">
-                    <a href="aisles/item.php?aisle=candy_food&id=28"><img src="img/Candy/Gummybears.jpeg" alt="Gummy Bears"></a>
-                  </div>
-                  <div class="info-holder">
-                    <a href="aisles/item.php?aisle=candy_food&id=28"><p class="food-name">Gummy Bears</p></a>
-                    <p class="food-details">1.0 kg</p>
-                    <p class="food-price">9.99$</p>
-                    <button class="custom-button"><i class="fas fa-shopping-cart"></i>Add to Cart</button>
-                  </div>
-                </div>
-              </div>
+
+$aisleName="candy";
+
+$list = $xml->$aisleName;
+
+for ($i = 0; $i < 3; $i++) {
+{
+  $name = $list[$i]->name;
+  $description = $list[$i]->desc;
+  $weight = $list[$i]->weight;
+  $price = $list[$i]->price;
+  $inv = $list[$i]->inv;
+  $img = $list[$i]->img;
+  $id = $list[$i]->id;
+
+  $name= str_replace('_'," ",$name);
+
+
+
+{
+echo "<div class=\"col-lg-4 col-sm-6\">
+<div class=\"advertisement-holder\">
+<div class=\"img-holder\">
+  <a href=\"/Grocery/grocery_website/aisles/item.php?aisle=candy_food"; echo "&id="; echo $id; echo"\">
+      <img src=\""; echo $img; echo "\" alt=\""; echo $name; echo "\">
+  </a>
+</div>
+<div class=\"info-holder\">
+  <a href=\"/Grocery/grocery_website/aisles/item.php?aisle=candy_food&id="; echo $id; echo"\">
+  <p class=\"food-name\">";
+      echo $name;
+  echo "</p>
+  </a>
+  <p class=\"food-details\">";
+      echo $weight; echo " kg</p>
+  <p class=\"food-price\">"; echo $price; echo"$</p>
+
+  
+</div>
+</div>
+
+</div>";
+}
+
+}
+}
+?>
 
             </div>
 
