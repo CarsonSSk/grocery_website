@@ -3,7 +3,7 @@
         <div class="col-6">
           <?php
             if($isUser && $isAdmin == "true")
-              echo '<a href="/Grocery/grocery_website/userlist.php"><i class="fas fa-door-open"></i>Backstore</a>';
+              echo '<a href="/Grocery/grocery_website/productlist.php"><i class="fas fa-door-open"></i>Backstore</a>';
           ?>
         </div>
         <div class="col-6 right-text">

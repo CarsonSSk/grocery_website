@@ -24,7 +24,7 @@
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     
-    <title>Grainlist | TastyGrocery.com</title>
+    <title>Productlist | TastyGrocery.com</title>
     <meta name="description" content="The userlist of Grocery.com, home of great online grocery shopping!">
     <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png">
     
@@ -42,48 +42,55 @@
               <!--Main content starts here!-->
                   
                 <div class="card-content">
-                    <h5 class="center-text">Grain List</h5>
-                </div>
-
-                <div class="topbar">
-                  <a href="addProduct.php" class="btn add custom-button">Add Product</a>
+                    <h5 class="center-text">Product List</h5>
                 </div>
                 <table id ="table">
-                    <?php
-                        $xml = simplexml_load_file("products.xml");
-                        $list = $xml->grain;
-                        echo '
-                        <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Weight per unit (kg)</th>
-                            <th>Price per unit(CAD)</th>
-                            <th>Units in stock</th>
-                            <th>Manage</th>
-                        </tr>
-                        </thead>';
-                        for ($i = 0; $i < count($list); $i++) { 
-                          $id = $list[$i]->id;
-                          $stringname = $list[$i]->name;
-                          $name = str_replace("_"," ",$stringname);
-                          $stringdesc = $list[$i]->desc;
-                          $desc = str_replace("_"," ",$stringdesc);
-                            echo '<tr>';
-                                echo '<td>' . $list[$i]->id . '</td>';
-                                echo '<td>' . $name . '</td>';
-                                echo '<td>' . $desc . '</td>';
-                                echo '<td>' . $list[$i]->weight . '</td>';
-                                echo '<td>' . $list[$i]->price . '</td>';
-                                echo '<td>' . $list[$i]->inv . '</td>';
-                                echo '<td>' . 
-                                "<a href = 'deleteProduct.php?aisle=grain&id=$id' class='btn custom-button'><i class='fa fa-trash'></i></button>
-                                <a href = 'addeditproducts/editfood.php?aisle=grain&id=$id' class = 'btn custom-button'><i class = 'fa fa-edit'</i></button>" 
-                                . '</td>';
-                            echo '</tr>';
-                        }
-                    ?>
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Name</th>
+                      <th>Description</th>
+                      <th>Link</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Produce</td>
+                      <td>Product List for the produce aisle</td>
+                      <td> <a href = "listProduce.php"> Visit product list</a> </td>
+                     
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Meat</td>
+                      <td>Product List for the meat aisle</td>
+                      <td> <a href = "listMeat.php"> Visit product list</a> </td>
+                     
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Grain</td>
+                      <td>Product List for the grain aisle</td>
+                      <td> <a href = "listGrain.php"> Visit product list</a> </td>
+                      
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Dairy</td>
+                      <td>Product List for the dairy aisle</td>
+                      <td> <a href = "listDairy.php"> Visit product list</a> </td>
+                      
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Candy</td>
+                      <td>Product List for the candy aisle</td>
+                      <td> <a href = "listCandy.php"> Visit product list</a> </td>
+                     
+                    </tr>
+                    
+                  </tbody>
                 </table>
 
                 <br/>

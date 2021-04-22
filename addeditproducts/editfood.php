@@ -1,3 +1,4 @@
+<?php include_once '../includes/session.php'; ?>
 <?php  
 $id = $_GET['id'];
 $aisle = $_GET['aisle'];
@@ -257,76 +258,8 @@ if(isset($_POST['edit'])) {
 
   <body>
 
-    <div class="header-userpage">
-      <div class="row page-width">
-        <div class="col-6">
-          <a href="../userlist.html"><i class="fas fa-door-open"></i>Backstore</a>
-        </div>
-        <div class="col-6 right-text">
-          <a href="../login.html"><i class="fas fa-user-alt"></i>My Account</a>
-        </div>
-      </div>
-    </div>
-
-    <header class="sticky-top">
-      <div class="page-width">
-        <div class="row">
-          
-          <div class="col-md-6 col-9">
-            <p class="header-name"><a href="../index.html"><i class="fas fa-pepper-hot"></i>TastyGrocery</a></p>
-          </div>
-
-          <div class="col-md-6 col-3">
-
-            <!-- Aisle menu on desktop view -->
-            <div class="aisle-menu desktop-only">
-                <div class="aisle-box">
-                  <span><i class="fas fa-search"></i>Aisles</span>
-                </div>
-              <ul>
-                  <li>
-                      <a href="../aisles/Produce.html"><i class="fas fa-pepper-hot"></i>Produce</a>
-                  </li>
-                  <li>
-                      <a href="../aisles/Meat.html"><i class="fas fa-drumstick-bite"></i>Meat</a>
-                  </li>
-                  <li>
-                      <a href="../aisles/Grain.html"><i class="fas fa-bread-slice"></i>Grain</a>
-                  </li>
-                  <li>
-                      <a href="../aisles/Dairy.html"><i class="fas fa-cheese"></i>Dairy</a>
-                  </li>
-                  <li>
-                      <a href="../aisles/Candy.html"><i class="fas fa-candy-cane"></i>Candy</a>
-                  </li>
-              </ul>
-            </div>
-            
-            <!-- Aisle and cart menu on mobile view -->
-            <div class="dropdown show">
-              <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Menu
-              </a>
-            
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="../shoppingCart.html"><i class="fas fa-shopping-cart"></i>Cart</a>
-                <a class="dropdown-item" href="../aisles/Produce.html"><i class="fas fa-pepper-hot"></i>Produce</a>
-                <a class="dropdown-item" href="../aisles/Meat.html"><i class="fas fa-drumstick-bite"></i>Meat</a>
-                <a class="dropdown-item" href="../aisles/Grain.html"><i class="fas fa-bread-slice"></i>Grain</a>
-                <a class="dropdown-item" href="../aisles/Dairy.html"><i class="fas fa-cheese"></i>Dairy</a>
-                <a class="dropdown-item" href="../aisles/Candy.html"><i class="fas fa-candy-cane"></i>Candy</a>
-              </div>
-            </div>
-
-            <!-- Cart check on mobile view -->
-            <div class="cart-check desktop-only">
-                <a class="custom-button" href="../shoppingCart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </header>
+  <?php include_once '../templates/navbar.php'; ?>
+  <?php include_once '../templates/header.php'; ?>
 
     <div class="page-container">
         <div class="content-wrapper">
@@ -403,10 +336,10 @@ if(isset($_POST['edit'])) {
                 <a href="../userlist.html" class="custom-button">User List</a>
               </div>
               <div class="col-lg-4 col-12">
-                <a href="../orderlist.html" class="custom-button">Order List</a>
+                <a href="../orderlist.php" class="custom-button">Order List</a>
               </div>
               <div class="col-lg-4 col-12">
-                <a href="../productlist.html" class="custom-button">Product List</a>
+                <a href="../productlist.php" class="custom-button">Product List</a>
               </div>
             </div>
                 </div>

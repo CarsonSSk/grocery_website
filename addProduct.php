@@ -29,7 +29,7 @@
         $weightTag = $xml->createElement("weight", $weight);
         $priceTag = $xml->createElement("price", $price);
         $invTag = $xml->createElement("inv", $inventory);
-        $imageTag = $xml->createElement("img", "../img/$aisle/$image");
+        $imageTag = $xml->createElement("img", "img/$aisle/$image");
 
         $aisleTag->appendChild($idTag);
         $aisleTag->appendChild($nameTag);
@@ -72,7 +72,7 @@
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     
-    <title>Userlist | TastyGrocery.com</title>
+    <title>AddProduct | TastyGrocery.com</title>
     <meta name="description" content="The userlist of Grocery.com, home of great online grocery shopping!">
     <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png">
     

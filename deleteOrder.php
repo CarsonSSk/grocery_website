@@ -1,43 +1,19 @@
 
 <?php
 $id = $_GET['id'];
-$aisle = $_GET['aisle'];
 
 if(isset($_POST['delete'])) { 
   $xml = new DomDocument("1.0","UTF-8");
-  $xml->load('products.xml');
+  $xml->load('orders.xml');
 
   $xpath = new DOMXPATH($xml);
 
-  switch($aisle) { 
-    case "produce":
-      foreach($xpath->query("/products/produce[id = '$id']") as $node) { 
-        $node->parentNode->removeChild($node);
-      }
-      break;
-    case "meat":
-      foreach($xpath->query("/products/meat[id = '$id']") as $node) { 
-        $node->parentNode->removeChild($node);
-      }
-      break;
-    case "dairy":
-      foreach($xpath->query("/products/dairy[id = '$id']") as $node) { 
-        $node->parentNode->removeChild($node);
-      }
-      break;
-    case "candy":
-      foreach($xpath->query("/products/candy[id = '$id']") as $node) { 
-        $node->parentNode->removeChild($node);
-      }
-      break;
-    case "grain":
-      foreach($xpath->query("/products/grain[id = '$id']") as $node) { 
-        $node->parentNode->removeChild($node);
-      }
-      break;
+  foreach($xpath->query("/orders/order[orderid = '$id']") as $node) { 
+    $node->parentNode->removeChild($node);
   }
+  
   $xml->formatoutput = true;
-  $xml->save('products.xml');
+  $xml->save('orders.xml');
 }
   
 ?>

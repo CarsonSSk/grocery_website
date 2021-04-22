@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<orders>
+
+<order id="1">
+<orderid>1</orderid>
+<address>6817_43_Av_Montreal_QC_H1T_2R9</address>
+<item>
+    <id>0</id>
+    <qty>0</qty>
+</item>
+<item>
+    <id>0</id>
+    <qty>0</qty>
+</item>
+<item>
+    <id>0</id>
+    <qty>0</qty>
+</item>
+</order>
+
+<order id="2">
+<orderid>2</orderid>
+<address>7503_Rue_St_Denis_Montreal_QC_H2R_2E7</address>
+<item>
+    <id>1</id>
+    <qty>2</qty>
+</item>
+<item>
+    <id>3</id>
+    <qty>4</qty>
+</item>
+<item>
+    <id>5</id>
+    <qty>6</qty>
+</item>
+</order>
+
+<order id="3">
+<orderid>3</orderid>
+<address>251_Av_Percival_Montreal_Ouest_QC_H4X_1T8</address>
+<item>
+    <id>1</id>
+    <qty>2</qty>
+</item>
+<item>
+    <id>3</id>
+    <qty>4</qty>
+</item>
+<item>
+    <id>5</id>
+    <qty>6</qty>
+</item>
+</order>
+
+<order id="4">
+<orderid>4</orderid>
+<address>7766_George_Street_Lasalle_QC_H8P_1E1</address>
+<item>
+    <id>1</id>
+    <qty>2</qty>
+</item>
+<item>
+    <id>3</id>
+    <qty>4</qty>
+</item>
+<item>
+    <id>5</id>
+    <qty>6</qty>
+</item>
+</order>
+
+
+
+<order id="5"><orderid>5</orderid><address>5745_17_Av_Montreal_QC_H1X_2R7</address><item><id>1</id><qty>1</qty></item><item><id>2</id><qty>2</qty></item><item><id>3</id><qty>3</qty></item><item><id>4</id><qty>4</qty></item><item><id>5</id><qty>5</qty></item></order></orders>
