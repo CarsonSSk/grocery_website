@@ -1,49 +1,4 @@
 
-<?php
-$id = $_GET['id'];
-$aisle = $_GET['aisle'];
-
-if(isset($_POST['delete'])) { 
-  $xml = new DomDocument("1.0","UTF-8");
-  $xml->load('products.xml');
-
-  $xpath = new DOMXPATH($xml);
-
-  switch($aisle) { 
-    case "produce":
-      foreach($xpath->query("/products/produce[id = '$id']") as $node) { 
-        $node->parentNode->removeChild($node);
-      }
-      break;
-    case "meat":
-      foreach($xpath->query("/products/meat[id = '$id']") as $node) { 
-        $node->parentNode->removeChild($node);
-      }
-      break;
-    case "dairy":
-      foreach($xpath->query("/products/dairy[id = '$id']") as $node) { 
-        $node->parentNode->removeChild($node);
-      }
-      break;
-    case "candy":
-      foreach($xpath->query("/products/candy[id = '$id']") as $node) { 
-        $node->parentNode->removeChild($node);
-      }
-      break;
-    case "grain":
-      foreach($xpath->query("/products/grain[id = '$id']") as $node) { 
-        $node->parentNode->removeChild($node);
-      }
-      break;
-  }
-  $xml->formatoutput = true;
-  $xml->save('products.xml');
-}
-  
-?>
-
-
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -69,7 +24,7 @@ if(isset($_POST['delete'])) {
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     
-    <title>DeleteProduct | TastyGrocery.com</title>
+    <title>Userlist | TastyGrocery.com</title>
     <meta name="description" content="The userlist of Grocery.com, home of great online grocery shopping!">
     <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png">
     
@@ -154,17 +109,14 @@ if(isset($_POST['delete'])) {
             <div class="main page-width">
               <!--Main content starts here!-->
 
-            <form method = "POST" action = "">
+            <form method = "POST" action = "" >
               <div class="card-content">
                 <h5 class="center-text"><b>Delete Product</b></h5>
               </div>
                   <hr/>
                   <div class="center-text">
-                  Are you sure you want to delete this product?
+                  Item has been deleted.
                   <hr/>
-                  <div class="saveButton"> 
-                    <input type="submit" class="btn custom-button" name = "delete" value="Delete"></input>
-                  </div>
             </form>
                   <hr class="clear">
 
@@ -175,10 +127,10 @@ if(isset($_POST['delete'])) {
                 <a href="userlist.html" class="custom-button">User List</a>
               </div>
               <div class="col-lg-4 col-12">
-                <a href="orderlist.php" class="custom-button">Order List</a>
+                <a href="orderlist.html" class="custom-button">Order List</a>
               </div>
               <div class="col-lg-4 col-12">
-                <a href="productlist.php" class="custom-button">Product List</a>
+                <a href="productlist.html" class="custom-button">Product List</a>
               </div>
             </div>
                 </div>
