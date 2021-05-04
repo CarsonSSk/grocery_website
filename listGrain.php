@@ -91,7 +91,7 @@
 
                 <div class="row backstore-navigation">
                   <div class="col-lg-4 col-12">
-                    <a href="userlist.html" class="custom-button">User List</a>
+                    <a href="userlist.php" class="custom-button">User List</a>
                   </div>
                   <div class="col-lg-4 col-12">
                     <a href="orderlist.php" class="custom-button">Order List</a>

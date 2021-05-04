@@ -24,7 +24,7 @@
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     
-    <title>Candylist | TastyGrocery.com</title>
+    <title>Userlist | TastyGrocery.com</title>
     <meta name="description" content="The userlist of Grocery.com, home of great online grocery shopping!">
     <link rel="shortcut icon" type="image/png" href="img/favicon-32x32.png">
     
@@ -32,54 +32,60 @@
 
   <body>
 
-  <?php include_once 'templates/navbar.php'; ?>
-  <?php include_once 'templates/header.php'; ?>
+    <?php include_once 'templates/navbar.php'; ?>
+    <?php include_once 'templates/header.php'; ?>
 
     <div class="page-container">
         <div class="content-wrapper">
             
             <div class="main page-width">
               <!--Main content starts here!-->
-                  
+              
+
+
                 <div class="card-content">
-                    <h5 class="center-text">Candy List</h5>
+                    <h5 class="center-text">User List</h5>
                 </div>
 
                 <div class="topbar">
-                  <a href="addProduct.php" class="btn add custom-button">Add Product</a>
+                  <a href="addUser.php" class="btn add custom-button">Add User</a>
                 </div>
                 <table id ="table">
                     <?php
-                        $xml = simplexml_load_file("products.xml");
-                        $list = $xml->candy;
+                        
+                        $list = glob('database/users/*.xml');
+                      
+
                         echo '
                         <thead>
                         <tr>
                             <th>#</th>
                             <th>Name</th>
-                            <th>Description</th>
-                            <th>Weight per unit (kg)</th>
-                            <th>Price per unit(CAD)</th>
-                            <th>Units in stock</th>
-                            <th>Manage</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Address</th>
+                            <th>Admin</th>
+                            
                         </tr>
                         </thead>';
                         for ($i = 0; $i < count($list); $i++) { 
-                          $id = $list[$i]->id;
-                          $stringname = $list[$i]->name;
+                          $xml = simplexml_load_file($list[$i]);
+                          $id = $xml->id;
+                          $stringname = $xml->name;
                           $name = str_replace("_"," ",$stringname);
-                          $stringdesc = $list[$i]->desc;
-                          $desc = str_replace("_"," ",$stringdesc);
+                          $stringemail = $xml->email;
+                          $email = str_replace("_"," ",$stringemail);
                             echo '<tr>';
-                                echo '<td>' . $list[$i]->id . '</td>';
+
+                                echo '<td>' . $xml->id . '</td>';
                                 echo '<td>' . $name . '</td>';
-                                echo '<td>' . $desc . '</td>';
-                                echo '<td>' . $list[$i]->weight . '</td>';
-                                echo '<td>' . $list[$i]->price . '</td>';
-                                echo '<td>' . $list[$i]->inv . '</td>';
+                                echo '<td>' . $email . '</td>';
+                                echo '<td>' . $xml->password . '</td>';
+                                echo '<td>' . $xml->address . '</td>';
+                                echo '<td>' . $xml->admin . '</td>';
                                 echo '<td>' . 
-                                "<a href = 'deleteProduct.php?aisle=candy&id=$id' class='btn custom-button'><i class='fa fa-trash'></i></button>
-                                <a href = 'addeditproducts/editfood.php?aisle=candy&id=$id' class = 'btn custom-button'><i class = 'fa fa-edit'</i></button>" 
+                                "<a href = 'deleteUser.php?email=$email&id=$id' class='btn custom-button'><i class='fa fa-trash'></i></button>
+                                <a href = 'editUser.php?email=$email&id=$id' class = 'btn custom-button'><i class = 'fa fa-edit'</i></button>" 
                                 . '</td>';
                             echo '</tr>';
                         }
@@ -97,7 +103,7 @@
                     <a href="orderlist.php" class="custom-button">Order List</a>
                   </div>
                   <div class="col-lg-4 col-12">
-                    <a href="productlist.php" class="custom-button">Product List</a>
+                    <a href="listproduce.php" class="custom-button">Product List</a>
                   </div>
                 </div>
           

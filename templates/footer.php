@@ -2,7 +2,7 @@
       <div class="row page-width">
 
         <div class="col-lg-3 col-md-12">
-          <p class="footer-name"><a href="/Grocery/grocery_website/index.php">TastyGrocery.com</a></p>
+          <p class="footer-name"><a href="/index.php">TastyGrocery.com</a></p>
         </div>
 
         <div class="col-lg-6 col-md-12">
