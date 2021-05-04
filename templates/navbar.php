@@ -3,15 +3,15 @@
         <div class="col-6">
           <?php
             if($isUser && $isAdmin == "true")
-              echo '<a href="/Grocery/grocery_website/productlist.php"><i class="fas fa-door-open"></i>Backstore</a>';
+              echo '<a href="/productlist.php"><i class="fas fa-door-open"></i>Backstore</a>';
           ?>
         </div>
         <div class="col-6 right-text">
           <?php
             if($isUser == false)
-              echo '<a href="/Grocery/grocery_website/login.php"><i class="fas fa-user-alt"></i>My Account</a>';
+              echo '<a href="/login.php"><i class="fas fa-user-alt"></i>My Account</a>';
             else
-              echo '<a href="/Grocery/grocery_website/logout.php"><i class="fas fa-user-alt"></i>Logout</a>';
+              echo '<a href="/logout.php"><i class="fas fa-user-alt"></i>Logout</a>';
           ?>
         </div>
       </div>

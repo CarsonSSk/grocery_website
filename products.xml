@@ -248,7 +248,7 @@
 <weight>1.00kg</weight>
 <price>9.99</price>
 <inv>44</inv>
-<img>img/Candy/Skittles.jpg</img>
+<img>img/candy/Skittles.jpg</img>
 </candy>
 
 <candy id="27">
@@ -258,7 +258,7 @@
 <weight>1.00kg</weight>
 <price>8.99</price>
 <inv>60</inv>
-<img>img/Candy/assortedHardCandy.jpeg</img>
+<img>img/candy/assortedHardCandy.jpeg</img>
 </candy>
 
 <candy id="28">
@@ -268,7 +268,7 @@
 <weight>1.00kg</weight>
 <price>9.99</price>
 <inv>51</inv>
-<img>img/Candy/Gummybears.jpeg</img>
+<img>img/candy/Gummybears.jpeg</img>
 </candy>
 
 <candy id="29">
@@ -278,7 +278,7 @@
 <weight>1.00kg</weight>
 <price>11.99</price>
 <inv>50</inv>
-<img>img/Candy/Starbursts.jpg</img>
+<img>img/candy/Starbursts.jpg</img>
 </candy>
 
 <candy id="30">
@@ -288,7 +288,7 @@
 <weight>1.00kg</weight>
 <price>8.99</price>
 <inv>32</inv>
-<img>img/Candy/Jellybeans.jpeg</img>
+<img>img/candy/Jellybeans.jpeg</img>
 </candy>
 
 <candy id="31">
@@ -298,7 +298,7 @@
 <weight>1.00kg</weight>
 <price>15.99</price>
 <inv>45</inv>
-<img>img/Candy/candySnakes.jpeg</img>
+<img>img/candy/candySnakes.jpeg</img>
 </candy>
 
 </products>

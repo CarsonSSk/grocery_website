@@ -89,12 +89,12 @@ if(isset($_POST['edit'])) {
           $newinv = $_POST['inv'];
           $newimage = $_POST['image'];
 
-          $xml->produce->name = $newname;
-          $xml->produce->weight = $newweight;
-          $xml->produce->price = $newprice;
-          $xml->produce->desc = $newdesc;
-          $xml->produce->inv = $newinv;
-          $xml->produce->img = $newimage;
+          $list[$i]->name = $newname;
+          $list[$i]->weight = $newweight;
+          $list[$i]->price = $newprice;
+          $list[$i]->desc = $newdesc;
+          $list[$i]->inv = $newinv;
+          $list[$i]->img = $newimage;
           
           $name = $newname;
           $desc = $newweight;
@@ -117,12 +117,12 @@ if(isset($_POST['edit'])) {
           $newinv = $_POST['inv'];
           $newimage = $_POST['image'];
 
-          $xml->meat->name = $newname;
-          $xml->meat->weight = $newweight;
-          $xml->meat->price = $newprice;
-          $xml->meat->desc = $newdesc;
-          $xml->meat->inv = $newinv;
-          $xml->meat->img = $newimage;
+          $list[$i]->name = $newname;
+          $list[$i]->weight = $newweight;
+          $list[$i]->price = $newprice;
+          $list[$i]->desc = $newdesc;
+          $list[$i]->inv = $newinv;
+          $list[$i]->img = $newimage;
           
           $name = $newname;
           $desc = $newweight;
@@ -145,12 +145,12 @@ if(isset($_POST['edit'])) {
           $newinv = $_POST['inv'];
           $newimage = $_POST['image'];
 
-          $xml->candy->name = $newname;
-          $xml->candy->weight = $newweight;
-          $xml->candy->price = $newprice;
-          $xml->candy->desc = $newdesc;
-          $xml->candy->inv = $newinv;
-          $xml->candy->img = $newimage;
+          $list[$i]->name = $newname;
+          $list[$i]->weight = $newweight;
+          $list[$i]->price = $newprice;
+          $list[$i]->desc = $newdesc;
+          $list[$i]->inv = $newinv;
+          $list[$i]->img = $newimage;
           
           $name = $newname;
           $desc = $newweight;
@@ -173,12 +173,12 @@ if(isset($_POST['edit'])) {
           $newinv = $_POST['inv'];
           $newimage = $_POST['image'];
 
-          $xml->dairy->name = $newname;
-          $xml->dairy->weight = $newweight;
-          $xml->dairy->price = $newprice;
-          $xml->dairy->desc = $newdesc;
-          $xml->dairy->inv = $newinv;
-          $xml->dairy->img = $newimage;
+          $list[$i]->name = $newname;
+          $list[$i]->weight = $newweight;
+          $list[$i]->price = $newprice;
+          $list[$i]->desc = $newdesc;
+          $list[$i]->inv = $newinv;
+          $list[$i]->img = $newimage;
           
           $name = $newname;
           $desc = $newweight;
@@ -201,12 +201,12 @@ if(isset($_POST['edit'])) {
           $newinv = $_POST['inv'];
           $newimage = $_POST['image'];
 
-          $xml->grain->name = $newname;
-          $xml->grain->weight = $newweight;
-          $xml->grain->price = $newprice;
-          $xml->grain->desc = $newdesc;
-          $xml->grain->inv = $newinv;
-          $xml->grain->img = $newimage;
+          $list[$i]->name = $newname;
+          $list[$i]->weight = $newweight;
+          $list[$i]->price = $newprice;
+          $list[$i]->desc = $newdesc;
+          $list[$i]->inv = $newinv;
+          $list[$i]->img = $newimage;
           
           $name = $newname;
           $desc = $newweight;
